@@ -1,7 +1,19 @@
 //Declare an add function that will add two numbers returned
+function add(firstNumber, secondNumber){
+    return firstNumber + secondNumber;
+}
 //Declare a subtract function that will subtract two numbers returned
+function subtract(firstNumber,secondNumber){
+    return firstNumber - secondNumber;
+}
 //Declare a multiply function that will multiply two numbers returned
+function multiply(firstNumber,secondNumber){
+    return firstNumber * secondNumber;
+}
 //Declare a divide function that will divide two numbers returned
+function divide(firstNumber, secondNumber){
+    return firstNumber / secondNumber;
+}
 
 //Declare a variable called firstNumber that will be used to store the first number
 let firstNumber;
