@@ -11,7 +11,9 @@ let secondNumber;
 let operator;
 
 //Create a function that will be used to perform a mathematical operation between two numbers
+function operate(firstNumber,secondNumber, operator){
     //If a user inputs two numbers and clicks a + button, call the add function
     //If a user inputs two numbers and clicks a - button, call the subtract function
     //If a user inputs two numbers and clicks a * button, call the multiply function
     //If a user inputs two numbers and clicks a / button, call the divide function
+}
