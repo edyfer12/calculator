@@ -20,8 +20,8 @@ between the div and heading in the page. Pad the calculator by 10px to make the 
 border and inner div elements neater for the user. Set the minimum width to 605px.*/
 .calculator {
     padding: 10px;
-    margin: 20px 450px;
-    min-width: 605px;
+    margin: 20px auto;
+    width: 605px;
 }
 
 /* Have the text box that is read-only allow the number to be readable when displayed there by
