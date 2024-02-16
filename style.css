@@ -6,3 +6,6 @@ as default to plan the layout of the Calculator page such as aligning the headin
     margin: 0;
     box-sizing: border-box;
 }
+
+/* Set the heading tp the center of the webpage to make the webpage readable to the user. To also 
+allow the webpage to be readable, the font-weight of the heading is bold.*/
