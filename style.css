@@ -65,3 +65,10 @@ set the padding to 65px.*/
 Have the buttons be placed horizontally. Add top spacing between the parent element and the start of the button by 65px.
 Set the spacing between the buttons to 20px. Pad the left by 30px and right by 21px. 
 */
+.second{
+    flex:1;
+    flex-direction: column;
+    padding-top:65px;
+    padding-left:30px;
+    padding-right:21px;
+}
