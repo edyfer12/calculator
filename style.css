@@ -104,3 +104,6 @@ button{
 }
 
 /*When a user hovers over the button, make the color the same as when not hovered */
+button:hover{
+    background: rgb(239, 239, 239);
+}
