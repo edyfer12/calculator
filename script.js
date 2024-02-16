@@ -43,3 +43,7 @@ function operate(firstNumber,secondNumber, operator){
         break;
     }
 }
+
+//Create a function that will be used to display the numbers on the small screen above the calculator
+//If a number is clicked,
+    //Display the number on the text box
