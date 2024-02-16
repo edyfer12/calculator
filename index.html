@@ -8,21 +8,50 @@
 </head>
 <body>
     <!--Add a heading for the webpage to indicate the user the name of the webpage-->
+    <h1>Calculator</h1>
     <!--Create a div element where the element is a calculator. The calculator will have
     digits(0-9), operators(+-/*=) and clear feature -->
+    <div class="calculator">
         <!--Add a textbox so the number can be displayed after a user selects an input. Also,
         if a user selects a first number followed by an operator, second number and equal,
         display the result-->
+        <input type="text" id="display" readonly/>
         <!--Add div element that will group the container two inner containers for styling purposes-->
+        <div class="grouped-features">
             <!--Inside the div element, add a another div element that groups all the digits 0 to 9 
             , decimal (.) and equal (=) in one container-->
+            <div class="first">
                 <!--Add each button for digit inside the container so when a user clicks
                 a number, it gets displayed on the small screen instantly-->
+                <button class="small">=</button>
+                <button class="small">0</button>
+                <button class="small">.</button>
+                <button class="small">1</button>
+                <button class="small">2</button>
+                <button class="small">3</button>
+                <button class="small">4</button>
+                <button class="small">5</button>
+                <button class="small">6</button>
+                <button class="small">7</button>
+                <button class="small">8</button>
+                <button class="small">9</button>
+            </div>
             <!--Add a div element under the calculator container that groups the operators
             (+-/*) located on the right of all digits and decimal point-->
+            <div class="second">
                 <!--Add a button for each operator where the user can click on an operator after previous
                 number has been clicked-->
+                <button class="small">÷</button>
+                <button class="small">X</button>
+                <button class="small">-</button>
+                <button class="small">+</button>
+            </div>
+        </div>
         <!--Add a div element that contain a clear button-->
-                <!--Add a clear button so the user can be given the option to reset the whole operation-->
+        <div class="clear">
+           <!--Add a clear button so the user can be given the option to reset the whole operation-->
+           <button class="big">Clear</button>
+        </div> 
+    </div>
 </body>
 </html>
