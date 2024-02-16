@@ -24,3 +24,9 @@ border and inner div elements neater for the user.*/
     margin-top: 20px;
     padding:10px;
 }
+
+/* Have the text box that is read-only allow the number to be readable when displayed there by
+adjusting the height to 30px. To equally align with the buttons that are placed on the left and 
+right, set the width that is 100% of the div element with class attribute of calculator. To prevent
+the user from accidentally clicking the buttons, set the margin-bottom property to a value of
+10px.*/
