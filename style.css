@@ -16,4 +16,11 @@ h1 {
 
 /* Set the left and right margins to 300px for the div element that goes under the class name
 calculator to evenly align the element to the heading. Set the margin to 20px to enable spacing 
-between the div and heading in the page.*/
+between the div and heading in the page. Pad the calculator by 10px to make the spacing between the
+border and inner div elements neater for the user.*/
+.calculator {
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 20px;
+    padding:10px;
+}
