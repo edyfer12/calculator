@@ -11,6 +11,7 @@ allow the webpage to be readable, the font-weight of the heading is bold. Add fo
 h1 {
     text-align: center;
     font-weight: bold;
+    font-size:40px;
 }
 
 /* Set the left and right margins to auto for the div element that goes under the class name
