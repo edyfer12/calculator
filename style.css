@@ -35,3 +35,7 @@ the user from accidentally clicking the buttons, set the margin-bottom property 
     margin-bottom: 10px;
     height: 30px;
 }
+
+/* For the div element with the class attribute, grouped-features, enable the inner div elements, with
+classes, .first and .second align to horizontally with each other by setting display property as flex and
+direction property as row */
