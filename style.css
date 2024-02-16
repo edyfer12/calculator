@@ -25,6 +25,7 @@ to white as the background color of the body is ivory.*/
     margin: 20px auto;
     border: 1px solid black;
     border-radius: 10px;
+    background: white;
 }
 
 /* Have the text box that is read-only allow the number to be readable when displayed there by
@@ -111,3 +112,6 @@ button:hover{
 }
 
 /*Set the background color to ivory for the body to make the page appear presentable in colors*/
+body{
+    background:ivory;
+}
