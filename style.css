@@ -52,7 +52,8 @@ Also set the display property to flex to enable the flex-wrap property to be use
 to wrap-reverse so buttons are rearranged into reverse order when the elements overflow the parent element.
 To prevent the user for accidentally clicking the number, set the gap to 20px so there is enough spacing
 between buttons horizontally and vertically. To evenly pad the group of buttons horizontally and vertically,
-set the padding to 50px. Set the minimum width to 436px*/
+set the padding to 50px. Set the minimum width to 436px. Set the border to 1px solid black and remove the bottom
+border.*/
 .first {
     flex: 4;
     flex-wrap: wrap-reverse;
@@ -72,7 +73,8 @@ set the padding to 50px. Set the minimum width to 436px*/
 
 /*Set the width of the second class element to be 20% of the div element where class is grouped-features.
 Have the buttons be placed vertically. Add top spacing between the parent element and the start of the button by 50px.
-Set the spacing between the buttons to 20px. Pad the left by 30px and right by 21px. 
+Set the spacing between the buttons to 20px. Pad the left by 30px and right by 21px. Set the border to 1px solid black.
+Remove the border on the left and right.
 */
 .second{
     flex: 1;
