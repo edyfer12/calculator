@@ -17,21 +17,23 @@ h1 {
 /* Set the left and right margins to 450px for the div element that goes under the class name
 calculator to evenly align the element to the heading. Set the margin to 20px to enable spacing 
 between the div and heading in the page. Pad the calculator by 10px to make the spacing between the
-border and inner div elements neater for the user.*/
+border and inner div elements neater for the user. Set the minimum width to 605px.*/
 .calculator {
-    padding:10px;
-    margin:20px 450px;
+    padding: 10px;
+    margin: 20px 450px;
+    min-width: 605px;
 }
 
 /* Have the text box that is read-only allow the number to be readable when displayed there by
-adjusting the height to 30px. To equally align with the buttons that are placed on the left and 
+adjusting the height to 65px. To equally align with the buttons that are placed on the left and 
 right, set the width that is 100% of the div element with class attribute of calculator. To prevent
 the user from accidentally clicking the buttons, set the margin-bottom property to a value of
-10px.*/
+10px. Set the padding to 10px to enable the output to not touch the edge of the textbox*/
 #display {
     width: 100%;
     margin-bottom: 10px;
-    height: 30px;
+    height: 65px;
+    padding: 10px;
 }
 
 /* For the div element with the class attribute, grouped-features, enable the inner div elements, with
@@ -46,13 +48,14 @@ Also set the display property to flex to enable the flex-wrap property to be use
 to wrap-reverse so buttons are rearranged into reverse order when the elements overflow the parent element.
 To prevent the user for accidentally clicking the number, set the gap to 20px so there is enough spacing
 between buttons horizontally and vertically. To evenly pad the group of buttons horizontally and vertically,
-set the padding to 65px.*/
+set the padding to 50px. Set the minimum width to 436px*/
 .first {
     flex: 4;
     flex-wrap: wrap-reverse;
-    padding: 65px;
+    padding: 50px;
     display: flex;
     gap: 20px;
+    min-width: 436px;
 }
 
 /*Set the small buttons to height and width of 90px*/
@@ -62,13 +65,15 @@ set the padding to 65px.*/
 }
 
 /*Set the width of the second class element to be 20% of the div element where class is grouped-features.
-Have the buttons be placed horizontally. Add top spacing between the parent element and the start of the button by 65px.
+Have the buttons be placed vertically. Add top spacing between the parent element and the start of the button by 50px.
 Set the spacing between the buttons to 20px. Pad the left by 30px and right by 21px. 
 */
 .second{
-    flex:1;
+    flex: 1;
     flex-direction: column;
-    padding-top:65px;
-    padding-left:30px;
-    padding-right:21px;
+    padding-top: 50px;
+    display: flex;
+    padding-left: 30px;
+    padding-right: 21px;
+    gap: 20px;
 }
