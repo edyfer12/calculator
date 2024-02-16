@@ -102,3 +102,5 @@ button{
     font-weight: bold;
     font-size: 24px;
 }
+
+/*When a user hovers over the button, make the color the same as when not hovered */
