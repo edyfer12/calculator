@@ -13,3 +13,7 @@ h1 {
     text-align: center;
     font-weight: bold;
 }
+
+/* Set the left and right margins to 300px for the div element that goes under the class name
+calculator to evenly align the element to the heading. Set the margin to 20px to enable spacing 
+between the div and heading in the page.*/
