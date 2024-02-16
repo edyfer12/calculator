@@ -25,7 +25,21 @@ let operator;
 //Create a function that will be used to perform a mathematical operation between two numbers
 function operate(firstNumber,secondNumber, operator){
     //If a user inputs two numbers and clicks a + button, call the add function
+    switch(operator){
+        case '+':
+        return add(firstNumber,secondNumber);
+        break;
     //If a user inputs two numbers and clicks a - button, call the subtract function
+        case '-':
+        return subtract(firstNumber,secondNumber);
+        break;
     //If a user inputs two numbers and clicks a * button, call the multiply function
+        case '*':
+        return multiply(firstNumber, secondNumber);
+        break;
     //If a user inputs two numbers and clicks a / button, call the divide function
+        case '/':
+        return divide(firstNumber, secondNumber);
+        break;
+    }
 }
