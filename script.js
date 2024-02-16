@@ -45,5 +45,7 @@ function operate(firstNumber,secondNumber, operator){
 }
 
 //Create a function that will be used to display the numbers on the small screen above the calculator
+function display(firstNumber){
 //If a number is clicked,
     //Display the number on the text box
+}
