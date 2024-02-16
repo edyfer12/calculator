@@ -49,5 +49,8 @@ function display(firstNumber){
     //Refer to the buttons where class attribute is small so that can be used for obtaining the text content of the button
     let number = document.querySelector('.small').textContent;
     //If a number is clicked,
+    number.addEventListener(() => {
         //Display the number on the text box
+        
+    )};
 }
