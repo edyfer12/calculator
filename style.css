@@ -43,3 +43,4 @@ direction property as row */
     display: flex;
     flex-direction: row;
 }
+/* Set the width of the first class to be 75% of the div element where class is group-features. */
