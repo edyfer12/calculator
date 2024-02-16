@@ -48,9 +48,9 @@ function operate(firstNumber,secondNumber, operator){
 function display(firstNumber){
     //Refer to the buttons where class attribute is small so that can be used for obtaining the text content of the button
     let number = document.querySelector('.small').textContent;
+    //Refer to the text box that is aimed to populate the element with numbers
     //If a number is clicked,
     number.addEventListener(() => {
-        //Display the number on the text box
-        
+        //Display the number on the text box   
     )};
 }
