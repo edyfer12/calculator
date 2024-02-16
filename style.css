@@ -20,8 +20,10 @@ between the div and heading in the page. Pad the calculator by 10px to make the 
 border and inner div elements neater for the user. Set the width to 605px.*/
 .calculator {
     padding: 10px;
-    margin: 20px auto;
     width: 605px;
+    margin: 20px auto;
+    border: 1px solid black;
+    border-radius: 10px;
 }
 
 /* Have the text box that is read-only allow the number to be readable when displayed there by
@@ -34,6 +36,8 @@ the user from accidentally clicking the buttons, set the margin-bottom property 
     margin-bottom: 10px;
     height: 65px;
     padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
 /* For the div element with the class attribute, grouped-features, enable the inner div elements, with
@@ -56,6 +60,8 @@ set the padding to 50px. Set the minimum width to 436px*/
     display: flex;
     gap: 20px;
     min-width: 436px;
+    border: 1px solid;
+    border-bottom: none;
 }
 
 /*Set the small buttons to height and width of 90px*/
@@ -76,6 +82,9 @@ Set the spacing between the buttons to 20px. Pad the left by 30px and right by 2
     padding-left: 30px;
     padding-right: 21px;
     gap: 20px;
+    border: 1px solid black;
+    border-left: none;
+    border-bottom: none;
 }
 
 /*Set the clear button's height to 50px to make the button larger in height and set the
