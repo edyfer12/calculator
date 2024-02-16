@@ -30,3 +30,8 @@ adjusting the height to 30px. To equally align with the buttons that are placed 
 right, set the width that is 100% of the div element with class attribute of calculator. To prevent
 the user from accidentally clicking the buttons, set the margin-bottom property to a value of
 10px.*/
+#display {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 30px;
+}
