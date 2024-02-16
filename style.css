@@ -14,10 +14,10 @@ h1 {
     font-weight: bold;
 }
 
-/* Set the left and right margins to 450px for the div element that goes under the class name
+/* Set the left and right margins to auto for the div element that goes under the class name
 calculator to evenly align the element to the heading. Set the margin to 20px to enable spacing 
 between the div and heading in the page. Pad the calculator by 10px to make the spacing between the
-border and inner div elements neater for the user. Set the minimum width to 605px.*/
+border and inner div elements neater for the user. Set the width to 605px.*/
 .calculator {
     padding: 10px;
     margin: 20px auto;
