@@ -47,6 +47,7 @@ function operate(firstNumber,secondNumber, operator){
 //Create a function that will be used to display the numbers on the small screen above the calculator
 function display(firstNumber){
     //Refer to the buttons where class attribute is small so that can be used for obtaining the text content of the button
+    let number = document.querySelector('.small').textContent;
     //If a number is clicked,
         //Display the number on the text box
 }
