@@ -41,16 +41,16 @@ direction property as row */
     display: flex;
     flex-direction: row;
 }
-/* Set the width of the first class to be 75% of the div element where class is grouped-features. 
+/* Set the width of the first class to be 80% of the div element where class is grouped-features. 
 Also set the display property to flex to enable the flex-wrap property to be used. Set the flex-wrap property
 to wrap-reverse so buttons are rearranged into reverse order when the elements overflow the parent element.
 To prevent the user for accidentally clicking the number, set the gap to 20px so there is enough spacing
 between buttons horizontally and vertically. To evenly pad the group of buttons horizontally and vertically,
-set the padding to 20px.*/
+set the padding to 65px.*/
 .first {
-    flex: 3;
+    flex: 4;
     flex-wrap: wrap-reverse;
-    padding: 20px;
+    padding: 65px;
     display: flex;
     gap: 20px;
 }
