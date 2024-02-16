@@ -84,3 +84,6 @@ width to 100% of the parent element that aligns the calculator's leftmost and ri
     width:100%;
     height: 50px;
 }
+
+/*Make all buttons in the calculator have the cursor as a pointer display when the user hovers. This
+indicate that the button is clickable. In addition, make the font bold and set the font size to 24px.*/
