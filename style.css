@@ -54,3 +54,9 @@ set the padding to 20px.*/
     display: flex;
     gap: 20px;
 }
+
+/*Set the small buttons to height and width of 90px*/
+.small{
+    width: 90px;
+    height: 90px;
+}
