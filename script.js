@@ -62,6 +62,7 @@ function display(){
     const secondNumber = [];
     //Create variable where it stores the second operand 
     let operandSecond;
+    //Create variable that captures the reference to the equals sign button
     //For each number button in the numbers nodelist,
     numbers.forEach((number) => {
         //Create variable where it indicates to user if the operator is clicked or not
