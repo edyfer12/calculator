@@ -60,6 +60,7 @@ function display(){
         number.addEventListener('click', () => {
             //Populate the numbers in an array that stores numbers
             arrNumbers.push(number.textContent);
+            //Remove the comma between the numbers
             //Display the number on a text box
             output.value = arrNumbers;
         });
