@@ -149,8 +149,10 @@ function display(){
         operator.addEventListener('click', () => {
             //Push the number before the operator into the arithmetic array
             //If the arithmetic does not have an operator,
-            arithmetic.push(operandFirst);
-            console.log(arithmetic);
+            if(!arithmetic.includes(operatorName)){
+                arithmetic.push(operandFirst);
+                console.log(arithmetic);
+            }
             //Store in the operator name
             operatorName = operator.textContent;
             //Push the operator in the arithmetic array
