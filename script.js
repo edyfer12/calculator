@@ -101,6 +101,8 @@ function display(){
                     //Store the output's value into the variable that saves the first number's item joined
                     //Convert to a number
                     operandFirst = +output.value; 
+                    //Push the number before the operator into the arithmetic array
+                    arithmetic.push(operandFirst);
                 }
                 //If so,
                 else {
@@ -146,8 +148,6 @@ function display(){
     operators.forEach((operator) => {
         //When the operator is clicked,
         operator.addEventListener('click', () => {
-            //Push the number before the operator into the arithmetic array
-            arithmetic.push(operandFirst);
             //Store in the operator name
             operatorName = operator.textContent;
             //Push the operator in the arithmetic array
