@@ -56,6 +56,8 @@ function display(){
     const firstNumber = [];
     //Create a variable that saves the first number joined together from the array that stores the first numbers
     let operandFirst;
+    //Declare a variable that capture the reference to the operator buttons
+    //Declare an array that store in the digits after the operator button is pressed 
     //For each number button in the numbers nodelist,
     numbers.forEach((number) => {
         //If a user clicks on a number button, 
@@ -66,6 +68,10 @@ function display(){
             output.value = firstNumber.join("");
             //Store the output's value into the variable that saves the first number's item joined
             operandFirst = output.value;
+            //For each operator button in the operators nodelist,
+                //If the operator button is clicked,
+                    //Push the number into the second array that occurs after an operation occurs
+                    //Remove the commas between the digits and join them together with the number displayed on the textbox
         });
     });
     
