@@ -77,6 +77,8 @@ function display(){
             //Populate the numbers in the second number array that occur after operation if operator is clicked
             else {
                 secondNumber.push(number.textContent);
+                //Remove the comma between the numbers and display the number on a text box
+                //Store the output's value into the variable that saves the second number's item joined together
             }
             
             
