@@ -55,7 +55,7 @@ function display(){
     //be used for displaying multiple digits on a textbox
     const firstNumber = [];
     //Create a variable that saves the first number joined together from the array that stores the first numbers
-    let operand;
+    let operandFirst;
     //For each number button in the numbers nodelist,
     numbers.forEach((number) => {
         //If a user clicks on a number button, 
