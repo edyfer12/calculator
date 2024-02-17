@@ -60,7 +60,7 @@ function display(){
         number.addEventListener('click', () => {
             //Populate the numbers in an array that stores numbers
             arrNumbers.push(number.textContent);
-            output.value = number.textContent;
+            output.value = arrNumbers;
         });
     });
 }
