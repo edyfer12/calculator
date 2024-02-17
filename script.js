@@ -67,16 +67,17 @@ function display(){
             if(!secondNumber){
                 firstNumber.push(number.textContent);
             }
+            //If the first array does exist, push the number in the second array
             //Remove the comma between the numbers and display the number on a text box
             output.value = firstNumber.join("");
             //Store the output's value into the variable that saves the first number's item joined
             operandFirst = output.value;
             //For each operator button in the operators nodelist,
             operators.forEach((operator) => {
-                //Declare an array that store in the digits after the operator button is pressed 
-                const secondNumber = [];
                 //If the operator button is clicked,
                 operator.addEventListener('click', () =>{
+                //Declare an array that store in the digits after the operator button is pressed 
+                const secondNumber = [];
                     //and the number is clicked
                 });
             });
