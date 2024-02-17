@@ -122,7 +122,6 @@ function display(){
             //If user has clicked a plus operator,
             else if(operatorName === '+'){
                 //Use the object method to add numbers between the operator
-                operator.add(operandFirst,operandSecond);
                 //Display the final result on the textbox
                 output.value = operator.add(operandFirst,operandSecond);
             }
