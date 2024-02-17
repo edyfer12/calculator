@@ -53,6 +53,7 @@ function display(){
     const output = document.querySelector('#display'); 
     //Create an array that will be used to store multiple numbers in one container. The numbers in an array will
     //be used for displaying multiple digits on a textbox
+    const arrNumbers = [];
     //For each number button in the numbers nodelist,
     numbers.forEach((number) => {
         //If a user clicks on a number button, display the number on a text box
