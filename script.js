@@ -99,8 +99,7 @@ function display(){
                 output.value = firstNumber.join("");
                 //Store the output's value into the variable that saves the first number's item joined
                 //Convert to a number
-                operandFirst = +output.value;
-                //Push the first operand in the arithmetic array 
+                operandFirst = +output.value; 
             }
             //Populate the numbers in the second number array that occur after operation if operator is clicked
             else {
@@ -110,7 +109,6 @@ function display(){
                 //Store the output's value into the variable that saves the second number's item joined together
                 //Convert to a number
                 operandSecond = +output.value;
-                //Push the second operand in the arithmetic array
             }
         });
         //If a user clicks an equal button, 
