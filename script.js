@@ -98,6 +98,7 @@ function display(){
                     firstNumber.push(number.textContent);
                     //Remove the comma between the numbers and display the number on a text box
                     output.value = firstNumber.join("");
+                    console.log("o = " + output.value);
                     //Store the output's value into the variable that saves the first number's item joined
                     //Convert to a number
                     operandFirst = +output.value;
@@ -112,8 +113,6 @@ function display(){
                     //Store the output's value into the variable that saves the second number's item joined together
                     //Convert to a number
                     operandSecond = +output.value;
-                    //Push the number after the operator in the array
-                    arithmetic.push(operandSecond);
                 }
             });
     });
@@ -151,13 +150,17 @@ function display(){
             //If the arithmetic does not have an operator,
             if(!arithmetic.includes(operatorName)){
                 arithmetic.push(operandFirst);
-                console.log(arithmetic);
+                //console.log(arithmetic);
+            }
+            //If the arithmetic does have the operator push the operand after the operator
+            else{
+                arithmetic.push(operandSecond);
             }
             //Store in the operator name
             operatorName = operator.textContent;
             //Push the operator in the arithmetic array
             arithmetic.push(operatorName);
-            //console.log(arithmetic);
+            console.log(arithmetic);
             //Output the value on the text box
             console.log(operatorName);
         })
