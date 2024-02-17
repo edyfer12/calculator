@@ -58,6 +58,7 @@ function display(){
     let operandFirst;
     //Declare a variable that capture the reference to the operator buttons
     let operators = document.querySelectorAll('.small.operators');
+    //Declare an array that stores the series of digits that occur after the operation
     const secondNumber = [];
     //Create variable where it stores the second operand 
     let operandSecond;
