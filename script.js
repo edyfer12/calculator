@@ -71,9 +71,11 @@ function display(){
             //Store the output's value into the variable that saves the first number's item joined
             operandFirst = output.value;
             //For each operator button in the operators nodelist,
+            operators.forEach((operator) => {
                 //If the operator button is clicked,
                     //Push the number into the second array that occurs after an operation occurs
                     //Remove the commas between the digits and join them together with the number displayed on the textbox
+            });
         });
     });
     
