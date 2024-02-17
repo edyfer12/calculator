@@ -73,6 +73,7 @@ function display(){
             operators.forEach((operator) => {
                 //When the operator is clicked,
                 operator.addEventListener('click', () => {
+                    //Indicate to the user that the operator is clicked
                 })
             });
         });
