@@ -111,6 +111,7 @@ function display(){
                 operandSecond = +output.value;
             }
         });
+        
         //If a user clicks an equal button, 
         equal.addEventListener('click', () => {
             //If user has clicked a minus operator,
@@ -141,6 +142,7 @@ function display(){
         operators.forEach((operator) => {
             //When the operator is clicked,
             operator.addEventListener('click', () => {
+                //Push the number before the operator into the arithmetic array
                 //Indicate to the user that the operator is clicked
                 operatorClicked = true;
                 //Store in the operator name
