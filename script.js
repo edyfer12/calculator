@@ -54,7 +54,6 @@ function display(){
     //Create an array that will be used to store multiple numbers in one container. The numbers in an array will
     //be used for displaying multiple digits on a textbox
     const arrNumbers = [];
-    //Create an array that will be used to store the previous values after the user clicks the operator
     //For each number button in the numbers nodelist,
     numbers.forEach((number) => {
         //If a user clicks on a number button, 
