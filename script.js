@@ -53,15 +53,15 @@ function display(){
     const output = document.querySelector('#display'); 
     //Create an array that will be used to store multiple numbers in one container. The numbers in an array will
     //be used for displaying multiple digits on a textbox
-    const arrNumbers = [];
+    const firstNumber = [];
     //For each number button in the numbers nodelist,
     numbers.forEach((number) => {
         //If a user clicks on a number button, 
         number.addEventListener('click', () => {
             //Populate the numbers in an array that stores numbers
-            arrNumbers.push(number.textContent);
+            firstNumber.push(number.textContent);
             //Remove the comma between the numbers and display the number on a text box
-            output.value = arrNumbers.join("");
+            output.value = firstNumber.join("");
         });
     });
 }
