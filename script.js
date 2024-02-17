@@ -67,6 +67,7 @@ function display(){
             //Populate the numbers in an array that stores numbers
             firstNumber.push(number.textContent);
             //Remove the comma between the numbers and display the number on a text box
+            //If the value of the second numbers array does not exist, display the output value
             output.value = firstNumber.join("");
             //Store the output's value into the variable that saves the first number's item joined
             operandFirst = output.value;
