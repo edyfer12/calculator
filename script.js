@@ -99,9 +99,6 @@ function display(){
                     //Remove the comma between the numbers and display the number on a text box
                     output.value = firstNumber.join("");
                     console.log("o = " + output.value);
-                    //Store the output's value into the variable that saves the first number's item joined
-                    //Convert to a number
-                    operandFirst = +output.value;
                     
                 }
                 //If so,
@@ -149,6 +146,9 @@ function display(){
             //Push the number before the operator into the arithmetic array
             //If the arithmetic does not have an operator,
             if(!arithmetic.includes(operatorName)){
+                //Store the output's value into the variable that saves the first number's item joined
+                //Convert to a number
+                operandFirst = +output.value;
                 arithmetic.push(operandFirst);
                 //console.log(arithmetic);
             }
