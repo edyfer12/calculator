@@ -108,6 +108,7 @@ function display(){
                 //Indicate to the user that the operator is clicked
                 operatorClicked = true;
                 //Store in the operator name
+                operatorName = operator.textContent;
             })
         });
     });
