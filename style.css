@@ -35,7 +35,8 @@ adjusting the height to 65px. To equally align with the buttons that are placed 
 right, set the width that is 100% of the div element with class attribute of calculator. To prevent
 the user from accidentally clicking the buttons, set the margin-bottom property to a value of
 10px. Set the padding to 10px to enable the output to not touch the edge of the textbox. Set the background
-color to none since the background of the calculator is white and needs the number displayed to be visible.*/
+color to none since the background of the calculator is white and needs the number displayed to be visible.
+Set the font size to 18px to make the number readable to the user.*/
 #display {
     width: 100%;
     margin-bottom: 10px;
@@ -44,6 +45,7 @@ color to none since the background of the calculator is white and needs the numb
     border: 1px solid black;
     border-radius: 5px;
     background: none;
+    font-size: 18px;
 }
 
 /* For the div element with the class attribute, grouped-features, enable the inner div elements, with
