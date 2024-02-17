@@ -109,6 +109,8 @@ function display(){
                     //Store the output's value into the variable that saves the second number's item joined together
                     //Convert to a number
                     operandSecond = +output.value;
+                    //Push the number after the operator in the array
+                    arithmetic.push(operandSecond);
                 }
             });
     });
@@ -150,8 +152,7 @@ function display(){
             operatorName = operator.textContent;
             //Push the operator in the arithmetic array
             arithmetic.push(operatorName);
-            //Push the number after the operator in the array
-            arithmetic.push(operandSecond);
+            console.log(arithmetic);
             //Output the value on the text box
             console.log(operatorName);
         })
