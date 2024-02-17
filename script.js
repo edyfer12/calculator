@@ -65,6 +65,7 @@ function display(){
     //Create variable that captures the reference to the equals sign button
     const equal = document.querySelector('.small.equal');
     //Create variable that is able to store in the name of operator button
+    let operatorName;
     //For each number button in the numbers nodelist,
     numbers.forEach((number) => {
         //Create variable where it indicates to user if the operator is clicked or not
