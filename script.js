@@ -65,6 +65,7 @@ function display(){
             //Remove the comma between the numbers and display the number on a text box
             output.value = firstNumber.join("");
             //Store the output's value into the variable that saves the first number's item joined
+            operandFirst = output.value;
         });
     });
     
