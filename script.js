@@ -107,6 +107,7 @@ function display(){
             operator.addEventListener('click', () => {
                 //Indicate to the user that the operator is clicked
                 operatorClicked = true;
+                //Store in the operator name
             })
         });
     });
