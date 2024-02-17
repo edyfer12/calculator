@@ -45,10 +45,24 @@ function operate(firstNumber,secondNumber, operator){
 }
 
 //Create an object that stores the operators. Each operator is a method
+const operators = {
     //Set the add method and the value is num1 + num2
+    add: function(num1,num2){
+        return num1 + num2;
+    },
     //Set the minus method and the value is num1 - num2
+    minus: function(num1,num2){
+        return num1 - num2;
+    },
     //Set the multiply method and the value is num1 * num2
+    multiply: function(num1, num2){
+        return num1 * num2;
+    },
     //Set the divide method and the value is num1 / num2
+    divide: function(num1,num2){
+        return num1 / num2;
+    }
+};
 
 //Create a function that will be used to display the numbers on the small screen above the calculator
 function display(){
