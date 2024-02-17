@@ -54,5 +54,8 @@ function display(){
     //For each number button in the numbers nodelist,
     numbers.forEach((number) => {
         //If a user clicks on a number button, display the number on a text box
+        number.addEventListener('click', () => {
+            output.value = number.textContent;
+        });
     });
 }
