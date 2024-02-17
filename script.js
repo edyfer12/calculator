@@ -89,29 +89,29 @@ function display(){
     numbers.forEach((number) => {
         //Create variable where it indicates to user if the operator is clicked or not
         let operatorClicked = false;  
-        //If a user clicks on a number button, 
-        number.addEventListener('click', () => {
-            //Populate the numbers in a first number array that stores digits that occurs before operation
-            //if operator is not clicked
-            if(!operatorClicked){
-                firstNumber.push(number.textContent);
-                //Remove the comma between the numbers and display the number on a text box
-                output.value = firstNumber.join("");
-                //Store the output's value into the variable that saves the first number's item joined
-                //Convert to a number
-                operandFirst = +output.value; 
-            }
-            //Populate the numbers in the second number array that occur after operation if operator is clicked
-            else {
-                secondNumber.push(number.textContent);
-                //Remove the comma between the numbers and display the number on a text box
-                output.value = secondNumber.join('');
-                //Store the output's value into the variable that saves the second number's item joined together
-                //Convert to a number
-                operandSecond = +output.value;
-            }
-        });
-        });
+            //If a user clicks on a number button, 
+            number.addEventListener('click', () => {
+                //Populate the numbers in a first number array that stores digits that occurs before operation
+                //if operator is not clicked
+                if(!operatorClicked){
+                    firstNumber.push(number.textContent);
+                    //Remove the comma between the numbers and display the number on a text box
+                    output.value = firstNumber.join("");
+                    //Store the output's value into the variable that saves the first number's item joined
+                    //Convert to a number
+                    operandFirst = +output.value; 
+                }
+                //Populate the numbers in the second number array that occur after operation if operator is clicked
+                else {
+                    secondNumber.push(number.textContent);
+                    //Remove the comma between the numbers and display the number on a text box
+                    output.value = secondNumber.join('');
+                    //Store the output's value into the variable that saves the second number's item joined together
+                    //Convert to a number
+                    operandSecond = +output.value;
+                }
+            });
+    });
         //If a user clicks an equal button, 
         equal.addEventListener('click', () => {
             //If user has clicked a minus operator,
