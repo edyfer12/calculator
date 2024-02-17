@@ -67,7 +67,7 @@ function display(){
     //Create variable that is able to store in the name of operator button
     let operatorName;
     //Create an object that stores the operators. Each operator is a method
-    const operators = {
+    const operator = {
         //Add a property for the first number and set value to the first number entered in the calculator
         num1: operandFirst,
         //Add a property for the second number and set value to the second number entered in the calculator
