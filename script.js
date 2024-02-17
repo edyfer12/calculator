@@ -93,7 +93,7 @@ function display(){
             number.addEventListener('click', () => {
                 //Check if the arithmetic array has an operator sign
                 //If not, 
-                if(!operatorClicked){
+                if(!arithmetic.includes(operatorName)){
                     //Populate the numbers in a first number array that stores digits that occurs
                     firstNumber.push(number.textContent);
                     //Remove the comma between the numbers and display the number on a text box
@@ -130,7 +130,7 @@ function display(){
             output.value = operator.add(operandFirst,operandSecond);
         }
         //If user has clicked a multiply operator,
-        else if(operatorName === '*'){
+        else if(operatorName === 'X'){
             //Use the object method to multiply numbers between the operator
             //Display the final result on the textbox
             output.value = operator.multiply(operandFirst, operandSecond);
@@ -148,8 +148,6 @@ function display(){
         operator.addEventListener('click', () => {
             //Push the number before the operator into the arithmetic array
             arithmetic.push(operandFirst);
-            //Indicate to the user that the operator is clicked
-            operatorClicked = true;
             //Store in the operator name
             operatorName = operator.textContent;
             //Push the operator in the arithmetic array
