@@ -65,4 +65,5 @@ function display(){
         });
     });
 }
+//Add a function call to execute an task responsible for displaying value on the calculator
 display();
