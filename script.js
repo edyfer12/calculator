@@ -69,15 +69,16 @@ function display(){
             //if operator is not clicked
             if(!operatorClicked){
                 firstNumber.push(number.textContent);
+                //Remove the comma between the numbers and display the number on a text box
+                output.value = firstNumber.join("");
+                //Store the output's value into the variable that saves the first number's item joined
+                operandFirst = output.value;
             }
             //Populate the numbers in the second number array that occur after operation if operator is clicked
             else {
                 secondNumber.push(number.textContent);
             }
-            //Remove the comma between the numbers and display the number on a text box
-            output.value = firstNumber.join("");
-            //Store the output's value into the variable that saves the first number's item joined
-            operandFirst = output.value;
+            
             
         });
         //For each operator button in the operators nodelist,
