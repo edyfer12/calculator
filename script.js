@@ -69,12 +69,12 @@ function display(){
     //Create an object that stores the operators. Each operator is a method
     const operator = {
         //Add a property for the first number and set value to the first number entered in the calculator
-        num1: operandFirst,
+        //num1: output.value,
         //Add a property for the second number and set value to the second number entered in the calculator
-        num2: operandSecond,
+        //num2: output.value,
         //Set the add method and the value is num1 + num2
         add: function(num1,num2){
-            return this.num1 + this.num2;
+            return num1 + num2;
         },
         //Set the minus method and the value is num1 - num2
         minus: function(num1,num2){
