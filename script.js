@@ -143,6 +143,7 @@ function display(){
                 operatorClicked = true;
                 //Store in the operator name
                 operatorName = operator.textContent;
+                //Output the value on the text box
                 console.log(operatorName);
             })
         });
