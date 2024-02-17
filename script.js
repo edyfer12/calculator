@@ -78,6 +78,7 @@ function display(){
             else {
                 secondNumber.push(number.textContent);
                 //Remove the comma between the numbers and display the number on a text box
+                output.value = secondNumber.join('');
                 //Store the output's value into the variable that saves the second number's item joined together
             }
             
