@@ -62,6 +62,7 @@ function display(){
     //For each number button in the numbers nodelist,
     numbers.forEach((number) => {
         //Create variable where it indicates to user if the operator is clicked or not
+        let operatorClicked = false;
         //If a user clicks on a number button, 
         number.addEventListener('click', () => {
             //Populate the numbers in a first number array that stores digits that occurs before operation
