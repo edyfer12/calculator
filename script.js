@@ -151,6 +151,7 @@ function display(){
             //Push the operator in the arithmetic array
             arithmetic.push(operatorName);
             //Push the number after the operator in the array
+            arithmetic.push(operandSecond);
             //Output the value on the text box
             console.log(operatorName);
         })
