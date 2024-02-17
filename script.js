@@ -56,10 +56,11 @@ function display(){
     const arrNumbers = [];
     //For each number button in the numbers nodelist,
     numbers.forEach((number) => {
-        //If a user clicks on a number button, display the number on a text box
+        //If a user clicks on a number button, 
         number.addEventListener('click', () => {
             //Populate the numbers in an array that stores numbers
             arrNumbers.push(number.textContent);
+            //Display the number on a text box
             output.value = arrNumbers;
         });
     });
