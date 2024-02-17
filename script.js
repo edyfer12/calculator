@@ -63,7 +63,7 @@ function display(){
     numbers.forEach((number) => {
         //If a user clicks on a number button, 
         number.addEventListener('click', () => {
-            //Populate the numbers in an array that stores numbers if the second numbers array does not exist
+            //Populate the numbers in a first number array that stores digits that occurs before operation
             if(!secondNumber){
                 firstNumber.push(number.textContent);
             }
