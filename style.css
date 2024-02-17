@@ -34,7 +34,8 @@ to white as the background color of the body is ivory.*/
 adjusting the height to 65px. To equally align with the buttons that are placed on the left and 
 right, set the width that is 100% of the div element with class attribute of calculator. To prevent
 the user from accidentally clicking the buttons, set the margin-bottom property to a value of
-10px. Set the padding to 10px to enable the output to not touch the edge of the textbox*/
+10px. Set the padding to 10px to enable the output to not touch the edge of the textbox. Set the background
+color to none since the background of the calculator is white and needs the number displayed to be visible.*/
 #display {
     width: 100%;
     margin-bottom: 10px;
