@@ -143,6 +143,7 @@ function display(){
         //When the operator is clicked,
         operator.addEventListener('click', () => {
             //Push the number before the operator into the arithmetic array
+            arithmetic.push(operandFirst);
             //Indicate to the user that the operator is clicked
             operatorClicked = true;
             //Store in the operator name
