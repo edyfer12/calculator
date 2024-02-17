@@ -93,17 +93,25 @@ function display(){
         //If a user clicks an equal button, 
         equal.addEventListener('click', () => {
             //If user has clicked a minus operator,
+            if(operatorName === '-'){
                 //Use the object method to subtract numbers between the operator
                 //Display the final result on the textbox
+            }
             //If user has clicked a plus operator,
+            else if(operatorName === '+'){
                 //Use the object method to add numbers between the operator
                 //Display the final result on the textbox
+            }
             //If user has clicked a multiply operator,
+            else if(operatorName === '*'){
                 //Use the object method to multiply numbers between the operator
                 //Display the final result on the textbox
+            }
             //If user has clicked a divide operator,
+            else{
                 //Use the object method to divide numbers between the operator
                 //Display the final result on the textbox
+            }
         });
         //For each operator button in the operators nodelist,
         operators.forEach((operator) => {
