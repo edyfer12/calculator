@@ -118,6 +118,7 @@ function display(){
             if(operatorName === '-'){
                 //Use the object method to subtract numbers between the operator
                 //Display the final result on the textbox
+                output.value = operator.minus(operandFirst, operandSecond);
             }
             //If user has clicked a plus operator,
             else if(operatorName === '+'){
@@ -128,11 +129,13 @@ function display(){
             else if(operatorName === '*'){
                 //Use the object method to multiply numbers between the operator
                 //Display the final result on the textbox
+                output.value = operator.multiply(operandFirst, operandSecond);
             }
             //If user has clicked a divide operator,
             else{
                 //Use the object method to divide numbers between the operator
                 //Display the final result on the textbox
+                output.value = operator.divide(operandFirst, operandSecond);
             }
         });
         //For each operator button in the operators nodelist,
