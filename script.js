@@ -82,6 +82,7 @@ function display(){
     const equal = document.querySelector('.small.equal');
     //Create variable that is able to store in the name of operator button
     let operatorName;
+    //Declare an array that stores the operator and operands
 
     //For each number button in the numbers nodelist,
     numbers.forEach((number) => {
