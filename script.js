@@ -58,7 +58,7 @@ function display(){
     let operandFirst;
     //Declare a variable that capture the reference to the operator buttons
     let operators = document.querySelectorAll('.small.operators');
-    
+    const secondNumber = [];
     //For each number button in the numbers nodelist,
     numbers.forEach((number) => {
         //If a user clicks on a number button, 
@@ -71,16 +71,9 @@ function display(){
             operandFirst = output.value;
             //For each operator button in the operators nodelist,
             operators.forEach((operator) => {
-                //If the operator button is clicked,
-                operator.addEventListener('click', () =>{
-                //Declare an array that store in the digits after the operator button is pressed 
-                const secondNumber = [];
-                //If the number is clicked,
-                number.addEventListener('click', () => {
-                    //Push the item into the second array
-                    //Display all the digits joined from the second array on the textbox
-                }); 
-                });
+                //When the operator is clicked,
+                operator.addEventListener('click', () => {
+                })
             });
         });
     });
