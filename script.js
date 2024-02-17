@@ -77,6 +77,7 @@ function display(){
                     //Push the number into the second array that occurs after an operation occurs
                     secondNumber.push(number.textContent);
                     //Remove the commas between the digits and join them together with the number displayed on the textbox
+                    output.value = '';
                 });
             });
         });
