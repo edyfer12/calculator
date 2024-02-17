@@ -103,6 +103,7 @@ function display(){
                 //Remove the comma between the numbers and display the number on a text box
                 output.value = firstNumber.join("");
                 //Store the output's value into the variable that saves the first number's item joined
+                //Convert to a number
                 operandFirst = output.value;
             }
             //Populate the numbers in the second number array that occur after operation if operator is clicked
@@ -111,6 +112,7 @@ function display(){
                 //Remove the comma between the numbers and display the number on a text box
                 output.value = secondNumber.join('');
                 //Store the output's value into the variable that saves the second number's item joined together
+                //Convert to a number
                 operandSecond = output.value;
             }
         });
