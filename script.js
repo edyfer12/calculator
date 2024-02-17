@@ -77,7 +77,9 @@ function display(){
                 operator.addEventListener('click', () =>{
                 //Declare an array that store in the digits after the operator button is pressed 
                 const secondNumber = [];
-                    //and the number is clicked
+                //If the number is clicked,
+                    //Push the item into the second array
+                    //Display all the digits joined from the second array on the textbox 
                 });
             });
         });
