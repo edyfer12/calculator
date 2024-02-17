@@ -111,7 +111,7 @@ function display(){
                 operandSecond = +output.value;
             }
         });
-        
+        });
         //If a user clicks an equal button, 
         equal.addEventListener('click', () => {
             //If user has clicked a minus operator,
@@ -151,7 +151,7 @@ function display(){
                 console.log(operatorName);
             })
         });
-    });
+    
     
 }
 //Add a function call to execute an task responsible for displaying value on the calculator
