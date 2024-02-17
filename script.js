@@ -50,6 +50,6 @@ function display(){
     //a group of buttons that are just numbers from 0 to 9
     const numbers = document.querySelectorAll('.small.numbers');
     //Capture the reference to the text box so the number gets outputted to the user
-    const display = document.querySelector('#display'); 
+    const output = document.querySelector('#display'); 
         //If a user clicks on a button that is a number, display the number on a text box
 }
