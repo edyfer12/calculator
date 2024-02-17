@@ -47,7 +47,9 @@ function operate(firstNumber,secondNumber, operator){
 //Create an object that stores the operators. Each operator is a method
 const operators = {
     //Add a property for the first number and set value to the first number entered in the calculator
+    num1: operandFirst,
     //Add a property for the second number and set value to the second number entered in the calculator
+    num2: operandSecond,
     //Set the add method and the value is num1 + num2
     add: function(num1,num2){
         return num1 + num2;
