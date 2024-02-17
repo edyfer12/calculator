@@ -88,6 +88,19 @@ function display(){
                 operandSecond = output.value;
             }
         });
+        //If a user clicks an equal button, 
+            //If user has clicked a minus operator,
+                //Use the object method to subtract numbers between the operator
+                //Display the final result on the textbox
+            //If user has clicked a plus operator,
+                //Use the object method to add numbers between the operator
+                //Display the final result on the textbox
+            //If user has clicked a multiply operator,
+                //Use the object method to multiply numbers between the operator
+                //Display the final result on the textbox
+            //If user has clicked a divide operator,
+                //Use the object method to divide numbers between the operator
+                //Display the final result on the textbox
         //For each operator button in the operators nodelist,
         operators.forEach((operator) => {
             //When the operator is clicked,
