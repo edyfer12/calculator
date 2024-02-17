@@ -52,5 +52,7 @@ function display(){
     //Capture the reference to the text box so the number gets outputted to the user
     const output = document.querySelector('#display'); 
     //For each number button in the numbers nodelist,
+    numbers.forEach((number) => {
         //If a user clicks on a number button, display the number on a text box
+    });
 }
