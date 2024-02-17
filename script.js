@@ -83,6 +83,7 @@ function display(){
     //Create variable that is able to store in the name of operator button
     let operatorName;
     //Declare an array that stores the operator and operands
+    const arithmetic = [];
 
     //For each number button in the numbers nodelist,
     numbers.forEach((number) => {
