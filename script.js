@@ -54,6 +54,7 @@ function display(){
     //Create an array that will be used to store multiple numbers in one container. The numbers in an array will
     //be used for displaying multiple digits on a textbox
     const firstNumber = [];
+    //Create a variable that saves the first number joined together from the array that stores the first numbers
     //For each number button in the numbers nodelist,
     numbers.forEach((number) => {
         //If a user clicks on a number button, 
@@ -62,8 +63,28 @@ function display(){
             firstNumber.push(number.textContent);
             //Remove the comma between the numbers and display the number on a text box
             output.value = firstNumber.join("");
+            //Store the output's value into the variable that saves the first number's item joined
         });
     });
+    //Convert the value of the variable consisting of first numbers into an integer
+    //Create an array that will store numbers which is the second number after user clicks on an operator
+    //Create a variable and store reference to the operator buttons
+    //Create a variable that is able to store the value of the operator button
+    //Create a variable that is able to store the joined items of the second numbers array
+    //Loop through the nodelist that contains the operators where user decides to perform a calculation,
+        //If the user clicks on one of the operators,
+            //Store the value of the operator button into the variable created 
+            //Loop through the numbers nodelist,
+                //If the number is clicked,
+                    //Populate the number that is of the second number array
+                    //Display the number on the text box with the comma removed between the numbers
+                    //Store the joined value of the second array into the variable 
+    //Capture the reference to the equal button
+    //Convert the 
+    //If the user clicks on the equal button, 
+        //If the button clicked is an '+' sign,
+            //Add two numbers together
+            //Display the output on the textbox showing the total of two numbers added
 }
 //Add a function call to execute an task responsible for displaying value on the calculator
 display();
