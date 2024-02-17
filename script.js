@@ -126,7 +126,7 @@ function display(){
                 //Use the object method to add numbers between the operator
                 operator.add(operandFirst,operandSecond);
                 //Display the final result on the textbox
-                output.value = operators.add(operandFirst,operandSecond);
+                output.value = operator.add(operandFirst,operandSecond);
             }
             //If user has clicked a multiply operator,
             else if(operatorName === '*'){
