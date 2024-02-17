@@ -58,24 +58,26 @@ function display(){
     let operandFirst;
     //Declare a variable that capture the reference to the operator buttons
     let operators = document.querySelectorAll('.small.operators');
-    //Declare an array that store in the digits after the operator button is pressed 
-    const secondNumber = [];
+    
     //For each number button in the numbers nodelist,
     numbers.forEach((number) => {
         //If a user clicks on a number button, 
         number.addEventListener('click', () => {
-            //Populate the numbers in an array that stores numbers
-            firstNumber.push(number.textContent);
+            //Populate the numbers in an array that stores numbers if the second numbers array does not exist
+            if(!secondNumber){
+                firstNumber.push(number.textContent);
+            }
             //Remove the comma between the numbers and display the number on a text box
-            //If the value of the second numbers array does not exist, display the output value
             output.value = firstNumber.join("");
             //Store the output's value into the variable that saves the first number's item joined
             operandFirst = output.value;
             //For each operator button in the operators nodelist,
             operators.forEach((operator) => {
+                //Declare an array that store in the digits after the operator button is pressed 
+                const secondNumber = [];
                 //If the operator button is clicked,
                 operator.addEventListener('click', () =>{
-                    
+                    //and the number is clicked
                 });
             });
         });
