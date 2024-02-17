@@ -59,6 +59,7 @@ function display(){
         //If a user clicks on a number button, display the number on a text box
         number.addEventListener('click', () => {
             //Populate the numbers in an array that stores numbers
+            arrNumbers.push(number);
             output.value = number.textContent;
         });
     });
