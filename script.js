@@ -65,6 +65,7 @@ function display(){
         //If a user clicks on a number button, 
         number.addEventListener('click', () => {
             //Populate the numbers in a first number array that stores digits that occurs before operation
+            //if operator is not clicked
             firstNumber.push(number.textContent);
             //Remove the comma between the numbers and display the number on a text box
             output.value = firstNumber.join("");
