@@ -75,14 +75,15 @@ function display(){
             output.value = firstNumber.join("");
             //Store the output's value into the variable that saves the first number's item joined
             operandFirst = output.value;
-            //For each operator button in the operators nodelist,
-            operators.forEach((operator) => {
-                //When the operator is clicked,
-                operator.addEventListener('click', () => {
-                    //Indicate to the user that the operator is clicked
-                    operatorClicked = true;
-                })
-            });
+            
+        });
+        //For each operator button in the operators nodelist,
+        operators.forEach((operator) => {
+            //When the operator is clicked,
+            operator.addEventListener('click', () => {
+                //Indicate to the user that the operator is clicked
+                operatorClicked = true;
+            })
         });
     });
     
