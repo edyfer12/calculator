@@ -104,7 +104,7 @@ function display(){
                 output.value = firstNumber.join("");
                 //Store the output's value into the variable that saves the first number's item joined
                 //Convert to a number
-                operandFirst = output.value;
+                operandFirst = +output.value;
             }
             //Populate the numbers in the second number array that occur after operation if operator is clicked
             else {
@@ -113,7 +113,7 @@ function display(){
                 output.value = secondNumber.join('');
                 //Store the output's value into the variable that saves the second number's item joined together
                 //Convert to a number
-                operandSecond = output.value;
+                operandSecond = +output.value;
             }
         });
         //If a user clicks an equal button, 
