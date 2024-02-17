@@ -43,7 +43,25 @@ function operate(firstNumber,secondNumber, operator){
         break;
     }
 }
-
+//Create an object that stores the operators. Each operator is a method
+const operator = {
+    //Set the add method and the value is num1 + num2
+    add: function(num1,num2){
+        return num1 + num2;
+    },
+    //Set the minus method and the value is num1 - num2
+    minus: function(num1,num2){
+        return num1 - num2;
+    },
+    //Set the multiply method and the value is num1 * num2
+    multiply: function(num1, num2){
+        return num1 * num2;
+    },
+    //Set the divide method and the value is num1 / num2
+    divide: function(num1,num2){
+        return num1 / num2;
+    }
+};
 //Create a function that will be used to display the numbers on the small screen above the calculator
 function display(){
     //Capture the reference to the buttons where class name is "small numbers". This is aimed to capture
@@ -66,25 +84,6 @@ function display(){
     const equal = document.querySelector('.small.equal');
     //Create variable that is able to store in the name of operator button
     let operatorName;
-    //Create an object that stores the operators. Each operator is a method
-    const operator = {
-        //Set the add method and the value is num1 + num2
-        add: function(num1,num2){
-            return num1 + num2;
-        },
-        //Set the minus method and the value is num1 - num2
-        minus: function(num1,num2){
-            return num1 - num2;
-        },
-        //Set the multiply method and the value is num1 * num2
-        multiply: function(num1, num2){
-            return num1 * num2;
-        },
-        //Set the divide method and the value is num1 / num2
-        divide: function(num1,num2){
-            return num1 / num2;
-        }
-    };
 
     //For each number button in the numbers nodelist,
     numbers.forEach((number) => {
