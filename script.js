@@ -67,7 +67,6 @@ function display(){
             if(!secondNumber){
                 firstNumber.push(number.textContent);
             }
-            //If the first array does exist, push the number in the second array
             //Remove the comma between the numbers and display the number on a text box
             output.value = firstNumber.join("");
             //Store the output's value into the variable that saves the first number's item joined
