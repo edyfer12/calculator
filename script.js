@@ -85,8 +85,6 @@ function display(){
                 //Store the output's value into the variable that saves the second number's item joined together
                 operandSecond = output.value;
             }
-            
-            
         });
         //For each operator button in the operators nodelist,
         operators.forEach((operator) => {
