@@ -52,7 +52,7 @@ const operators = {
     num2: operandSecond,
     //Set the add method and the value is num1 + num2
     add: function(num1,num2){
-        return num1 + num2;
+        return this.num1 + this.num2;
     },
     //Set the minus method and the value is num1 - num2
     minus: function(num1,num2){
