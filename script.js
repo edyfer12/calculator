@@ -149,6 +149,7 @@ function display(){
             //Store in the operator name
             operatorName = operator.textContent;
             //Push the operator in the arithmetic array
+            arithmetic.push(operatorName);
             //Output the value on the text box
             console.log(operatorName);
         })
