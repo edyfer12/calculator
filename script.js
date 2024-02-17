@@ -59,6 +59,7 @@ function display(){
     //Declare a variable that capture the reference to the operator buttons
     let operators = document.querySelectorAll('.small.operators');
     //Declare an array that store in the digits after the operator button is pressed 
+    const secondNumber = [];
     //For each number button in the numbers nodelist,
     numbers.forEach((number) => {
         //If a user clicks on a number button, 
