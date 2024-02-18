@@ -64,7 +64,7 @@ function display(){
     //Loop through the nodelist for the number buttons from 0 to 9,
     numbers.forEach((digit) => {
         //If a user clicks on a number button, 
-        number.addEventListener('click', () => {
+        digit.addEventListener('click', () => {
             //Push digit into digits array
             //Join the digits from the array with '' converted to number and assign to firstNumber variable
             //Output the value of firstNumber variable onto the textbox
