@@ -67,17 +67,8 @@ function display(){
     const numbers = document.querySelectorAll('.small.numbers');
     //Capture the reference to the text box so the number gets outputted to the user
     const output = document.querySelector('#display'); 
-    //Create an array that will be used to store multiple numbers in one container. The numbers in an array will
-    //be used for displaying multiple digits on a textbox
-    const firstNumber = [];
-    //Create a variable that saves the first number joined together from the array that stores the first numbers
-    let operandFirst;
     //Declare a variable that capture the reference to the operator buttons
     let operators = document.querySelectorAll('.small.operators');
-    //Declare an array that stores the series of digits that occur after the operation
-    const secondNumber = [];
-    //Create variable where it stores the second operand 
-    let operandSecond;
     //Create variable that captures the reference to the equals sign button
     const equal = document.querySelector('.small.equal');
     //Create variable that is able to store in the name of operator button
@@ -89,26 +80,7 @@ function display(){
     numbers.forEach((number) => {
         //If a user clicks on a number button, 
         number.addEventListener('click', () => {
-            //Check if the arithmetic array has an operator sign
-            //If not, 
-            if(!arithmetic.includes(operatorName)){
-                //Populate the numbers in a first number array that stores digits that occurs
-                firstNumber.push(number.textContent);
-                //Remove the comma between the numbers and display the number on a text box
-                output.value = firstNumber.join("");
-                console.log("o = " + output.value);
-                
-            }
-            //If so,
-            else {
-                //Populate the numbers in the second number array that occur after operation
-                secondNumber.push(number.textContent);
-                //Remove the comma between the numbers and display the number on a text box
-                output.value = secondNumber.join('');
-                //Store the output's value into the variable that saves the second number's item joined together
-                //Convert to a number
-                operandSecond = +output.value;
-            }
+            
         });
     });
     //If a user clicks an equal button, 
@@ -119,26 +91,7 @@ function display(){
     operators.forEach((operator) => {
         //When the operator is clicked,
         operator.addEventListener('click', () => {
-            //Push the number before the operator into the arithmetic array
-            //If the arithmetic does not have an operator,
-            if(!arithmetic.includes(operatorName)){
-                //Store the output's value into the variable that saves the first number's item joined
-                //Convert to a number
-                operandFirst = +output.value;
-                arithmetic.push(operandFirst);
-                //console.log(arithmetic);
-            }
-            //If the arithmetic does have the operator push the operand after the operator
-            else{
-                arithmetic.push(operandSecond);
-            }
-            //Store in the operator name
-            operatorName = operator.textContent;
-            //Push the operator in the arithmetic array
-            arithmetic.push(operatorName);
-            console.log(arithmetic);
-            //Output the value on the text box
-            console.log(operatorName);
+            
         })
     });
     
