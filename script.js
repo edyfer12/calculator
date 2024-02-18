@@ -106,19 +106,26 @@ function display(){
         operator.addEventListener('click', () => {
             //Pop all digits in the digits array
             digits.splice(0,digits.length);
-            //Assign the text content of the operator button into the operatorName variable
-            operatorName = operator.textContent;
             //If the arithmetic item does not include a first number or arithmetic item
             if(!arithmetic.includes(firstNumber)){
+                //Push the first number into the array
                 arithmetic.push(firstNumber);
+                //Assign the text content of the operator button into the operatorName variable
+                operatorName = operator.textContent;
+                //Push the operator into the array
+                arithmetic.push(operatorName);
             }
             //If the arithmetic item, operator is the last index and item, first number is one before the last index,
             else if(arithmetic.indexOf(operatorName) === arithmetic.length - 1 && 
             arithmetic.indexOf(firstNumber) === arithmetic.length - 2){
                 //Push the arithmetic array with the second number
                 arithmetic.push(secondNumber);
+                //Assign the text content of the operator button into the operatorName variable
+                operatorName = operator.textContent;
+                //Push the operator into the array
+                arithmetic.push(operatorName);
             } 
-            arithmetic.push(operatorName);
+            console.log(arithmetic);
         })
     });
     
