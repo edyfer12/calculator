@@ -107,6 +107,7 @@ function display(){
             //If the second number variable exists,
             if(secondNumber){
                 //Push the arithmetic array with the second number
+                arithmetic.push(secondNumber);
             }
         })
     });
