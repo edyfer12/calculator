@@ -83,6 +83,7 @@ function display(){
                 //Join the digits together with '' converted to number and assign to secondNumber variable
                 secondNumber = +digits.join('');
                 //Output the value of secondNumber variable onto the textbox
+                output.value = secondNumber;
             }
         });
     });
