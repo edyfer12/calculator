@@ -94,6 +94,8 @@ function display(){
             //Assign the text content of the operator button into the operatorName variable
             operatorName = operator.textContent;
             //Push the first number and operator name into arithmetic array
+            arithmetic.push(firstNumber);
+            arithmetic.push(operatorName);
         })
     });
     
