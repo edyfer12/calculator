@@ -106,7 +106,8 @@ function display(){
         operator.addEventListener('click', () => {
             //Pop all digits in the digits array
             digits.splice(0,digits.length);
-            //If the arithmetic item does not include a first number or arithmetic item
+            //If the arithmetic item does not include a first number or arithmetic item, operator has an index of last index
+            //and second number has a one before last index
             if(!arithmetic.includes(firstNumber)){
                 //Push the first number into the array
                 arithmetic.push(firstNumber);
