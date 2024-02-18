@@ -113,8 +113,6 @@ function display(){
                 arithmetic.push(firstNumber);
             }
             //If the arithmetic item, operator is the last index and item, first number is one before the last index,
-            if(secondNumber){
-            //If the arithmetic item, operator is the last index and item, first number is one before the last index,
             else if(arithmetic.indexOf(operatorName) === arithmetic.length - 1 && 
             arithmetic.indexOf(firstNumber) === arithmetic.length - 2){
                 //Push the arithmetic array with the second number
