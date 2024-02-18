@@ -59,7 +59,7 @@ function display(){
     //Declare an array that stores the operator and operands
     const arithmetic = [];
 
-    //For each number button in the numbers nodelist,
+    //Loop through the nodelist for the number buttons from 0 to 9,
     numbers.forEach((number) => {
         //If a user clicks on a number button, 
         number.addEventListener('click', () => {
@@ -70,7 +70,7 @@ function display(){
     equal.addEventListener('click', () => {
         output.value = operate(operandFirst,operandSecond, operatorName);
     });
-    //For each operator button in the operators nodelist,
+    //Loop through the nodelist of operator buttons +-/*,
     operators.forEach((operator) => {
         //When the operator is clicked,
         operator.addEventListener('click', () => {
