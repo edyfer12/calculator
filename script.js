@@ -89,6 +89,7 @@ function display(){
                 //Push the digits into the digits array
                 digits.push(digit.textContent);
                 //Join the digits together with '' converted to number and assign to firstNumber variable
+                firstNumber = +digits.join('');
                 //Output the value of firstNumber variable onto the textbox
             }
         });
