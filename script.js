@@ -58,12 +58,15 @@ function display(){
     let operatorName;
     //Declare an array that stores the operator and operands
     const arithmetic = [];
+    //Create an array called digits that stores digits in one container
 
     //Loop through the nodelist for the number buttons from 0 to 9,
     numbers.forEach((number) => {
         //If a user clicks on a number button, 
         number.addEventListener('click', () => {
-            
+            //Push digit into digits array
+            //Join the digits from the array with '' converted to number and assign to firstNumber variable
+            //Output the value of firstNumber variable onto the textbox
         });
     });
     //If a user clicks an equal button, 
