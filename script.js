@@ -81,6 +81,7 @@ function display(){
                 //Push new digits into the digits array
                 digits.push(digit.textContent);
                 //Join the digits together with '' converted to number and assign to secondNumber variable
+                secondNumber = +digits.join('');
                 //Output the value of secondNumber variable onto the textbox
             }
         });
