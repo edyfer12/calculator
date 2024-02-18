@@ -75,7 +75,8 @@ function display(){
                 output.value = firstNumber;
             }
             //If the operator in an arithmetic array is an index of last index and first number is one index before last index, 
-            else if(arithmetic.includes(firstNumber) && arithmetic.includes(operatorName)){
+            else if(arithmetic.indexOf(arithmetic.length - 1) === operatorName &&
+            arithmetic.indexOf(arithmetic.length - 2) === firstNumber){
                 //Push new digits into the digits array
                 digits.push(digit.textContent);
                 //Join the digits together with '' converted to number and assign to secondNumber variable
@@ -84,8 +85,8 @@ function display(){
                 output.value = secondNumber;
             }
             //If the operator in an arithmetic array is an index of last index and second number is one index before last index, 
-            else if(arithmetic.includes(firstNumber) && arithmetic.includes(operatorName) 
-            && arithmetic.includes(secondNumber)){
+            else if(arithmetic.indexOf(arithmetic.length - 1) === operatorName &&
+            arithmetic.indexOf(arithmetic.length - 2) === secondNumber){
                 //Push the digits into the digits array
                 digits.push(digit.textContent);
                 //Join the digits together with '' converted to number and assign to firstNumber variable
