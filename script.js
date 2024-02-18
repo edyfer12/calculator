@@ -92,6 +92,7 @@ function display(){
         //When the operator is clicked,
         operator.addEventListener('click', () => {
             //Assign the text content of the operator button into the operatorName variable
+            operatorName = operator.textContent;
             //Push the first number and operator name into arithmetic array
         })
     });
