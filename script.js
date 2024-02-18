@@ -74,7 +74,7 @@ function display(){
                 //Output the value of firstNumber variable onto the textbox
                 output.value = firstNumber;
             }
-            //If the arithmetic array contains first number and operator,
+            //If the operator in an arithmetic array is an index of last index and first number is one index before last index, 
             else if(arithmetic.includes(firstNumber) && arithmetic.includes(operatorName)){
                 //Push new digits into the digits array
                 digits.push(digit.textContent);
@@ -83,7 +83,7 @@ function display(){
                 //Output the value of secondNumber variable onto the textbox
                 output.value = secondNumber;
             }
-            //If the arithmetic array includes the first number, operator and second number
+            //If the operator in an arithmetic array is an index of last index and second number is one index before last index, 
             else if(arithmetic.includes(firstNumber) && arithmetic.includes(operatorName) 
             && arithmetic.includes(secondNumber)){
                 //Push the digits into the digits array
