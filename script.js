@@ -75,8 +75,8 @@ function display(){
                 output.value = firstNumber;
             }
             //If the operator in an arithmetic array is an index of last index and first number is one index before last index, 
-            else if(arithmetic.indexOf(arithmetic.length - 1) === operatorName &&
-            arithmetic.indexOf(arithmetic.length - 2) === firstNumber){
+            else if(arithmetic.indexOf(operatorName) === arithmetic.length - 1 &&
+            arithmetic.indexOf(firstNumber) === arithmetic.length - 2){
                 //Push new digits into the digits array
                 digits.push(digit.textContent);
                 //Join the digits together with '' converted to number and assign to secondNumber variable
@@ -85,8 +85,8 @@ function display(){
                 output.value = secondNumber;
             }
             //If the operator in an arithmetic array is an index of last index and second number is one index before last index, 
-            else if(arithmetic.indexOf(arithmetic.length - 1) === operatorName &&
-            arithmetic.indexOf(arithmetic.length - 2) === secondNumber){
+            else if(arithmetic.indexOf(operatorName) === arithmetic.length - 1 &&
+            arithmetic.indexOf(secondNumber) === arithmetic.length - 2){
                 //Push the digits into the digits array
                 digits.push(digit.textContent);
                 //Join the digits together with '' converted to number and assign to firstNumber variable
@@ -110,7 +110,7 @@ function display(){
             operatorName = operator.textContent;
             //If the arithmetic item does not include a first number or arithmetic item, second number
             //has an index of last index, then push first number into the arithmetic array
-            if(arithmetic.indexOf(arithmetic.length - 1) === secondNumber || 
+            if(arithmetic.indexOf(secondNumber) === arithmetic.length - 1 || 
             !arithmetic.includes(firstNumber)){
                 arithmetic.push(firstNumber);
             }
