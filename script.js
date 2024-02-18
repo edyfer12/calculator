@@ -32,11 +32,11 @@ function operate(firstNumber,secondNumber, operator){
         return subtract(firstNumber,secondNumber);
         break;
     //If a user inputs two numbers and clicks a * button, call the multiply function
-        case '*':
+        case 'X':
         return multiply(firstNumber, secondNumber);
         break;
     //If a user inputs two numbers and clicks a / button, call the divide function
-        case '/':
+        case '÷':
         return divide(firstNumber, secondNumber);
         break;
     }
