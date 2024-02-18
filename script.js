@@ -114,7 +114,7 @@ function display(){
             !arithmetic.includes(firstNumber)){
                 arithmetic.push(firstNumber);
             }
-            //If the second number variable exists,
+            //If the arithmetic item, operator is the last index and item, first number is one before the last index,
             if(secondNumber){
                 //Push the arithmetic array with the second number
                 arithmetic.push(secondNumber);
