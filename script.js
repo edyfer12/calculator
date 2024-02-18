@@ -62,7 +62,7 @@ function display(){
     const digits = [];
 
     //Loop through the nodelist for the number buttons from 0 to 9,
-    numbers.forEach((number) => {
+    numbers.forEach((digit) => {
         //If a user clicks on a number button, 
         number.addEventListener('click', () => {
             //Push digit into digits array
