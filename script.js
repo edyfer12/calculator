@@ -75,7 +75,7 @@ function display(){
     });
     //If a user clicks an equal button, 
     equal.addEventListener('click', () => {
-        output.value = operate(operandFirst,operandSecond, operatorName);
+        output.value = operate(firstNumber,secondNumber,operatorName);
     });
     //Loop through the nodelist of operator buttons +-/*,
     operators.forEach((operator) => {
