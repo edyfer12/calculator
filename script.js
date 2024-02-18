@@ -114,12 +114,12 @@ function display(){
             !arithmetic.includes(firstNumber)){
                 arithmetic.push(firstNumber);
             }
-            arithmetic.push(operatorName);
             //If the second number variable exists,
             if(secondNumber){
                 //Push the arithmetic array with the second number
                 arithmetic.push(secondNumber);
-            }
+            } 
+            arithmetic.push(operatorName);
         })
     });
     
