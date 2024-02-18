@@ -87,29 +87,29 @@ function display(){
 
     //For each number button in the numbers nodelist,
     numbers.forEach((number) => {
-            //If a user clicks on a number button, 
-            number.addEventListener('click', () => {
-                //Check if the arithmetic array has an operator sign
-                //If not, 
-                if(!arithmetic.includes(operatorName)){
-                    //Populate the numbers in a first number array that stores digits that occurs
-                    firstNumber.push(number.textContent);
-                    //Remove the comma between the numbers and display the number on a text box
-                    output.value = firstNumber.join("");
-                    console.log("o = " + output.value);
-                    
-                }
-                //If so,
-                else {
-                    //Populate the numbers in the second number array that occur after operation
-                    secondNumber.push(number.textContent);
-                    //Remove the comma between the numbers and display the number on a text box
-                    output.value = secondNumber.join('');
-                    //Store the output's value into the variable that saves the second number's item joined together
-                    //Convert to a number
-                    operandSecond = +output.value;
-                }
-            });
+        //If a user clicks on a number button, 
+        number.addEventListener('click', () => {
+            //Check if the arithmetic array has an operator sign
+            //If not, 
+            if(!arithmetic.includes(operatorName)){
+                //Populate the numbers in a first number array that stores digits that occurs
+                firstNumber.push(number.textContent);
+                //Remove the comma between the numbers and display the number on a text box
+                output.value = firstNumber.join("");
+                console.log("o = " + output.value);
+                
+            }
+            //If so,
+            else {
+                //Populate the numbers in the second number array that occur after operation
+                secondNumber.push(number.textContent);
+                //Remove the comma between the numbers and display the number on a text box
+                output.value = secondNumber.join('');
+                //Store the output's value into the variable that saves the second number's item joined together
+                //Convert to a number
+                operandSecond = +output.value;
+            }
+        });
     });
     //If a user clicks an equal button, 
     equal.addEventListener('click', () => {
