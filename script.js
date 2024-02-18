@@ -81,7 +81,7 @@ function display(){
     operators.forEach((operator) => {
         //When the operator is clicked,
         operator.addEventListener('click', () => {
-            
+            //Assign the text content of the operator button into the variable
         })
     });
     
