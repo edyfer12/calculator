@@ -108,14 +108,13 @@ function display(){
             digits.splice(0,digits.length);
             //Assign the text content of the operator button into the operatorName variable
             operatorName = operator.textContent;
-            //If the arithmetic item does not include a first number or arithmetic item, second number
-            //has an index of last index, then push first number into the arithmetic array
-            if(arithmetic.indexOf(secondNumber) === arithmetic.length - 1 || 
-            !arithmetic.includes(firstNumber)){
+            //If the arithmetic item does not include a first number or arithmetic item
+            if(!arithmetic.includes(firstNumber)){
                 arithmetic.push(firstNumber);
             }
             //If the arithmetic item, operator is the last index and item, first number is one before the last index,
-            if(secondNumber){
+            if(arithmetic.indexOf(operatorName) === arithmetic.length - 1 && 
+            arithmetic.indexOf(firstNumber) === arithmetic.length - 2){
                 //Push the arithmetic array with the second number
                 arithmetic.push(secondNumber);
             } 
