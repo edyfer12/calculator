@@ -108,7 +108,8 @@ function display(){
             digits.splice(0,digits.length);
             //Assign the text content of the operator button into the operatorName variable
             operatorName = operator.textContent;
-            //Push the first number and operator name into arithmetic array
+            //If the arithmetic item does not include a first number or arithmetic item, second number
+            //has an index of last index, then push first number into the arithmetic array
             arithmetic.push(firstNumber);
             arithmetic.push(operatorName);
             //If the second number variable exists,
