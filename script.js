@@ -76,8 +76,6 @@ function display(){
             }
             //If the arithmetic array contains first number and operator,
             else if(arithmetic.includes(firstNumber) && arithmetic.includes(operatorName)){
-                //Pop all digits in the digits array
-                digits.splice(0,digits.length);
                 //Push new digits into the digits array
                 digits.push(digit.textContent);
                 //Join the digits together with '' converted to number and assign to secondNumber variable
@@ -95,6 +93,8 @@ function display(){
     operators.forEach((operator) => {
         //When the operator is clicked,
         operator.addEventListener('click', () => {
+            //Pop all digits in the digits array
+            digits.splice(0,digits.length);
             //Assign the text content of the operator button into the operatorName variable
             operatorName = operator.textContent;
             //Push the first number and operator name into arithmetic array
