@@ -91,6 +91,7 @@ function display(){
                 //Join the digits together with '' converted to number and assign to firstNumber variable
                 firstNumber = +digits.join('');
                 //Output the value of firstNumber variable onto the textbox
+                output.value = firstNumber;
             }
         });
     });
