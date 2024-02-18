@@ -87,6 +87,7 @@ function display(){
             else if(arithmetic.includes(firstNumber) && arithmetic.includes(operatorName) 
             && arithmetic.includes(secondNumber)){
                 //Push the digits into the digits array
+                digits.push(digit.textContent);
                 //Join the digits together with '' converted to number and assign to firstNumber variable
                 //Output the value of firstNumber variable onto the textbox
             }
