@@ -84,9 +84,12 @@ function display(){
                 output.value = secondNumber;
             }
             //If the arithmetic array includes the first number, operator and second number
+            else if(arithmetic.includes(firstNumber) && arithmetic.includes(operatorName) 
+            && arithmetic.includes(secondNumber)){
                 //Push the digits into the digits array
                 //Join the digits together with '' converted to number and assign to firstNumber variable
                 //Output the value of firstNumber variable onto the textbox
+            }
         });
     });
     //If a user clicks an equal button, 
