@@ -66,12 +66,14 @@ function display(){
         //If a user clicks on a number button, 
         digit.addEventListener('click', () => {
             //If the arithmetic array has no first number,
-            //Push digit into digits array
-            digits.push(digit.textContent);
-            //Join the digits from the array with '' converted to number and assign to firstNumber variable
-            firstNumber = +digits.join('');
-            //Output the value of firstNumber variable onto the textbox
-            output.value = firstNumber;
+            if(!arithmetic.includes(firstNumber)){
+                //Push digit into digits array
+                digits.push(digit.textContent);
+                //Join the digits from the array with '' converted to number and assign to firstNumber variable
+                firstNumber = +digits.join('');
+                //Output the value of firstNumber variable onto the textbox
+                output.value = firstNumber;
+            }
             //If the arithmetic array contains first number and operator,
                 //Pop all digits in the digits array
                 //Push new digits into the digits array
