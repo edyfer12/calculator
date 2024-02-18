@@ -65,12 +65,18 @@ function display(){
     numbers.forEach((digit) => {
         //If a user clicks on a number button, 
         digit.addEventListener('click', () => {
+            //If the arithmetic array has no first number,
             //Push digit into digits array
             digits.push(digit.textContent);
             //Join the digits from the array with '' converted to number and assign to firstNumber variable
             firstNumber = +digits.join('');
             //Output the value of firstNumber variable onto the textbox
             output.value = firstNumber;
+            //If the arithmetic array contains first number and operator,
+                //Pop all digits in the digits array
+                //Push new digits into the digits array
+                //Join the digits together with '' converted to number and assign to secondNumber variable
+                //Output the value of secondNumber variable onto the textbox
         });
     });
     //If a user clicks an equal button, 
@@ -82,6 +88,7 @@ function display(){
         //When the operator is clicked,
         operator.addEventListener('click', () => {
             //Assign the text content of the operator button into the operatorName variable
+            //Push the first number and operator name into arithmetic array
         })
     });
     
