@@ -59,6 +59,7 @@ function display(){
     //Declare an array that stores the operator and operands
     const arithmetic = [];
     //Create an array called digits that stores digits in one container
+    const digits = [];
 
     //Loop through the nodelist for the number buttons from 0 to 9,
     numbers.forEach((number) => {
