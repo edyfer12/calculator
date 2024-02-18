@@ -75,10 +75,12 @@ function display(){
                 output.value = firstNumber;
             }
             //If the arithmetic array contains first number and operator,
+            else if(arithmetic.includes(firstNumber) && arithmetic.includes(operatorName)){
                 //Pop all digits in the digits array
                 //Push new digits into the digits array
                 //Join the digits together with '' converted to number and assign to secondNumber variable
                 //Output the value of secondNumber variable onto the textbox
+            }
         });
     });
     //If a user clicks an equal button, 
