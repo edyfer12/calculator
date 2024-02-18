@@ -83,6 +83,10 @@ function display(){
                 //Output the value of secondNumber variable onto the textbox
                 output.value = secondNumber;
             }
+            //If the arithmetic array includes the first number, operator and second number
+                //Push the digits into the digits array
+                //Join the digits together with '' converted to number and assign to firstNumber variable
+                //Output the value of firstNumber variable onto the textbox
         });
     });
     //If a user clicks an equal button, 
@@ -100,6 +104,8 @@ function display(){
             //Push the first number and operator name into arithmetic array
             arithmetic.push(firstNumber);
             arithmetic.push(operatorName);
+            //If the second number variable exists,
+                //Push the arithmetic array with the second number
         })
     });
     
