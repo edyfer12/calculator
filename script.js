@@ -15,10 +15,7 @@ function divide(firstNumber, secondNumber){
     return firstNumber / secondNumber;
 }
 
-//Declare a variable called firstNumber that will be used to store the first number
-let firstNumber;
-//Declare a variable called secondNumber that will be used to store the second number
-let secondNumber;
+
 
 //Create a function that will be used to perform a mathematical operation between two numbers
 function operate(firstNumber,secondNumber, operator){
@@ -44,6 +41,10 @@ function operate(firstNumber,secondNumber, operator){
 
 //Create a function that will be used to display the numbers on the small screen above the calculator
 function display(){
+    //Declare a variable called firstNumber that will be used to store the first number
+    let firstNumber;
+    //Declare a variable called secondNumber that will be used to store the second number
+    let secondNumber;
     //Capture the reference to the buttons where class name is "small numbers". This is aimed to capture
     //a group of buttons that are just numbers from 0 to 9
     const numbers = document.querySelectorAll('.small.numbers');
