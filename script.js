@@ -110,7 +110,10 @@ function display(){
             operatorName = operator.textContent;
             //If the arithmetic item does not include a first number or arithmetic item, second number
             //has an index of last index, then push first number into the arithmetic array
-            arithmetic.push(firstNumber);
+            if(arithmetic.indexOf(arithmetic.length - 1) === secondNumber || 
+            !arithmetic.includes(firstNumber)){
+                arithmetic.push(firstNumber);
+            }
             arithmetic.push(operatorName);
             //If the second number variable exists,
             if(secondNumber){
