@@ -88,6 +88,7 @@ function display(){
             //Remove all digits in the digits array
             digits.splice(0,digits.length);
             //Store in the operator button's text content into the operatorName variable
+            operatorName = operator.textContent;
         });
     });
     
