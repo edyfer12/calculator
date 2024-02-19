@@ -60,40 +60,12 @@ function display(){
     const arithmetic = [];
     //Create an array called digits that stores digits in one container
     const digits = [];
-
+    
     //Loop through the nodelist for the number buttons from 0 to 9,
     numbers.forEach((digit) => {
         //If a user clicks on a number button, 
         digit.addEventListener('click', () => {
-            //If the arithmetic array has no first number,
-            if(!arithmetic.includes(firstNumber)){
-                //Push digit into digits array
-                digits.push(digit.textContent);
-                //Join the digits from the array with '' converted to number and assign to firstNumber variable
-                firstNumber = +digits.join('');
-                //Output the value of firstNumber variable onto the textbox
-                output.value = firstNumber;
-            }
-            //If the operator in an arithmetic array is an index of last index and first number is one index before last index, 
-            else if(arithmetic.indexOf(operatorName) === arithmetic.length - 1 &&
-            arithmetic.indexOf(firstNumber) === arithmetic.length - 2){
-                //Push new digits into the digits array
-                digits.push(digit.textContent);
-                //Join the digits together with '' converted to number and assign to secondNumber variable
-                secondNumber = +digits.join('');
-                //Output the value of secondNumber variable onto the textbox
-                output.value = secondNumber;
-            }
-            //If the operator in an arithmetic array is an index of last index and second number is one index before last index, 
-            else if(arithmetic.indexOf(operatorName) === arithmetic.length - 1 &&
-            arithmetic.indexOf(secondNumber) === arithmetic.length - 2){
-                //Push the digits into the digits array
-                digits.push(digit.textContent);
-                //Join the digits together with '' converted to number and assign to firstNumber variable
-                firstNumber = +digits.join('');
-                //Output the value of firstNumber variable onto the textbox
-                output.value = firstNumber;
-            }
+        
         });
     });
     //If a user clicks an equal button, 
@@ -104,30 +76,8 @@ function display(){
     operators.forEach((operator) => {
         //When the operator is clicked,
         operator.addEventListener('click', () => {
-            //Pop all digits in the digits array
-            digits.splice(0,digits.length);
-            //If the arithmetic item does not include a first number or arithmetic item, operator has an index of last index
-            //and second number has a one before last index
-            if(!arithmetic.includes(firstNumber)){
-                //Push the first number into the array
-                arithmetic.push(firstNumber);
-                //Assign the text content of the operator button into the operatorName variable
-                operatorName = operator.textContent;
-                //Push the operator into the array
-                arithmetic.push(operatorName);
-            }
-            //If the arithmetic item, operator is the last index and item, first number is one before the last index,
-            else if(arithmetic.indexOf(operatorName) === arithmetic.length - 1 && 
-            arithmetic.indexOf(firstNumber) === arithmetic.length - 2){
-                //Push the arithmetic array with the second number
-                arithmetic.push(secondNumber);
-                //Assign the text content of the operator button into the operatorName variable
-                operatorName = operator.textContent;
-                //Push the operator into the array
-                arithmetic.push(operatorName);
-            } 
-            console.log(arithmetic);
-        })
+            
+        });
     });
     
     
