@@ -131,6 +131,7 @@ function display(){
     const arithmetic = [];
     //Create an array called digits that stores digits in one container
     const digits = [];
+    //Create a variable that stores in the last index of the arithmetic array
     
     //Loop through the nodelist for the number buttons from 0 to 9,
     numbers.forEach((digit) => {
