@@ -41,25 +41,6 @@ function operate(firstNumber,secondNumber, operator){
 
 //Create a function that will be used to display the numbers on the small screen above the calculator
 function display(){
-    //Declare a variable called firstNumber that will be used to store the first number
-    let firstNumber;
-    //Declare a variable called secondNumber that will be used to store the second number
-    let secondNumber;
-    //Capture the reference to the buttons where class name is "small numbers". This is aimed to capture
-    //a group of buttons that are just numbers from 0 to 9
-    const numbers = document.querySelectorAll('.small.numbers');
-    //Capture the reference to the text box so the number gets outputted to the user
-    const output = document.querySelector('#display'); 
-    //Declare a variable that capture the reference to the operator buttons
-    let operators = document.querySelectorAll('.small.operators');
-    //Create variable that captures the reference to the equals sign button
-    const equal = document.querySelector('.small.equal');
-    //Create variable that is able to store in the name of operator button
-    let operatorName;
-    //Declare an array that stores the operator and operands
-    const arithmetic = [];
-    //Create an array called digits that stores digits in one container
-    const digits = [];
 
     //**********************ALGORITHMS - PERFORM OPERATIONS ON MULTIPLE NUMBERS ********************** */ 
     /*
@@ -130,6 +111,26 @@ function display(){
                         => [123, '+', 1231, '+', 121, '+']
 
     */
+
+    //Declare a variable called firstNumber that will be used to store the first number
+    let firstNumber;
+    //Declare a variable called secondNumber that will be used to store the second number
+    let secondNumber;
+    //Capture the reference to the buttons where class name is "small numbers". This is aimed to capture
+    //a group of buttons that are just numbers from 0 to 9
+    const numbers = document.querySelectorAll('.small.numbers');
+    //Capture the reference to the text box so the number gets outputted to the user
+    const output = document.querySelector('#display'); 
+    //Declare a variable that capture the reference to the operator buttons
+    let operators = document.querySelectorAll('.small.operators');
+    //Create variable that captures the reference to the equals sign button
+    const equal = document.querySelector('.small.equal');
+    //Create variable that is able to store in the name of operator button
+    let operatorName;
+    //Declare an array that stores the operator and operands
+    const arithmetic = [];
+    //Create an array called digits that stores digits in one container
+    const digits = [];
     
     //Loop through the nodelist for the number buttons from 0 to 9,
     numbers.forEach((digit) => {
