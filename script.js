@@ -204,11 +204,15 @@ function display(){
             //If arithmetic array does not include firstNumber,
             if(!arithmetic.includes(firstNumber)){
                 //Push firstNumber into the arithmetic array
-                arithmetic.push(firstNumber);
+                if(firstNumber !== undefined){
+                    arithmetic.push(firstNumber);
+                }
                 //Store the operator button value into the operatorName variable
                 operatorName = operator.textContent;
                 //Push the operatorName variable into the arithmetic array 
-                arithmetic.push(operatorName);
+                if(firstNumber !== undefined){
+                    arithmetic.push(operatorName);
+                }
             }
             //If arithmetic[lastIndex - 1] EQUAL to firstNumber AND arithmetic[lastIndex] equal to operatorName,
             else if(arithmetic[arithmetic.length - 2] === firstNumber && 
