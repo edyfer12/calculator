@@ -191,7 +191,7 @@ function display(){
             arithmetic.push(firstNumber);
         }
         //Push the equal sign into the arithmetic array
-        arithmetic.push(equal);
+        arithmetic.push(equal.textContent);
         //Print the final result to the textbox
         output.value = operate(firstNumber,secondNumber,operatorName);
     });
