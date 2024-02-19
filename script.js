@@ -82,6 +82,7 @@ function display(){
         //When the operator is clicked,
         operator.addEventListener('click', () => {
             //Remove all digits in the digits array
+            digits.splice(0,digits.length);
         });
     });
     
