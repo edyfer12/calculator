@@ -131,8 +131,7 @@ function display(){
     const arithmetic = [];
     //Create an array called digits that stores digits in one container
     const digits = [];
-    //Create a variable that stores in the last index of the arithmetic array
-    let lastIndex = arithmetic.length - 1;
+    
     //Loop through the nodelist for the number buttons from 0 to 9,
     numbers.forEach((digit) => {
         //If a user clicks on a number button, 
@@ -151,7 +150,8 @@ function display(){
                 output.value = firstNumber;
             }
             //If arithmetic[lastIndex - 1] EQUAL to firstNumber and arithmetic[lastIndex] to operatorName,
-            else if(arithmetic[lastIndex - 1] === firstNumber && arithmetic[lastIndex] === operatorName){
+            else if(arithmetic[arithmetic.length - 2] === firstNumber &&
+                arithmetic[arithmetic.length - 1] === operatorName){
                 //Store the value of digits array into the second number variable
                 secondNumber = digits;
                 //Join together all the digits with '' and save into the secondNumber
@@ -162,7 +162,8 @@ function display(){
                 output.value = secondNumber;
             }
             //If arithmetic[lastIndex - 1] EQUAL to secondNumber and arithmetic[lastIndex] equal to operatorName,
-            else if(arithmetic[lastIndex - 1] === secondNumber && arithmetic[lastIndex] === operatorName){
+            else if(arithmetic[arithmetic.length - 2] === secondNumber &&
+                 arithmetic[arithmetic.length - 1] === operatorName){
                 //Store the firstNumber into the arithmetic array
                 firstNumber = digits;
                 //Join together all the digits with '' and save into the secondNumber
@@ -194,7 +195,8 @@ function display(){
                 arithmetic.push(operatorName);
             }
             //If arithmetic[lastIndex - 1] EQUAL to firstNumber AND arithmetic[lastIndex] equal to operatorName,
-            else if(arithmetic[lastIndex - 1] === firstNumber && arithmetic[lastIndex] === operatorName){
+            else if(arithmetic[arithmetic.length - 2] === firstNumber && 
+                arithmetic[arithmetic.length - 1] === operatorName){
                 //Push secondNumber into the arithmetic array 
                 arithmetic.push(secondNumber);
                 //Store the operator button value into the operatorName variable
@@ -202,7 +204,8 @@ function display(){
                 //Push the operatorName variale into the arithmetic array 
                 arithmetic.push(operatorName);
             }
-            else if(arithmetic[lastIndex - 1] === secondNumber && arithmetic[lastIndex] === operatorName){
+            else if(arithmetic[arithmetic.length - 2] === secondNumber && 
+                arithmetic[arithmetic.length - 1] === operatorName){
             //If arithmetic[lastIndex - 1] EQUAL to secondNumber and EQUAL to arithmetic[lastIndex] equal to operatorName?
                 //Push the firstNumber into the arithmetic array
                 arithmetic.push(firstNumber);
@@ -211,6 +214,8 @@ function display(){
                 //Push the operatorName variable into the arithmetic array   
                 arithmetic.push(operatorName);
             } 
+        console.log(arithmetic);
+            
         });
     });
     
