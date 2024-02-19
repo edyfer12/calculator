@@ -70,6 +70,7 @@ function display(){
             //Join all digits from array converted to number into firstNumber variable
             firstNumber = Number(digits.join(''));
             //Display the value of first number into the textbox
+            output.value = firstNumber;
         });
     });
     //If a user clicks an equal button, 
