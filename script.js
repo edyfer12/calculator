@@ -71,6 +71,7 @@ function display(){
             if(operatorName){
                 console.log("secondNumber");
                 //Join all digits from array converted to number into secondNumber variable
+                secondNumber = Number(digits.join(''));
                 //Display the value of second number into the textbox
             }
             //If operator does not exist,
