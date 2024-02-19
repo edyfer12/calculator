@@ -131,7 +131,7 @@ function display(){
     const arithmetic = [];
     //Create an array called digits that stores digits in one container
     const digits = [];
-    
+
     //Loop through the nodelist for the number buttons from 0 to 9,
     numbers.forEach((digit) => {
         //If a user clicks on a number button, 
@@ -214,8 +214,6 @@ function display(){
                 //Push the operatorName variable into the arithmetic array   
                 arithmetic.push(operatorName);
             } 
-        console.log(arithmetic);
-            
         });
     });
     
