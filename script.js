@@ -81,7 +81,7 @@ function display(){
     operators.forEach((operator) => {
         //When the operator is clicked,
         operator.addEventListener('click', () => {
-            
+            //Remove all digits in the digits array
         });
     });
     
