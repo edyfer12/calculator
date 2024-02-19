@@ -68,6 +68,7 @@ function display(){
             //Push each digit into the digits array
             digits.push(digit.textContent);
             //Join all digits from array converted to number into firstNumber variable
+            firstNumber = Number(digits.join(''));
             //Display the value of first number into the textbox
         });
     });
