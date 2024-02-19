@@ -65,7 +65,7 @@ function display(){
     numbers.forEach((digit) => {
         //If a user clicks on a number button, 
         digit.addEventListener('click', () => {
-        
+            //Push each digit into the digits array
         });
     });
     //If a user clicks an equal button, 
