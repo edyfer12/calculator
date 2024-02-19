@@ -73,6 +73,7 @@ function display(){
                 //Join all digits from array converted to number into secondNumber variable
                 secondNumber = Number(digits.join(''));
                 //Display the value of second number into the textbox
+                output.value = secondNumber;
             }
             //If operator does not exist,
             else{
