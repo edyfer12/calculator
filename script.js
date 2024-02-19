@@ -195,6 +195,7 @@ function display(){
         //Extract the last item in the index from arithmetic array and store into the secondNumber variable
         secondNumber = arithmetic.slice(arithmetic.length - 2, arithmetic.length - 1);
         //Extract the arithmetic array from the first index to the index where operator is final and store into firstNumber 
+        firstNumber = arithmetic.slice(0, arithmetic.lastIndexOf(operatorName));
         //Print the final result to the textbox
         output.value = operate(firstNumber,secondNumber,operatorName);
     });
