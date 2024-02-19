@@ -68,7 +68,7 @@ function display(){
             //Push each digit into the digits array
             digits.push(digit.textContent);
             //If operator exists,
-            if(firstNumber){
+            if(operatorName){
                 //Join all digits from array converted to number into secondNumber variable
                 //Display the value of second number into the textbox
             }
