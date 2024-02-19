@@ -67,7 +67,7 @@ function display(){
         digit.addEventListener('click', () => {
             //Push each digit into the digits array
             digits.push(digit.textContent);
-            //If first number exists,
+            //If operator exists,
             if(firstNumber){
                 //Join all digits from array converted to number into secondNumber variable
                 //Display the value of second number into the textbox
