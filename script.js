@@ -192,6 +192,8 @@ function display(){
         }
         //Push the equal sign into the arithmetic array
         arithmetic.push(equal.textContent);
+        //Extract the last item in the index from arithmetic array and store into the secondNumber variable
+        secondNumber = arithmetic.slice(arithmetic.length - 2, arithmetic.length - 1);
         //Print the final result to the textbox
         output.value = operate(firstNumber,secondNumber,operatorName);
     });
