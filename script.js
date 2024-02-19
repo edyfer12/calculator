@@ -196,6 +196,12 @@ function display(){
         secondNumber = arithmetic.slice(arithmetic.length - 2, arithmetic.length - 1);
         //Extract the arithmetic array from the first index to the index where operator is final and store into firstNumber 
         firstNumber = arithmetic.slice(0, arithmetic.lastIndexOf(operatorName));
+        //Use the array reduce method to return a single value after performing arithmetic operations for the firstNumber
+            //Use the first item in the arithmetic array as the initial value in the function
+            //Use the operatorName as the first parameter in the function
+            //Use the second item in the arithmetic array as the second parameter
+            //Inside the function, 
+                //Return operate function three values passed(firstNumber, secondNumber, operatorName),   
         //Print the final result to the textbox
         output.value = operate(firstNumber,secondNumber,operatorName);
     });
