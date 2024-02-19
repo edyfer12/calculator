@@ -67,6 +67,8 @@ function display(){
         digit.addEventListener('click', () => {
             //Push each digit into the digits array
             digits.push(digit.textContent);
+            //Join all digits from array converted to number into firstNumber variable
+            //Display the value of first number into the textbox
         });
     });
     //If a user clicks an equal button, 
