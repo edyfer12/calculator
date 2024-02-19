@@ -60,6 +60,76 @@ function display(){
     const arithmetic = [];
     //Create an array called digits that stores digits in one container
     const digits = [];
+
+    //**********************ALGORITHMS - PERFORM OPERATIONS ON MULTIPLE NUMBERS ********************** */ 
+    /*
+        EXAMPLE: 123 + 1231 + 121 + 1
+
+        Capture the reference of the number buttons (0 to 9)
+        Capture reference of the textbox
+        Create variable that stores the first number
+        Create variable that stores the operator
+        Create an array of digits that is able to store more than one value when buttons are clicked
+        Capture reference of the operator buttons (+-/*)
+        Create an array of numbers and operators that is able to then perform arithmetic operations
+
+        Loop through the nodelist containing number buttons
+            For each number inside the nodelist (all the number buttons can be accessed), 
+            1. User clicks '1', '2' and '3' buttons that belong to the nodelist of number buttons
+                1. Push '1', '2', '3' to the digits array => digits = ['1', '2', '3']
+                1. Does arithmetic array not include firstNumber?
+                    1. Store the value of digits array into the first number variable 
+                        => firstNumber = digits = '1','2','3';
+                    1. Join together all the digits with '' and save into firstNumber 
+                        => firstNumber = digits.join('') = '123'
+                    1. Convert to Number and save into firstNumber
+                        => firstNumber = +firstNumber = 123
+                    1. Display firstNumber to textbox => textbox-element.value = firstNumber
+            2. User clicks '1', '2', '3' and '1' buttons that belong to the nodelist of number buttons
+                2. Push '1', '2', '3' and '1' to the digits array => digits = ['1', '2', '3', '1']
+                2. Is arithmetic[lastIndex - 1] EQUAL to firstNumber(123) and arithmetic[lastIndex]('+') to operatorName?
+                    2. Store the value of digits array into the second number variable
+                        => secondNumber = digits = '1', '2', '3', '1'
+                    2. Join together all the digits with '' and save into the secondNumber
+                        => secondNumber = digits.join('') = '1231'
+                    2. Convert to Number and save into secondNumber
+                        => secondNumber = +secondNumber = 1231
+                    2. Display secondNumber to textbox = textbox.value = secondNumber
+            3. User clicks '1', '2' and '1' on the number buttons
+                3. Push '1', '2', and '1' on the digits array => digits = ['1', '2', '1']
+                3. Is arithmetic[lastIndex - 1] EQUAL to secondNumber and arithmetic[lastIndex] EQUAL to operator?
+                    3. Store value of digits array into the firstNumber variable
+                        => firstNumber = '1', '2', '1'
+                    3. Join together all the items with '' and store into the firstNumber variable
+                        => firstNumber = digits.join('') = '121'
+                    3. Convert to Number and save to firstNumber => firstNumber = +firstNumber = 121
+                    3. Display firstNumber to textbox = textbox.value = firstNumber 
+
+        Loop through the nodelist containing operator buttons
+            For each operator inside the nodelist (all the operator buttons can be accessed),
+            1. User clicks '+' that belong to the nodelist of operator buttons,
+                Slice all items in the digits array => digits = []
+                1. Does arithmetic array not include firstNumber?
+                    1. Push firstNumber into the arithmetic array => arithmetic = [firstNumber] = [123]
+                    1. Store the operator button value into the operatorName variable => operatorName = '+'
+                    1. Push the operatorName variable into the arithmetic array => [firstNumber, operatorName] 
+                    => [123, '+']
+                2. Does arithmetic[lastIndex - 1] EQUAL to firstNumber(123) && arithmetic[lastIndex] equal to operatorName('+')?
+                    2. Push secondNumber into the arithmetic array 
+                        => arithmetic = [firstNumber, operator, secondNumber] = [123, '+', 1231]
+                    2. Store the operator button value into the operatorName variable => operatorName = '+'
+                    2. Push the operatorName variale into the arithmetic array => [firstNumber, operatorName, secondNumber, operatorName]
+                        => [123, '+', 1231, '+'] 
+                3. Does arithmetic[lastIndex - 1] EQUAL to secondNumber(1231) EQUAL to arithmetic[lastIndex] equal to operatorName(+)?
+                    3. Push the firstNumber into the arithmetic array
+                        => arithmetic = [firstNumber, operator, secondNumber, operator] = [123, '+', 1231, '+', 121]
+                    3. Store the operator button value into the operatorName variable 
+                        => operatorName = '+'
+                    3. Push the operatorName variable into the arithmetic array 
+                        => [firstNumber, operatorName, secondNumber, operatorName]
+                        => [123, '+', 1231, '+', 121, '+']
+
+    */
     
     //Loop through the nodelist for the number buttons from 0 to 9,
     numbers.forEach((digit) => {
