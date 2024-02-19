@@ -68,13 +68,17 @@ function display(){
             //Push each digit into the digits array
             digits.push(digit.textContent);
             //If first number exists,
+            if(firstNumber){
                 //Join all digits from array converted to number into secondNumber variable
                 //Display the value of second number into the textbox
+            }
             //If first number does not exist,
+            else{
                 //Join all digits from array converted to number into firstNumber variable
                 firstNumber = Number(digits.join(''));
                 //Display the value of first number into the textbox
                 output.value = firstNumber;
+            }
         });
     });
     //If a user clicks an equal button, 
