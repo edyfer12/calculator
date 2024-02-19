@@ -101,7 +101,7 @@ function display(){
                     2. Store the operator button value into the operatorName variable => operatorName = '+'
                     2. Push the operatorName variale into the arithmetic array => [firstNumber, operatorName, secondNumber, operatorName]
                         => [123, '+', 1231, '+'] 
-                3. Does arithmetic[lastIndex - 1] EQUAL to secondNumber(1231) EQUAL to arithmetic[lastIndex] equal to operatorName(+)?
+                3. Does arithmetic[lastIndex - 1] EQUAL to secondNumber(1231) and arithmetic[lastIndex] equal to operatorName(+)?
                     3. Push the firstNumber into the arithmetic array
                         => arithmetic = [firstNumber, operator, secondNumber, operator] = [123, '+', 1231, '+', 121]
                     3. Store the operator button value into the operatorName variable 
@@ -138,7 +138,21 @@ function display(){
         digit.addEventListener('click', () => {
             //Push each digit into the digits array
             digits.push(digit.textContent);
-            
+            //If arithmetic array not include firstNumber,
+                //Store the value of digits array into the first number variable 
+                //Join together all the digits with '' and save into firstNumber 
+                //Convert to Number and save into firstNumber
+                //Display firstNumber to textbox
+            //If arithmetic[lastIndex - 1] EQUAL to firstNumber and arithmetic[lastIndex] to operatorName,
+                //Store the value of digits array into the second number variable
+                //Join together all the digits with '' and save into the secondNumber
+                //Convert to Number and save into secondNumber
+                //Display secondNumber to textbox = textbox.value = secondNumber
+            //If arithmetic[lastIndex - 1] EQUAL to secondNumber and arithmetic[lastIndex] equal to operatorName,
+                //Store the firstNumber into the arithmetic array
+                //Join together all the digits with '' and save into the secondNumber
+                //Convert to Number and save into secondNumber
+                //Display secondNumber to textbox = textbox.value = secondNumber
         });
     });
     //If a user clicks an equal button, 
@@ -151,6 +165,18 @@ function display(){
         operator.addEventListener('click', () => {
             //Remove all digits in the digits array
             digits.splice(0,digits.length);
+            //If arithmetic array does not include firstNumber,
+                //Push firstNumber into the arithmetic array
+                //Store the operator button value into the operatorName variable
+                //Push the operatorName variable into the arithmetic array 
+            //If arithmetic[lastIndex - 1] EQUAL to firstNumber AND arithmetic[lastIndex] equal to operatorName,
+                //Push secondNumber into the arithmetic array 
+                //Store the operator button value into the operatorName variable
+                //Push the operatorName variale into the arithmetic array 
+            //If arithmetic[lastIndex - 1] EQUAL to secondNumber and EQUAL to arithmetic[lastIndex] equal to operatorName?
+                //Push the firstNumber into the arithmetic array
+                //Store the operator button value into the operatorName variable 
+                //Push the operatorName variable into the arithmetic array    
         });
     });
     
