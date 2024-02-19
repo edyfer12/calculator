@@ -137,20 +137,7 @@ function display(){
         digit.addEventListener('click', () => {
             //Push each digit into the digits array
             digits.push(digit.textContent);
-            //If operator exists,
-            if(operatorName){
-                //Join all digits from array converted to number into secondNumber variable
-                secondNumber = Number(digits.join(''));
-                //Display the value of second number into the textbox
-                output.value = secondNumber;
-            }
-            //If operator does not exist,
-            else{
-                //Join all digits from array converted to number into firstNumber variable
-                firstNumber = Number(digits.join(''));
-                //Display the value of first number into the textbox
-                output.value = firstNumber;
-            }
+            
         });
     });
     //If a user clicks an equal button, 
@@ -163,8 +150,6 @@ function display(){
         operator.addEventListener('click', () => {
             //Remove all digits in the digits array
             digits.splice(0,digits.length);
-            //Store in the operator button's text content into the operatorName variable
-            operatorName = operator.textContent;
         });
     });
     
