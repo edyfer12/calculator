@@ -139,20 +139,26 @@ function display(){
             //Push each digit into the digits array
             digits.push(digit.textContent);
             //If arithmetic array not include firstNumber,
+            if(!arithmetic.includes(firstNumber)){
                 //Store the value of digits array into the first number variable 
                 //Join together all the digits with '' and save into firstNumber 
                 //Convert to Number and save into firstNumber
                 //Display firstNumber to textbox
+            }
             //If arithmetic[lastIndex - 1] EQUAL to firstNumber and arithmetic[lastIndex] to operatorName,
+            else if(arithmetic[lastIndex - 1] === firstNumber && arithmetic[lastIndex] === operatorName){
                 //Store the value of digits array into the second number variable
                 //Join together all the digits with '' and save into the secondNumber
                 //Convert to Number and save into secondNumber
                 //Display secondNumber to textbox = textbox.value = secondNumber
+            }
             //If arithmetic[lastIndex - 1] EQUAL to secondNumber and arithmetic[lastIndex] equal to operatorName,
+            else if(arithmetic[lastIndex - 1] === secondNumber && arithmetic[lastIndex] === operatorName){
                 //Store the firstNumber into the arithmetic array
                 //Join together all the digits with '' and save into the secondNumber
                 //Convert to Number and save into secondNumber
                 //Display secondNumber to textbox = textbox.value = secondNumber
+            }
         });
     });
     //If a user clicks an equal button, 
@@ -166,17 +172,23 @@ function display(){
             //Remove all digits in the digits array
             digits.splice(0,digits.length);
             //If arithmetic array does not include firstNumber,
+            if(!arithmetic.includes(firstNumber)){
                 //Push firstNumber into the arithmetic array
                 //Store the operator button value into the operatorName variable
                 //Push the operatorName variable into the arithmetic array 
+            }
             //If arithmetic[lastIndex - 1] EQUAL to firstNumber AND arithmetic[lastIndex] equal to operatorName,
+            else if(arithmetic[lastIndex - 1] === firstNumber && arithmetic[lastIndex] === operatorName){
                 //Push secondNumber into the arithmetic array 
                 //Store the operator button value into the operatorName variable
                 //Push the operatorName variale into the arithmetic array 
+            }
+            else if(arithmetic[lastIndex - 1] === secondNumber && arithmetic[lastIndex] === operatorName){
             //If arithmetic[lastIndex - 1] EQUAL to secondNumber and EQUAL to arithmetic[lastIndex] equal to operatorName?
                 //Push the firstNumber into the arithmetic array
                 //Store the operator button value into the operatorName variable 
-                //Push the operatorName variable into the arithmetic array    
+                //Push the operatorName variable into the arithmetic array   
+            } 
         });
     });
     
