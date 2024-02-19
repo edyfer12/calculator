@@ -141,23 +141,35 @@ function display(){
             //If arithmetic array not include firstNumber,
             if(!arithmetic.includes(firstNumber)){
                 //Store the value of digits array into the first number variable 
+                firstNumber = digits;
                 //Join together all the digits with '' and save into firstNumber 
+                firstNumber = digits.join(''); 
                 //Convert to Number and save into firstNumber
+                firstNumber = +firstNumber;
                 //Display firstNumber to textbox
+                output.value = firstNumber;
             }
             //If arithmetic[lastIndex - 1] EQUAL to firstNumber and arithmetic[lastIndex] to operatorName,
             else if(arithmetic[lastIndex - 1] === firstNumber && arithmetic[lastIndex] === operatorName){
                 //Store the value of digits array into the second number variable
+                secondNumber = digits;
                 //Join together all the digits with '' and save into the secondNumber
+                secondNumber = digits.join('');
                 //Convert to Number and save into secondNumber
+                secondNumber = +secondNumber;
                 //Display secondNumber to textbox = textbox.value = secondNumber
+                output.value = secondNumber;
             }
             //If arithmetic[lastIndex - 1] EQUAL to secondNumber and arithmetic[lastIndex] equal to operatorName,
             else if(arithmetic[lastIndex - 1] === secondNumber && arithmetic[lastIndex] === operatorName){
                 //Store the firstNumber into the arithmetic array
+                firstNumber = digits;
                 //Join together all the digits with '' and save into the secondNumber
+                firstNumber = digits.join(''); 
                 //Convert to Number and save into secondNumber
+                firstNumber = +firstNumber;
                 //Display secondNumber to textbox = textbox.value = secondNumber
+                output.value = firstNumber;
             }
         });
     });
@@ -174,20 +186,29 @@ function display(){
             //If arithmetic array does not include firstNumber,
             if(!arithmetic.includes(firstNumber)){
                 //Push firstNumber into the arithmetic array
+                arithmetic.push(firstNumber);
                 //Store the operator button value into the operatorName variable
+                operatorName = operator.textContent;
                 //Push the operatorName variable into the arithmetic array 
+                arithmetic.push(operatorName);
             }
             //If arithmetic[lastIndex - 1] EQUAL to firstNumber AND arithmetic[lastIndex] equal to operatorName,
             else if(arithmetic[lastIndex - 1] === firstNumber && arithmetic[lastIndex] === operatorName){
                 //Push secondNumber into the arithmetic array 
+                arithmetic.push(secondNumber);
                 //Store the operator button value into the operatorName variable
+                operatorName = operator.textContent;
                 //Push the operatorName variale into the arithmetic array 
+                arithmetic.push(operatorName);
             }
             else if(arithmetic[lastIndex - 1] === secondNumber && arithmetic[lastIndex] === operatorName){
             //If arithmetic[lastIndex - 1] EQUAL to secondNumber and EQUAL to arithmetic[lastIndex] equal to operatorName?
                 //Push the firstNumber into the arithmetic array
+                arithmetic.push(firstNumber);
                 //Store the operator button value into the operatorName variable 
+                operatorName = operator.textContent;
                 //Push the operatorName variable into the arithmetic array   
+                arithmetic.push(operatorName);
             } 
         });
     });
