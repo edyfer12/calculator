@@ -177,6 +177,14 @@ function display(){
     });
     //If a user clicks an equal button, 
     equal.addEventListener('click', () => {
+        //Push the final operand into the arithmetic array
+            /* If the items of the last index and one before in the arithmetic array is operatorName and firstNumber
+             respectively, */
+                //Push the secondNumber to the arithmetic array
+            /* If the items of the last index and one before in the arithmetic array is operatorName and secondNumber
+             respectively, */ 
+                //Push the firstNumber to the arithmetic array
+        //Push the equal sign into the arithmetic array
         //Print the final result to the textbox
         output.value = operate(firstNumber,secondNumber,operatorName);
     });
