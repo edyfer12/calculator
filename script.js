@@ -177,6 +177,7 @@ function display(){
     });
     //If a user clicks an equal button, 
     equal.addEventListener('click', () => {
+        //Print the final result to the textbox
         output.value = operate(firstNumber,secondNumber,operatorName);
     });
     //Loop through the nodelist of operator buttons +-/*,
