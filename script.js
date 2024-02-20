@@ -296,10 +296,10 @@ function display(){
                 //Push the operatorName variale into the arithmetic array 
                 arithmetic.push(operatorName);
             }
-            else if(arithmetic[arithmetic.length - 2] === secondNumber && 
-                arithmetic[arithmetic.length - 1] === operatorName){
             //If arithmetic[lastIndex - 1] EQUAL to secondNumber and EQUAL to arithmetic[lastIndex] equal to operatorName?
                 //Push the firstNumber into the arithmetic array
+            else if(arithmetic[arithmetic.length - 2] === secondNumber && 
+                arithmetic[arithmetic.length - 1] === operatorName){
                 arithmetic.push(firstNumber);
                 //Store the operator button value into the operatorName variable 
                 operatorName = operator.textContent;
