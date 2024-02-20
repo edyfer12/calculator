@@ -195,7 +195,30 @@ function display(){
         //Extract the last item in the index from arithmetic array and store into the secondNumber variable
         secondNumber = arithmetic.slice(arithmetic.length - 2, arithmetic.length - 1);
         //Extract the arithmetic array from the first index to the index where operator is final and store into firstNumber 
-        firstNumber = arithmetic.slice(0, arithmetic.lastIndexOf(operatorName));   
+        firstNumber = arithmetic.slice(0, arithmetic.lastIndexOf(operatorName)); 
+        /*Use the array reduce method to return a single value for the firstNumber array. 
+            Initial_value for the reduce method to 0 as a second parameter
+            Include the callback function as the first parameter
+            Inside the callback function, include
+                accumulator as the first parameter, accumulator = initial_value = 0
+                current_item as second parameter 
+                current_index as third parameter
+        */  
+       //For example, array is [1, '+', 120, '-', 12, 'X' ,123] 
+
+       //If current_index is an odd number, do not store values in the accumulator and return -1 to move to next current_item
+       //If current_index is an even number and is at least 2,
+            //If item[current_index - 1] = '+',
+                //set the accumulator to current accumulator value added by current_item
+            //If item[current_index - 1] = '-',
+                //set the accumulator to current accumulator value subtracted by current_item
+            //If item[current_index - 1] = 'X',
+                //set the accumulator to current accumulator value multiplied by current_item
+            //If item[current_index - 1] = '÷',
+                //set the accumulator to current accumulator value divided by current_item
+            //Return accumulator
+        //If current_index is 0, 
+            //set the accumulator to current accumulator value added by current_item
         //Print the final result to the textbox
         output.value = operate(firstNumber,secondNumber,operatorName);
     });
