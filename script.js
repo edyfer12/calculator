@@ -175,6 +175,7 @@ function display(){
             }
         });
     });
+    //If a user clicks the Clear button, empty the display value in the textbox and erase the entire arithmetic array
     //If a user clicks an equal button, 
     equal.addEventListener('click', () => {
         //Push the final operand into the arithmetic array
@@ -196,7 +197,6 @@ function display(){
         secondNumber = arithmetic[arithmetic.length - 2];
         //Extract the arithmetic array from the first index to the index where operator is final and store into firstNumber 
         firstNumber = arithmetic.slice(0, arithmetic.lastIndexOf(operatorName)); 
-        console.log('firstNumber  = ',firstNumber);
         /*Use the array reduce method to return a single value for the firstNumber array. 
             Initial_value for the reduce method to 0 as a second parameter
             Include the callback function as the first parameter
@@ -286,7 +286,6 @@ function display(){
                 //Push the operatorName variable into the arithmetic array   
                 arithmetic.push(operatorName);
             } 
-            console.log(arithmetic);
         });
     });
     
