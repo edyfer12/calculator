@@ -291,6 +291,10 @@ function display(){
                 arithmetic[arithmetic.length - 1] === operatorName){
                 //Push secondNumber into the arithmetic array 
                 arithmetic.push(secondNumber);
+                //If the operatorName is +, call the operate function and display result on text box
+                if(operatorName === '+'){
+                    output.value = operate(firstNumber,secondNumber,operatorName);
+                }
                 //Store the operator button value into the operatorName variable
                 operatorName = operator.textContent;
                 //Push the operatorName variale into the arithmetic array 
