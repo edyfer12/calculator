@@ -181,6 +181,7 @@ function display(){
     clear.addEventListener('click', () => {
         output.value = '';
         arithmetic.splice(0,arithmetic.length);
+        //Empty the digits array
         digits.splice(0,digits.length);
     });
     //If a user clicks an equal button, 
