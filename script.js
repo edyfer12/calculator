@@ -215,24 +215,31 @@ function display(){
                 //If item[current_index - 1] = '+',
                 if(current_item[current_index - 1] === '+'){
                     //set the accumulator to current accumulator value added by current_item
+                    accumulator += current_item;
                 }
                 //If item[current_index - 1] = '-',
                 else if(current_item[current_index - 1] === '-'){
                     //set the accumulator to current accumulator value subtracted by current_item
+                    accumulator-= current_item;
                 }
                 //If item[current_index - 1] = 'X',
                 else if(current_item[current_index - 1] === 'X'){
                     //set the accumulator to current accumulator value multiplied by current_item
+                    accumulator *= current_item;
                 }
                 //If item[current_index - 1] = '÷',
                 else if(current_item[current_index - 1] === '÷'){
                     //set the accumulator to current accumulator value divided by current_item
+                    accumulator /= current_item;
                 }
                 //Return accumulator
+                return accumulator;
         }
             //If current_index is 0, 
         else if(current_index === 0){
-                //set the accumulator to current accumulator value added by current_item
+            //set the accumulator to current accumulator value added by current_item
+            accumulator += current_item;
+            return accumulator;
         }
         }, 0);
         //Print the final result to the textbox
