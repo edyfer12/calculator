@@ -213,13 +213,21 @@ function display(){
         //If current_index is an even number and is at least 2,
         else if(current_index % 2 === 0 && current_index >= 2){
                 //If item[current_index - 1] = '+',
+                if(current_item[current_index - 1] === '+'){
                     //set the accumulator to current accumulator value added by current_item
+                }
                 //If item[current_index - 1] = '-',
+                else if(current_item[current_index - 1] === '-'){
                     //set the accumulator to current accumulator value subtracted by current_item
+                }
                 //If item[current_index - 1] = 'X',
+                else if(current_item[current_index - 1] === 'X'){
                     //set the accumulator to current accumulator value multiplied by current_item
+                }
                 //If item[current_index - 1] = '÷',
+                else if(current_item[current_index - 1] === '÷'){
                     //set the accumulator to current accumulator value divided by current_item
+                }
                 //Return accumulator
         }
             //If current_index is 0, 
