@@ -126,6 +126,7 @@ function display(){
     //Create variable that captures the reference to the equals sign button
     const equal = document.querySelector('.small.equal');
     //Create variable that captures the reference to the clear button
+    const clear = document.querySelector('.clear');
     //Create variable that is able to store in the name of operator button
     let operatorName;
     //Declare an array that stores the operator and operands
