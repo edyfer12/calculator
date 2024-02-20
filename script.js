@@ -178,6 +178,9 @@ function display(){
         });
     });
     //If a user clicks the Clear button, empty the display value in the textbox and erase the entire arithmetic array
+    clear.addEventListener('click', () => {
+        
+    });
     //If a user clicks an equal button, 
     equal.addEventListener('click', () => {
         //Push the final operand into the arithmetic array
