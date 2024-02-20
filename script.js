@@ -183,7 +183,12 @@ function display(){
         arithmetic.splice(0,arithmetic.length);
         //Empty the digits array
         digits.splice(0,digits.length);
-        //Create variable called clearedArithmetic and set to true 
+        //Set the first number to undefined
+        firstNumber = undefined;
+        //Set the second number to undefined
+        secondNumber = undefined;
+        //Set the operator name to undefined
+        operatorName = undefined;
     });
     //If a user clicks an equal button, 
     equal.addEventListener('click', () => {
