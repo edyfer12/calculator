@@ -193,7 +193,7 @@ function display(){
         //Push the equal sign into the arithmetic array
         arithmetic.push(equal.textContent);
         //Extract the last item in the index from arithmetic array and store into the secondNumber variable
-        secondNumber = arithmetic.slice(arithmetic.length - 2, arithmetic.length - 1);
+        secondNumber = arithmetic[arithmetic.length - 2];
         //Extract the arithmetic array from the first index to the index where operator is final and store into firstNumber 
         firstNumber = arithmetic.slice(0, arithmetic.lastIndexOf(operatorName)); 
         console.log('firstNumber  = ',firstNumber);
