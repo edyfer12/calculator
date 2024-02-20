@@ -183,6 +183,7 @@ function display(){
         arithmetic.splice(0,arithmetic.length);
         //Empty the digits array
         digits.splice(0,digits.length);
+        //Create variable called clearedArithmetic and set to true 
     });
     //If a user clicks an equal button, 
     equal.addEventListener('click', () => {
