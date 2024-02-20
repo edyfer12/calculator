@@ -205,44 +205,18 @@ function display(){
         //Extract the arithmetic array from the first index to the index where operator is final and store into firstNumber 
         firstNumber = arithmetic.slice(0, arithmetic.lastIndexOf(operatorName)); 
         /*Use the array reduce method to return a single value for the firstNumber array. 
-            Initial_value for the reduce method to item of index 2 as a second parameter
+            Initial_value for the reduce method to 0 as a second parameter
             Include the callback function as the first parameter
             Inside the callback function, include
-                accumulator as the first parameter, accumulator = initial_value = firstNumber[2]
+                accumulator as the first parameter, accumulator = initial_value = 0
                 current_item as second parameter 
                 current_index as third parameter
         */  
        //For example, array is [1, '+', 120, '-', 12, 'X' ,123] 
         firstNumber = firstNumber.reduce((accumulator, current_item, current_index) => {
-            //If current_index is at least 2 and is even
-            if(current_index % 2 === 0 && current_index >= 2){
-                //If firstNumber[current_index - 1] = '+',
-                if(firstNumber[current_index - 1] === '+'){
-                    //Add the accumulator value by the firstNumber[current_index - 2] and store into accumulator
-                    accumulator+=firstNumber[current_index - 2];
-                }
-                //If firstNumber[current_index - 1] = '-',
-                else if(firstNumber[current_index - 1] === '-'){
-                    //Subtract the accumulator value by the firstNumber[current_index - 2] and store into accumulator
-                    accumulator-=firstNumber[current_index - 2];
-                }
-                //If firstNumber[current_index - 1] = 'X',
-                else if(firstNumber[current_index - 1] === 'X'){
-                    //Multiply the accumulator value by the firstNumber[current_index - 2] and store into accumulator
-                    accumulator*=firstNumber[current_index - 2];
-                }
-                //If firstNumber[current_index - 1] = '÷',
-                else if(firstNumber[current_index - 1] === '÷'){
-                    //Divide the accumulator value by the firstNumber[current_index - 2] and store into accumulator
-                    accumulator/=firstNumber[current_index - 2];
-                }
-            }
-            //Return accumulator value to iterate to next current_item of firstNumber array
-            return accumulator;
-        },firstNumber[2]);
         //If current_index is an odd number, do not store values in the accumulator and 
         //return accumulator to move to next current_item
-       /* if(current_index % 2 === 1){
+        if(current_index % 2 === 1){
             return accumulator;
         }
         //If current_index is an even number and is at least 2,
@@ -275,12 +249,12 @@ function display(){
             //set the accumulator to current accumulator value added by current_item
             accumulator += current_item;
             return accumulator;
-        }/*
+        }
         }, 0);
         /*If the secondNumber is 0 and operatorName is ÷, display the error message "Cannot divide by zero" on textbox
         return the value -1 to terminate the display function*/
         if(operatorName === '÷' && secondNumber === 0){
-            output.value = 'Cannot divide by zero';
+            output.value = 'Cannot divide by 0';
             return -1;
         }
         //Print the final result to the textbox
