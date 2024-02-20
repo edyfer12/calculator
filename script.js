@@ -207,7 +207,11 @@ function display(){
        //For example, array is [1, '+', 120, '-', 12, 'X' ,123] 
         firstNumber = firstNumber.reduce((accumulator, current_item, current_index) => {
         //If current_index is an odd number, do not store values in the accumulator and return -1 to move to next current_item
+        if(current_index % 2 === 1){
+            return -1;
+        }
         //If current_index is an even number and is at least 2,
+        else if(current_index % 2 === 0 && current_index >= 2){
                 //If item[current_index - 1] = '+',
                     //set the accumulator to current accumulator value added by current_item
                 //If item[current_index - 1] = '-',
@@ -217,8 +221,11 @@ function display(){
                 //If item[current_index - 1] = '÷',
                     //set the accumulator to current accumulator value divided by current_item
                 //Return accumulator
+        }
             //If current_index is 0, 
+        else if(current_index === 0){
                 //set the accumulator to current accumulator value added by current_item
+        }
         }, 0);
         //Print the final result to the textbox
         output.value = operate(firstNumber,secondNumber,operatorName);
