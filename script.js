@@ -192,6 +192,8 @@ function display(){
         secondNumber = undefined;
         //Set the operator name to undefined
         operatorName = undefined;
+        //Set total to 0
+        total = 0;
     });
     //If a user clicks an equal button, 
     equal.addEventListener('click', () => {
