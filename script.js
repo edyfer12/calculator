@@ -251,7 +251,7 @@ function display(){
             return accumulator;
         }
         }, 0);
-        //If the secondNumber is 0, display the error message "Cannot be divided by zero"
+        //If the secondNumber is 0 and operatorName is ÷, display the error message "Cannot be divided by zero"
         //Print the final result to the textbox
         output.value = operate(firstNumber,secondNumber,operatorName);
     });
