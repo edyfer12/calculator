@@ -305,10 +305,6 @@ function display(){
                 operatorName = operator.textContent;
                 //Push the operatorName variable into the arithmetic array   
                 arithmetic.push(operatorName);
-                //Display the result value between the operation of two numbers
-                //If operatorName is +, 
-                    //call an operate function with three values passed firstNumber, operatorName, secondNumber
-                    //Display the result on the textbox
             } 
         });
     });
