@@ -196,6 +196,7 @@ function display(){
         secondNumber = arithmetic.slice(arithmetic.length - 2, arithmetic.length - 1);
         //Extract the arithmetic array from the first index to the index where operator is final and store into firstNumber 
         firstNumber = arithmetic.slice(0, arithmetic.lastIndexOf(operatorName)); 
+        console.log('firstNumber  = ',firstNumber);
         /*Use the array reduce method to return a single value for the firstNumber array. 
             Initial_value for the reduce method to 0 as a second parameter
             Include the callback function as the first parameter
@@ -206,29 +207,30 @@ function display(){
         */  
        //For example, array is [1, '+', 120, '-', 12, 'X' ,123] 
         firstNumber = firstNumber.reduce((accumulator, current_item, current_index) => {
-        //If current_index is an odd number, do not store values in the accumulator and return -1 to move to next current_item
+        //If current_index is an odd number, do not store values in the accumulator and 
+        //return accumulator to move to next current_item
         if(current_index % 2 === 1){
-            return -1;
+            return accumulator;
         }
         //If current_index is an even number and is at least 2,
         else if(current_index % 2 === 0 && current_index >= 2){
-                //If item[current_index - 1] = '+',
-                if(current_item[current_index - 1] === '+'){
+                //If array_name[current_index - 1] = '+',
+                if(firstNumber[current_index - 1] === '+'){
                     //set the accumulator to current accumulator value added by current_item
                     accumulator += current_item;
                 }
-                //If item[current_index - 1] = '-',
-                else if(current_item[current_index - 1] === '-'){
+                //If array_name[current_index - 1] = '-',
+                else if(firstNumber[current_index - 1] === '-'){
                     //set the accumulator to current accumulator value subtracted by current_item
                     accumulator-= current_item;
                 }
-                //If item[current_index - 1] = 'X',
-                else if(current_item[current_index - 1] === 'X'){
+                //If array_name[current_index - 1] = 'X',
+                else if(firstNumber[current_index - 1] === 'X'){
                     //set the accumulator to current accumulator value multiplied by current_item
                     accumulator *= current_item;
                 }
-                //If item[current_index - 1] = '÷',
-                else if(current_item[current_index - 1] === '÷'){
+                //If array_name[current_index - 1] = '÷',
+                else if(firstNumber[current_index - 1] === '÷'){
                     //set the accumulator to current accumulator value divided by current_item
                     accumulator /= current_item;
                 }
