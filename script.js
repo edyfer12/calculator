@@ -133,6 +133,9 @@ function display(){
     const arithmetic = [];
     //Create an array called digits that stores digits in one container
     const digits = [];
+    //Create a total variable that will store the calculated values for display
+    //Set to 0
+    let total = 0;
 
     //Loop through the nodelist for the number buttons from 0 to 9,
     numbers.forEach((digit) => {
@@ -141,7 +144,7 @@ function display(){
             //Push each digit into the digits array
             digits.push(digit.textContent);
             //If arithmetic array not include firstNumber,
-            if(!arithmetic.includes(firstNumber)){
+            if(arithmetic.length < 1){
                 //Store the value of digits array into the first number variable 
                 firstNumber = digits;
                 //Join together all the digits with '' and save into firstNumber 
@@ -273,8 +276,8 @@ function display(){
         operator.addEventListener('click', () => {
             //Remove all digits in the digits array
             digits.splice(0,digits.length);
-            //If arithmetic array does not include firstNumber,
-            if(!arithmetic.includes(firstNumber)){
+           console.log('arithmetic beofre = ', arithmetic);
+            if(arithmetic.length < 1){
                 //Push firstNumber into the arithmetic array
                 if(firstNumber !== undefined){
                     arithmetic.push(firstNumber);
@@ -284,16 +287,77 @@ function display(){
                 //Push the operatorName variable into the arithmetic array 
                 if(firstNumber !== undefined){
                     arithmetic.push(operatorName);
-                }
+                } 
+                
             }
             //If arithmetic[lastIndex - 1] EQUAL to firstNumber AND arithmetic[lastIndex] equal to operatorName,
             else if(arithmetic[arithmetic.length - 2] === firstNumber && 
                 arithmetic[arithmetic.length - 1] === operatorName){
                 //Push secondNumber into the arithmetic array 
                 arithmetic.push(secondNumber);
-                //If the operatorName is +, call the operate function and display result on text box
-                if(operatorName === '+'){
-                    output.value = operate(firstNumber,secondNumber,operatorName);
+                console.log('arithmetic 2nd = ', arithmetic);
+                //If item of index 0 is firstNumber, item of last index is secondNumber and length of arithmetic array is 3 
+                if(arithmetic[arithmetic.length - 1] === secondNumber && 
+                    arithmetic[0] === firstNumber && arithmetic.length === 3){
+                        //If the operator between two operands is +,
+                        if(operatorName === '+'){
+                            //Add current total value by first number and second number
+                            total += firstNumber + secondNumber
+                            //Display the total value on the textbox
+                            output.value = total;
+                        }
+                        //If the operator between two operands is -,
+                        else if(operatorName === '-'){
+                            //Add current total value and subtract first number and second number
+                            total += firstNumber - secondNumber;
+                            //Display the total value on the textbox
+                            output.value = total;
+                        }
+                        //If the operator between two operands is +,
+                        else if(operatorName === 'X'){
+                            //Add current total value and multiply first number by second number
+                            total += firstNumber * secondNumber
+                            //Display the total value on the textbox
+                            output.value = total;
+                        }
+                        //If the operator between two operands is -,
+                        else if(operatorName === '÷'){
+                            //Add current total value and dvide first number and second number
+                            total += firstNumber / secondNumber;
+                            //Display the total value on the textbox
+                            output.value = total;
+                        }
+                }
+                //If item of last index is secondNumber and item of two before last index is firstNumber,
+                else if(arithmetic[arithmetic.length - 1] === secondNumber && 
+                    arithmetic[arithmetic.length - 3] === firstNumber && arithmetic.length > 3){
+                        if(operatorName === '+'){
+                            //Add current total value by secondNumber
+                            total += secondNumber;
+                            //Display the total value to the textbox
+                            output.value = total;
+                        }
+                        //If the operator between two operands is -,
+                        else if(operatorName === '-'){
+                            //Subtract current total value by second number
+                            total -= secondNumber;
+                            //Display the total value to the textbox
+                            output.value = total;
+                        }
+                        //If the operator between two operands is +,
+                        else if(operatorName === 'X'){
+                            //Multiply current total value by second number
+                            total *= secondNumber;
+                            //Display the total value on the textbox
+                            output.value = total;
+                        }
+                        //If the operator between two operands is -,
+                        else if(operatorName === '÷'){
+                            //Divide current total value by second number
+                            total /= secondNumber;
+                            //Display the total value on the textbox
+                            output.value = total;
+                        }
                 }
                 //Store the operator button value into the operatorName variable
                 operatorName = operator.textContent;
@@ -305,11 +369,46 @@ function display(){
             else if(arithmetic[arithmetic.length - 2] === secondNumber && 
                 arithmetic[arithmetic.length - 1] === operatorName){
                 arithmetic.push(firstNumber);
+                //If item of last index is firstNumber and item of 2nd last index is secondNumber while length is greater than 3
+                if(arithmetic[arithmetic.length - 1] === firstNumber && 
+                    arithmetic[arithmetic.length - 3] === secondNumber
+                    && arithmetic.length > 3){
+                        //If operator between two operands is +
+                        if(operatorName === '+'){
+                            //Add current total value by firstNumber
+                            total += firstNumber;
+                            //Display the total value to the textbox
+                            output.value = total;
+                        }
+                        //If operator between two operand is -
+                        else if(operatorName === '-'){
+                            //Subtract current total value by firstNumber
+                            total -= firstNumber;
+                            //Display the total value to the textbox
+                            output.value = total;
+                        }
+                        //If the operator between two operands is +,
+                        else if(operatorName === 'X'){
+                            //Multiply current total value by first number
+                            total *= firstNumber;
+                            //Display the total value on the textbox
+                            output.value = total;
+                        }
+                        //If the operator between two operands is -,
+                        else if(operatorName === '÷'){
+                            //Divide current total value by first number
+                            total /= firstNumber;
+                            //Display the total value on the textbox
+                            output.value = total;
+                        }
+                } 
                 //Store the operator button value into the operatorName variable 
                 operatorName = operator.textContent;
                 //Push the operatorName variable into the arithmetic array   
                 arithmetic.push(operatorName);
-            } 
+            }  
+             
+            console.log('arithmetic = ', arithmetic);
         });
     });
     
