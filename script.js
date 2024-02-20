@@ -253,6 +253,9 @@ function display(){
         }, 0);
         /*If the secondNumber is 0 and operatorName is ÷, display the error message "Cannot divide by zero" on textbox
         return the value -1 to terminate the display function*/
+        if(operatorName === '÷' && secondNumber === 0){
+            
+        }
         //Print the final result to the textbox
         output.value = operate(firstNumber,secondNumber,operatorName);
     });
