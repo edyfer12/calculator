@@ -370,8 +370,10 @@ function display(){
                 //Store the operator button value into the operatorName variable
                 operatorName = operator.textContent;
                 //If the secondNumber does exist before the operator
+                if(arithmetic[arithmetic.length - 1] === secondNumber){
                     //Push the operatorName variale into the arithmetic array 
                     arithmetic.push(operatorName);
+                }
             }
             //If arithmetic[lastIndex - 1] EQUAL to secondNumber and EQUAL to arithmetic[lastIndex] equal to operatorName?
                 //Push the firstNumber into the arithmetic array
