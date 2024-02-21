@@ -299,6 +299,7 @@ function display(){
             else if(arithmetic[arithmetic.length - 2] === firstNumber && 
                 arithmetic[arithmetic.length - 1] === operatorName){
                 //Push secondNumber into the arithmetic array 
+                //If th secondNumber is not undefined,
                 arithmetic.push(secondNumber);
                 console.log('arithmetic 2nd = ', arithmetic);
                 //If item of index 0 is firstNumber, item of last index is secondNumber and length of arithmetic array is 3 
