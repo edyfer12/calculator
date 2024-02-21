@@ -271,8 +271,8 @@ function display(){
         }
         //If secondNumber does not have an undefined value,
         if(secondNumber !== undefined){ 
-        //Print the final result to the textbox
-        output.value = operate(firstNumber,secondNumber,operatorName);
+            //Print the final result to the textbox
+            output.value = operate(firstNumber,secondNumber,operatorName);
         }
     });
     //Loop through the nodelist of operator buttons +-/*,
