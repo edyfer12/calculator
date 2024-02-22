@@ -145,7 +145,6 @@ function display(){
             digits.push(digit.textContent);
             //If arithmetic array not include firstNumber,
             if(arithmetic.length === 0){
-                //digits.push(digit.textContent);
                 //Store the value of digits array into the first number variable 
                 firstNumber = digits;
                 //Join together all the digits with '' and save into firstNumber 
@@ -195,7 +194,6 @@ function display(){
         operatorName = undefined;
         //Set total to 0
         total = 0;
-        console.clear();
     });
     //If a user clicks an equal button, 
     equal.addEventListener('click', () => {
@@ -276,9 +274,6 @@ function display(){
             //Print the final result to the textbox
             output.value = operate(firstNumber,secondNumber,operatorName);
         }
-        //Otherwise, set the value of the text box to blank
-
-        //Reset the value of the firstNumber, secondNumber and operatorName
     });
     //Loop through the nodelist of operator buttons +-/*,
     operators.forEach((operator) => {
