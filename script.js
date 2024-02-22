@@ -143,9 +143,6 @@ function display(){
         digit.addEventListener('click', () => {
             //Push each digit into the digits array
             digits.push(digit.textContent);
-            console.log('firstNumber on numbers add event listener= ',firstNumber);
-            console.log('secondNumber on numbers add event listener= ',secondNumber);
-            console.log('operator on numbers add event listener= ', operatorName);
             //If arithmetic array not include firstNumber,
             if(arithmetic.length === 0){
                 //digits.push(digit.textContent);
@@ -284,13 +281,9 @@ function display(){
     operators.forEach((operator) => {
         //When the operator is clicked,
         operator.addEventListener('click', () => {
-            console.log('firstNumber on operator add event listener= ',firstNumber);
-            console.log('secondNumber on operator add event listener= ',secondNumber);
             //Remove all digits in the digits array
             digits.splice(0,digits.length);
-           console.log('arithmetic beofre = ', arithmetic);
             if(arithmetic.length == 0){
-                console.log("arithmetic initial before push = ", arithmetic);
                 //Push firstNumber into the arithmetic array
                 if(firstNumber !== undefined){
                     arithmetic.push(firstNumber);
@@ -301,19 +294,16 @@ function display(){
                 if(firstNumber !== undefined){
                     arithmetic.push(operatorName);
                 } 
-                console.log("arithmetic initial after push = ", arithmetic);
                 
             }
             //If arithmetic[lastIndex - 1] EQUAL to firstNumber AND arithmetic[lastIndex] equal to operatorName,
             else if(arithmetic[arithmetic.length - 2] === firstNumber && 
                 arithmetic[arithmetic.length - 1] === operatorName){
-                console.log("arithmetic 2nd before 2nd number push = ", arithmetic);
                 //If th secondNumber is not undefined,
                 if(secondNumber !== undefined){
                     //Push secondNumber into the arithmetic array 
                     arithmetic.push(secondNumber);
                 }
-                console.log("arithmetic 2nd after 2nd number push = ", arithmetic);
                 //If item of index 0 is firstNumber, item of last index is secondNumber and length of arithmetic array is 3 
                 if(arithmetic[arithmetic.length - 1] === secondNumber && 
                     arithmetic[0] === firstNumber && arithmetic.length === 3){
@@ -381,7 +371,6 @@ function display(){
                 }
                 //Store the operator button value into the operatorName variable
                 operatorName = operator.textContent;
-                console.log("arithmetic 2nd before operator name push = ", arithmetic);
                 //If the secondNumber does exist before the operator
                 if(arithmetic[arithmetic.length - 1] === secondNumber){
                     //Push the operatorName variale into the arithmetic array 
@@ -454,9 +443,6 @@ function display(){
                     }
                 }
                 //Push the operatorName variable into the arithmetic array   
-                /*if(firstNumber === undefined){
-                    arithmetic[arithmetic.length - 1] = operatorName; 
-                }*/
                 else if(secondNumber !== undefined){
                     secondNumber = undefined;
                 }
