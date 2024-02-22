@@ -271,8 +271,8 @@ function display(){
             output.value = 'Cannot divide by 0';
             return -1;
         }
-        //If secondNumber and firstNumber does not have an undefined value,
-        if(secondNumber !== undefined){ 
+        //If secondNumber, operatorName, firstNumber does not have an undefined value,
+        if(secondNumber !== undefined && firstNumber !== undefined && operatorName !== undefined){ 
             //Print the final result to the textbox
             output.value = operate(firstNumber,secondNumber,operatorName);
         }
