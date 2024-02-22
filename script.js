@@ -276,6 +276,9 @@ function display(){
             //Print the final result to the textbox
             output.value = operate(firstNumber,secondNumber,operatorName);
         }
+        //Otherwise, set the value of the text box to blank
+
+        //Reset the value of the firstNumber, secondNumber and operatorName
     });
     //Loop through the nodelist of operator buttons +-/*,
     operators.forEach((operator) => {
