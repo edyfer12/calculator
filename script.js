@@ -449,6 +449,9 @@ function display(){
                 //Replace the item wih new value
                 if(arithmetic.lastIndexOf(operator.textContent)){
                     arithmetic[arithmetic.length - 1] = operatorName;
+                    if(firstNumber !== undefined){
+                        secondNumber = undefined;
+                    }
                 }
                 //Push the operatorName variable into the arithmetic array   
                 /*if(firstNumber === undefined){
@@ -458,8 +461,6 @@ function display(){
                     secondNumber = undefined;
                 }
             }  
-             
-            //console.log('arithmetic = ', arithmetic);
         });
     });
     
