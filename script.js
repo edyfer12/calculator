@@ -143,8 +143,12 @@ function display(){
         digit.addEventListener('click', () => {
             //Push each digit into the digits array
             digits.push(digit.textContent);
+            console.log('firstNumber on numbers add event listener= ',firstNumber);
+            console.log('secondNumber on numbers add event listener= ',secondNumber);
+            console.log('operator on numbers add event listener= ', operatorName);
             //If arithmetic array not include firstNumber,
-            if(arithmetic.length < 1){
+            if(arithmetic.length === 0){
+                //digits.push(digit.textContent);
                 //Store the value of digits array into the first number variable 
                 firstNumber = digits;
                 //Join together all the digits with '' and save into firstNumber 
@@ -194,6 +198,7 @@ function display(){
         operatorName = undefined;
         //Set total to 0
         total = 0;
+        console.clear();
     });
     //If a user clicks an equal button, 
     equal.addEventListener('click', () => {
@@ -279,10 +284,13 @@ function display(){
     operators.forEach((operator) => {
         //When the operator is clicked,
         operator.addEventListener('click', () => {
+            console.log('firstNumber on operator add event listener= ',firstNumber);
+            console.log('secondNumber on operator add event listener= ',secondNumber);
             //Remove all digits in the digits array
             digits.splice(0,digits.length);
            console.log('arithmetic beofre = ', arithmetic);
-            if(arithmetic.length < 1){
+            if(arithmetic.length == 0){
+                console.log("arithmetic initial before push = ", arithmetic);
                 //Push firstNumber into the arithmetic array
                 if(firstNumber !== undefined){
                     arithmetic.push(firstNumber);
@@ -293,17 +301,19 @@ function display(){
                 if(firstNumber !== undefined){
                     arithmetic.push(operatorName);
                 } 
+                console.log("arithmetic initial after push = ", arithmetic);
                 
             }
             //If arithmetic[lastIndex - 1] EQUAL to firstNumber AND arithmetic[lastIndex] equal to operatorName,
             else if(arithmetic[arithmetic.length - 2] === firstNumber && 
                 arithmetic[arithmetic.length - 1] === operatorName){
+                console.log("arithmetic 2nd before 2nd number push = ", arithmetic);
                 //If th secondNumber is not undefined,
                 if(secondNumber !== undefined){
                     //Push secondNumber into the arithmetic array 
                     arithmetic.push(secondNumber);
                 }
-                console.log('arithmetic 2nd = ', arithmetic);
+                console.log("arithmetic 2nd after 2nd number push = ", arithmetic);
                 //If item of index 0 is firstNumber, item of last index is secondNumber and length of arithmetic array is 3 
                 if(arithmetic[arithmetic.length - 1] === secondNumber && 
                     arithmetic[0] === firstNumber && arithmetic.length === 3){
@@ -335,10 +345,12 @@ function display(){
                             //Display the total value on the textbox
                             output.value = total;
                         }
+                
                 }
                 //If item of last index is secondNumber and item of two before last index is firstNumber,
                 else if(arithmetic[arithmetic.length - 1] === secondNumber && 
-                    arithmetic[arithmetic.length - 3] === firstNumber && arithmetic.length > 3){
+                    arithmetic[arithmetic.length - 3] === firstNumber
+                     && arithmetic.length > 3){
                         if(operatorName === '+'){
                             //Add current total value by secondNumber
                             total += secondNumber;
@@ -369,21 +381,40 @@ function display(){
                 }
                 //Store the operator button value into the operatorName variable
                 operatorName = operator.textContent;
+                console.log("arithmetic 2nd before operator name push = ", arithmetic);
                 //If the secondNumber does exist before the operator
                 if(arithmetic[arithmetic.length - 1] === secondNumber){
                     //Push the operatorName variale into the arithmetic array 
                     arithmetic.push(operatorName);
                 }
+
+                operatorName = operator.textContent;
+                //If item of last index of the arithmetic array is an operator,
+                //Replace the item wih new value
+                if(arithmetic.lastIndexOf(operator.textContent)){
+                    arithmetic[arithmetic.length - 1] = operatorName;
+                }
+                if(secondNumber !== undefined){
+                    firstNumber = undefined;
+                }
+                
             }
             //If arithmetic[lastIndex - 1] EQUAL to secondNumber and EQUAL to arithmetic[lastIndex] equal to operatorName?
                 //Push the firstNumber into the arithmetic array
             else if(arithmetic[arithmetic.length - 2] === secondNumber && 
                 arithmetic[arithmetic.length - 1] === operatorName){
-                arithmetic.push(firstNumber);
+                
+                //arithmetic.push(firstNumber);
+                if(firstNumber !== undefined){
+                    arithmetic.push(firstNumber);
+                    //Store the operator button value into the operatorName variable 
+                    arithmetic.push(operatorName);
+                }
                 //If item of last index is firstNumber and item of 2nd last index is secondNumber while length is greater than 3
-                if(arithmetic[arithmetic.length - 1] === firstNumber && 
-                    arithmetic[arithmetic.length - 3] === secondNumber
+                if(arithmetic[arithmetic.length - 2] === firstNumber && 
+                    arithmetic[arithmetic.length - 1] === operatorName
                     && arithmetic.length > 3){
+                        
                         //If operator between two operands is +
                         if(operatorName === '+'){
                             //Add current total value by firstNumber
@@ -413,13 +444,22 @@ function display(){
                             output.value = total;
                         }
                 } 
-                //Store the operator button value into the operatorName variable 
                 operatorName = operator.textContent;
+                //If item of last index of the arithmetic array is an operator,
+                //Replace the item wih new value
+                if(arithmetic.lastIndexOf(operator.textContent)){
+                    arithmetic[arithmetic.length - 1] = operatorName;
+                }
                 //Push the operatorName variable into the arithmetic array   
-                arithmetic.push(operatorName);
+                /*if(firstNumber === undefined){
+                    arithmetic[arithmetic.length - 1] = operatorName; 
+                }*/
+                else if(secondNumber !== undefined){
+                    secondNumber = undefined;
+                }
             }  
              
-            console.log('arithmetic = ', arithmetic);
+            //console.log('arithmetic = ', arithmetic);
         });
     });
     
