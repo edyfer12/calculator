@@ -336,9 +336,11 @@ function display(){
             //Remove the digits array
             digits.splice(0,digits.length);
         }
-        //If the item in the first index has an undefined second number and an equal sign on the second index, 
+        //If the item in the first index has an undefined second number and an equal sign on the second index,
+        else if(arithmetic[0] === secondNumber && secondNumber === undefined && arithmetic[1] === '='){ 
             //Set first number to undefined to reset the value and start new calculation
             //Reset the arithmetic array by removing equal sign and secondNumber
+        }
         //Otherwise, empty the arithmetic array, first number and second number and return the output value as Invalid Input: Cannot click Operator Before equal 
         else{
             arithmetic.splice(0,arithmetic.length);
