@@ -203,18 +203,19 @@ function display(){
     equal.addEventListener('click', () => {
         //Push the final operand into the arithmetic array
             /* If the items of the last index and one before in the arithmetic array is operatorName and firstNumber
-             respectively, */
-        if(arithmetic[arithmetic.length - 1] === operatorName && arithmetic[arithmetic.length - 2] === firstNumber){
+             respectively and isAccumulated is false, */
+        if(arithmetic[arithmetic.length - 1] === operatorName && arithmetic[arithmetic.length - 2] === firstNumber ){
                 //Push the secondNumber to the arithmetic array
             arithmetic.push(secondNumber);
         }
             /* If the items of the last index and one before in the arithmetic array is operatorName and secondNumber
-             respectively, */ 
+             respectively, isAccumulated is false */ 
         else if(arithmetic[arithmetic.length - 1] === operatorName && arithmetic[arithmetic.length - 2] === secondNumber){
                 //Push the firstNumber to the arithmetic array
             arithmetic.push(firstNumber);
         }
-        //Push the equal sign into the arithmetic array
+        //If isAccumulated is false
+        //Push the equal sign into the arithmetic array 
         arithmetic.push(equal.textContent);
         //Extract the last item in the index from arithmetic array and store into the secondNumber variable
         secondNumber = arithmetic[arithmetic.length - 2];
