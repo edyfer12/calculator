@@ -337,10 +337,11 @@ function display(){
             //Reset the arithmetic array by removing equal sign and secondNumber
             arithmetic.splice(0,2);
         }
-        /*If the equal sign is the last index with second number entered undefined as one index before and first number
-        is defined as located two indexes before*/
-        else if(arithmetic[0] === firstNumber && arithmetic[1] === operatorName && arithmetic[2] === secondNumber
-            && secondNumber === undefined && arithmetic[3] === '='){
+        /*If the equal sign is the last index, undefined second number being the second last index, operator name 
+        located on the third last and first undefined number as the fourth last index*/
+        else if(arithmetic[arithmetic.length - 1] === '=' && arithmetic[arithmetic.length - 2] === secondNumber
+        && secondNumber === undefined && arithmetic[arithmetic.length - 3] === operatorName && 
+        arithmetic[arithmetic.length - 4] === firstNumber && firstNumber !== undefined){
             //Pop the last item in the arithmetic array that is an equal sign so user can enter a new second number
             arithmetic.pop();
             //Pop the next last item in the arithmetic array which is an undefined second number
