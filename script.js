@@ -347,6 +347,8 @@ function display(){
             //Pop the next last item in the arithmetic array which is an undefined second number
             arithmetic.pop();
         }
+        /*If the equal sign is the last index, undefined first number being the second last index, operator name
+        is located on the third last position and undefined second number is positioned on the fourth last index*/
         //Otherwise, empty the arithmetic array, first number and second number and return the output value as Invalid Input: Cannot click Operator Before equal 
         else{
             arithmetic.splice(0,arithmetic.length);
