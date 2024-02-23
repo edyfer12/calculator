@@ -204,17 +204,19 @@ function display(){
         //Push the final operand into the arithmetic array
             /* If the items of the last index and one before in the arithmetic array is operatorName and firstNumber
              respectively and isAccumulated is false, */
-        if(arithmetic[arithmetic.length - 1] === operatorName && arithmetic[arithmetic.length - 2] === firstNumber ){
+        if(isAccumulated === false && arithmetic[arithmetic.length - 1] === operatorName 
+            && arithmetic[arithmetic.length - 2] === firstNumber ){
                 //Push the secondNumber to the arithmetic array
             arithmetic.push(secondNumber);
         }
             /* If the items of the last index and one before in the arithmetic array is operatorName and secondNumber
              respectively, isAccumulated is false */ 
-        else if(arithmetic[arithmetic.length - 1] === operatorName && arithmetic[arithmetic.length - 2] === secondNumber){
+        else if(isAccumulated === false && arithmetic[arithmetic.length - 1] === operatorName && arithmetic[arithmetic.length - 2] === secondNumber){
                 //Push the firstNumber to the arithmetic array
             arithmetic.push(firstNumber);
         }
         //If isAccumulated is false
+        if(isAccumulated === false){
             //Push the equal sign into the arithmetic array 
             arithmetic.push(equal.textContent);
             //Extract the last item in the index from arithmetic array and store into the secondNumber variable
@@ -268,6 +270,7 @@ function display(){
                 return accumulator;
             }
             }, 0);
+        }
         /*If the secondNumber is 0 and operatorName is ÷, display the error message "Cannot divide by zero" on textbox
         return the value -1 to terminate the display function*/
         if(operatorName === '÷' && secondNumber === 0){
