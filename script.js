@@ -341,6 +341,7 @@ function display(){
             //Set first number to undefined to reset the value and start new calculation
             firstNumber = undefined;
             //Reset the arithmetic array by removing equal sign and secondNumber
+            arithmetic.splice(0,2);
         }
         //Otherwise, empty the arithmetic array, first number and second number and return the output value as Invalid Input: Cannot click Operator Before equal 
         else{
