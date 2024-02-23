@@ -348,6 +348,7 @@ function display(){
         else if(arithmetic[0] === firstNumber && arithmetic[1] === operatorName && arithmetic[2] === secondNumber
             && secondNumber === undefined && arithmetic[3] === '='){
             //Pop the last item in the arithmetic array so user can enter a new second number
+            arithmetic.pop();
         }
         //Otherwise, empty the arithmetic array, first number and second number and return the output value as Invalid Input: Cannot click Operator Before equal 
         else{
