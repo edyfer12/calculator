@@ -136,6 +136,8 @@ function display(){
     //Create a total variable that will store the calculated values for display
     //Set to 0
     let total = 0;
+    //Create variable result and set value to 0
+    //Create variable isAccumulated and set value to false
 
     //Loop through the nodelist for the number buttons from 0 to 9,
     numbers.forEach((digit) => {
@@ -271,6 +273,10 @@ function display(){
         }
         //If secondNumber, operatorName, firstNumber does not have an undefined value,
         if(secondNumber !== undefined && firstNumber !== undefined && operatorName !== undefined){ 
+            //If the operatorName is '+',
+                //Initially, store operate() function into the result variable
+                //Set isAccumulated to true
+                //If isAccumulated is true, store the previous result value added by the secondNumber into the result
             //Print the final result to the textbox
             output.value = operate(firstNumber,secondNumber,operatorName);
         }
