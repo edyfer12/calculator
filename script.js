@@ -389,6 +389,13 @@ function display(){
                 } 
                 
             }
+            //If the arithmetic length is 1,
+            else if(arithmetic.length === 1){
+                //Store operator button value into the operatorName variable
+                operatorName = operator.textContent;
+                //Push the operatorName into the arithmetic array
+                arithmetic.push(operatorName);
+            }
             //If arithmetic[lastIndex - 1] EQUAL to firstNumber AND arithmetic[lastIndex] equal to operatorName,
             else if(arithmetic[arithmetic.length - 2] === firstNumber && 
                 arithmetic[arithmetic.length - 1] === operatorName){
