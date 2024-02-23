@@ -145,6 +145,7 @@ function display(){
     numbers.forEach((digit) => {
         //If a user clicks on a number button, 
         digit.addEventListener('click', () => {
+            //Set the isAccumulated to false
             //Push each digit into the digits array
             digits.push(digit.textContent);
             //If arithmetic array not include firstNumber,
@@ -198,6 +199,7 @@ function display(){
         operatorName = undefined;
         //Set total to 0
         total = 0;
+        //Set isAccumulated to false
     });
     //If a user clicks an equal button, 
     equal.addEventListener('click', () => {
