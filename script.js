@@ -338,7 +338,7 @@ function display(){
             arithmetic.splice(0,2);
         }
         /*If the equal sign is the last index, undefined second number being the second last index, operator name 
-        located on the third last and first undefined number as the fourth last index*/
+        located on the third last and first defined number as the fourth last index*/
         else if(arithmetic[arithmetic.length - 1] === '=' && arithmetic[arithmetic.length - 2] === secondNumber
         && secondNumber === undefined && arithmetic[arithmetic.length - 3] === operatorName && 
         arithmetic[arithmetic.length - 4] === firstNumber && firstNumber !== undefined){
