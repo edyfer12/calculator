@@ -330,12 +330,6 @@ function display(){
             //Print the final result to the textbox
             output.value = result;
         }
-        //If the firstNumber but not the operator is stored in the arithmetic array, remove the whole arithmetic array
-        else if(arithmetic.includes(firstNumber) && arithmetic.includes("=")){
-            arithmetic.splice(0,arithmetic.length);
-            //Remove the digits array
-            digits.splice(0,digits.length);
-        }
         //If the item in the first index has an undefined second number and an equal sign on the second index,
         else if(arithmetic[0] === secondNumber && secondNumber === undefined && arithmetic[1] === '='){ 
             //Set first number to undefined to reset the value and start new calculation
