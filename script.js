@@ -330,12 +330,12 @@ function display(){
             //Print the final result to the textbox
             output.value = result;
         }
-        //Otherwise, empty the arithmetic array, first number and second number and return the output value as empty 
+        //Otherwise, empty the arithmetic array, first number and second number and return the output value as Invalid Input: Cannot click Operator Before equal 
         else{
             arithmetic.splice(0,arithmetic.length);
             firstNumber = undefined;
             secondNumber = undefined;
-            output.value = '';
+            output.value = 'Invalid Input: Cannot Click Operator Before Equal';
         }
     });
     //Loop through the nodelist of operator buttons +-/*,
