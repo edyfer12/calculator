@@ -137,7 +137,9 @@ function display(){
     //Set to 0
     let total = 0;
     //Create variable result and set value to 0
+    let result = 0;
     //Create variable isAccumulated and set value to false
+    let isAccumulated = false;
 
     //Loop through the nodelist for the number buttons from 0 to 9,
     numbers.forEach((digit) => {
