@@ -280,11 +280,18 @@ function display(){
         //If secondNumber, operatorName, firstNumber does not have an undefined value,
         if(secondNumber !== undefined && firstNumber !== undefined && operatorName !== undefined){ 
             //If the operatorName is '+',
+            if(operatorName === '+' && isAccumulated === false){
                 //Initially, store operate() function into the result variable
+                result = operate(firstNumber, secondNumber, operatorName);
                 //Set isAccumulated to true
-                //If isAccumulated is true, store the previous result value added by the secondNumber into the result
+                isAccumulated = true;
+            }
+            //If isAccumulated is true, store the previous result value added by the secondNumber into the result
+            else if(operatorName === '+' && isAccumulated === true){
+                result += secondNumber;
+            }  
             //Print the final result to the textbox
-            output.value = operate(firstNumber,secondNumber,operatorName);
+            output.value = result;
         }
         //Otherwise, empty the arithmetic array, first number and second number and return the output value as empty 
         else{
