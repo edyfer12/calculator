@@ -349,6 +349,10 @@ function display(){
         }
         /*If the equal sign is the last index, undefined first number being the second last index, operator name
         is located on the third last position and undefined second number is positioned on the fourth last index*/
+        else if(arithmetic[arithmetic.length - 1] === '=' && arithmetic[arithmetic.length - 2] === firstNumber &&
+        firstNumber == undefined && arithmetic[arithmetic.length - 3] === operatorName && 
+        arithmetic[arithmetic.length - 4] === secondNumber && secondNumber !== undefined){
+        }
         //Otherwise, empty the arithmetic array, first number and second number and return the output value as Invalid Input: Cannot click Operator Before equal 
         else{
             arithmetic.splice(0,arithmetic.length);
