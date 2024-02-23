@@ -357,6 +357,9 @@ function display(){
             //Pop the next last item in the arithmetic array that is an undefined first number
             arithmetic.pop();
         }
+        //If the first number or operator name is the first index in the arithmetic array and the equal is second item in array
+            //Pop the last item in the array
+            //Set the first number or operator to undefined to reset the first number value
         //Otherwise, empty the arithmetic array, first number and second number and return the output value as Invalid Input: Cannot click Operator Before equal 
         else{
             arithmetic.splice(0,arithmetic.length);
