@@ -344,6 +344,7 @@ function display(){
             //Pop the last item in the arithmetic array that is an equal sign so user can enter a new second number
             arithmetic.pop();
             //Pop the next last item in the arithmetic array which is an undefined second number
+            arithmetic.pop();
         }
         //Otherwise, empty the arithmetic array, first number and second number and return the output value as Invalid Input: Cannot click Operator Before equal 
         else{
