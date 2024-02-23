@@ -357,8 +357,8 @@ function display(){
             //Pop the next last item in the arithmetic array that is an undefined first number
             arithmetic.pop();
         }
-        //If the first number or operator name is the first index in the arithmetic array and the equal is second item in array
-        else if((arithmetic[0] === firstNumber || arithmetic[0] === operatorName) && arithmetic[1] === '='){
+        //If the first number is the first index and the equal is second item in array
+        else if(arithmetic[0] === firstNumber && arithmetic[1] === '='){
             //Pop the last item in the array
             arithmetic.pop();
         }
