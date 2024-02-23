@@ -330,6 +330,10 @@ function display(){
             //Print the final result to the textbox
             output.value = result;
         }
+        //If the firstNumber but not the operator is stored in the arithmetic array, remove the whole arithmetic array
+        else if(arithmetic.includes(firstNumber) && arithmetic.includes("=")){
+            arithmetic.splice(0,arithmetic.length);
+        }
         //Otherwise, empty the arithmetic array, first number and second number and return the output value as Invalid Input: Cannot click Operator Before equal 
         else{
             arithmetic.splice(0,arithmetic.length);
