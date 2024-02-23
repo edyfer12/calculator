@@ -274,6 +274,7 @@ function display(){
             //Print the final result to the textbox
             output.value = operate(firstNumber,secondNumber,operatorName);
         }
+        //Otherwise, empty the arithmetic array, first number and second number and return the output value as empty 
     });
     //Loop through the nodelist of operator buttons +-/*,
     operators.forEach((operator) => {
