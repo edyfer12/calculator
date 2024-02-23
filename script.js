@@ -215,59 +215,59 @@ function display(){
             arithmetic.push(firstNumber);
         }
         //If isAccumulated is false
-        //Push the equal sign into the arithmetic array 
-        arithmetic.push(equal.textContent);
-        //Extract the last item in the index from arithmetic array and store into the secondNumber variable
-        secondNumber = arithmetic[arithmetic.length - 2];
-        //Extract the arithmetic array from the first index to the index where operator is final and store into firstNumber 
-        firstNumber = arithmetic.slice(0, arithmetic.lastIndexOf(operatorName)); 
-        /*Use the array reduce method to return a single value for the firstNumber array. 
-            Initial_value for the reduce method to 0 as a second parameter
-            Include the callback function as the first parameter
-            Inside the callback function, include
-                accumulator as the first parameter, accumulator = initial_value = 0
-                current_item as second parameter 
-                current_index as third parameter
-        */  
-       //For example, array is [1, '+', 120, '-', 12, 'X' ,123] 
-        firstNumber = firstNumber.reduce((accumulator, current_item, current_index) => {
-        //If current_index is an odd number, do not store values in the accumulator and 
-        //return accumulator to move to next current_item
-        if(current_index % 2 === 1){
-            return accumulator;
-        }
-        //If current_index is an even number and is at least 2,
-        else if(current_index % 2 === 0 && current_index >= 2){
-                //If array_name[current_index - 1] = '+',
-                if(firstNumber[current_index - 1] === '+'){
-                    //set the accumulator to current accumulator value added by current_item
-                    accumulator += current_item;
-                }
-                //If array_name[current_index - 1] = '-',
-                else if(firstNumber[current_index - 1] === '-'){
-                    //set the accumulator to current accumulator value subtracted by current_item
-                    accumulator-= current_item;
-                }
-                //If array_name[current_index - 1] = 'X',
-                else if(firstNumber[current_index - 1] === 'X'){
-                    //set the accumulator to current accumulator value multiplied by current_item
-                    accumulator *= current_item;
-                }
-                //If array_name[current_index - 1] = '÷',
-                else if(firstNumber[current_index - 1] === '÷'){
-                    //set the accumulator to current accumulator value divided by current_item
-                    accumulator /= current_item;
-                }
-                //Return accumulator
+            //Push the equal sign into the arithmetic array 
+            arithmetic.push(equal.textContent);
+            //Extract the last item in the index from arithmetic array and store into the secondNumber variable
+            secondNumber = arithmetic[arithmetic.length - 2];
+            //Extract the arithmetic array from the first index to the index where operator is final and store into firstNumber 
+            firstNumber = arithmetic.slice(0, arithmetic.lastIndexOf(operatorName)); 
+            /*Use the array reduce method to return a single value for the firstNumber array. 
+                Initial_value for the reduce method to 0 as a second parameter
+                Include the callback function as the first parameter
+                Inside the callback function, include
+                    accumulator as the first parameter, accumulator = initial_value = 0
+                    current_item as second parameter 
+                    current_index as third parameter
+            */  
+        //For example, array is [1, '+', 120, '-', 12, 'X' ,123] 
+            firstNumber = firstNumber.reduce((accumulator, current_item, current_index) => {
+            //If current_index is an odd number, do not store values in the accumulator and 
+            //return accumulator to move to next current_item
+            if(current_index % 2 === 1){
                 return accumulator;
-        }
-            //If current_index is 0, 
-        else if(current_index === 0){
-            //set the accumulator to current accumulator value added by current_item
-            accumulator += current_item;
-            return accumulator;
-        }
-        }, 0);
+            }
+            //If current_index is an even number and is at least 2,
+            else if(current_index % 2 === 0 && current_index >= 2){
+                    //If array_name[current_index - 1] = '+',
+                    if(firstNumber[current_index - 1] === '+'){
+                        //set the accumulator to current accumulator value added by current_item
+                        accumulator += current_item;
+                    }
+                    //If array_name[current_index - 1] = '-',
+                    else if(firstNumber[current_index - 1] === '-'){
+                        //set the accumulator to current accumulator value subtracted by current_item
+                        accumulator-= current_item;
+                    }
+                    //If array_name[current_index - 1] = 'X',
+                    else if(firstNumber[current_index - 1] === 'X'){
+                        //set the accumulator to current accumulator value multiplied by current_item
+                        accumulator *= current_item;
+                    }
+                    //If array_name[current_index - 1] = '÷',
+                    else if(firstNumber[current_index - 1] === '÷'){
+                        //set the accumulator to current accumulator value divided by current_item
+                        accumulator /= current_item;
+                    }
+                    //Return accumulator
+                    return accumulator;
+            }
+                //If current_index is 0, 
+            else if(current_index === 0){
+                //set the accumulator to current accumulator value added by current_item
+                accumulator += current_item;
+                return accumulator;
+            }
+            }, 0);
         /*If the secondNumber is 0 and operatorName is ÷, display the error message "Cannot divide by zero" on textbox
         return the value -1 to terminate the display function*/
         if(operatorName === '÷' && secondNumber === 0){
