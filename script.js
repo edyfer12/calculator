@@ -290,38 +290,38 @@ function display(){
             else if(operatorName === '+' && isAccumulated === true){
                 result += secondNumber;
             } 
-            //If the operatorName is '+',
-            if(operatorName === '+' && isAccumulated === false){
+            //If the operatorName is '-',
+            else if(operatorName === '-' && isAccumulated === false){
                 //Initially, store operate() function into the result variable
                 result = operate(firstNumber, secondNumber, operatorName);
                 //Set isAccumulated to true
                 isAccumulated = true;
             }
             //If isAccumulated is true, store the previous result value added by the secondNumber into the result
-            else if(operatorName === '+' && isAccumulated === true){
-                result += secondNumber;
+            else if(operatorName === '-' && isAccumulated === true){
+                result -= secondNumber;
             }  
-            //If the operatorName is '+',
-            if(operatorName === '+' && isAccumulated === false){
+            //If the operatorName is 'X',
+            else if(operatorName === 'X' && isAccumulated === false){
                 //Initially, store operate() function into the result variable
                 result = operate(firstNumber, secondNumber, operatorName);
                 //Set isAccumulated to true
                 isAccumulated = true;
             }
             //If isAccumulated is true, store the previous result value added by the secondNumber into the result
-            else if(operatorName === '+' && isAccumulated === true){
-                result += secondNumber;
+            else if(operatorName === 'X' && isAccumulated === true){
+                result *= secondNumber;
             }  
-            //If the operatorName is '+',
-            if(operatorName === '+' && isAccumulated === false){
+            //If the operatorName is '÷',
+            else if(operatorName === '÷' && isAccumulated === false){
                 //Initially, store operate() function into the result variable
                 result = operate(firstNumber, secondNumber, operatorName);
                 //Set isAccumulated to true
                 isAccumulated = true;
             }
             //If isAccumulated is true, store the previous result value added by the secondNumber into the result
-            else if(operatorName === '+' && isAccumulated === true){
-                result += secondNumber;
+            else if(operatorName === '÷' && isAccumulated === true){
+                result /= secondNumber;
             }   
             //Print the final result to the textbox
             output.value = result;
