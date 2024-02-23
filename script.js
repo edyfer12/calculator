@@ -343,6 +343,9 @@ function display(){
             //Reset the arithmetic array by removing equal sign and secondNumber
             arithmetic.splice(0,2);
         }
+        /*If the item in the first index has a first number entered, operator name on second index, undefined second number on third index
+         and equal sign on the fourth index included in the arithmetic array*/
+            //Pop the last item in the arithmetic array so user can enter a new second number
         //Otherwise, empty the arithmetic array, first number and second number and return the output value as Invalid Input: Cannot click Operator Before equal 
         else{
             arithmetic.splice(0,arithmetic.length);
