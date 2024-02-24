@@ -363,7 +363,9 @@ function display(){
             arithmetic.pop();
         }
         //If the last index is an equal sign and the previous index has a second number that is undefined of the arithmetic array,
+        else if(arithmetic[arithmetic.length - 1] === '=' && arithmetic[arithmetic.length - 2] === undefined){
             //Pop the last item
+        }
         //Otherwise, empty the arithmetic array, first number and second number and return the output value as Invalid Input: Cannot click Operator Before equal 
         else{
             arithmetic.splice(0,arithmetic.length);
