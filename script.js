@@ -214,8 +214,8 @@ function display(){
     //If a user clicks an equal button, 
     equal.addEventListener('click', () => {
         //If isAccumulated is true, push the secondNumber in the array
-        if(accumulator === true){
-            arithmetic.push(secondNumber);
+        if(isAccumulated === true){
+            arithmetic.push(firstNumber);
         }
         //Push the final operand into the arithmetic array
             /* If the items of the last index and one before in the arithmetic array is operatorName and firstNumber
