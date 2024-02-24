@@ -291,11 +291,6 @@ function display(){
             }
             }, 0);
         }
-        //If the last item of arithmetic array is the first number and isAccumulated is set to true,
-        if(arithmetic[arithmetic.length - 1] === firstNumber && isAccumulated === true){
-            //Set firstNumber to previous firstNumber value
-            secondNumber = originalFirstNumber;
-        }
         //If the last item of arithmetic array is the second number and isAccumulated is set to true,
             //Set secondNumber to previous secondNumber value
         /*If the secondNumber is 0 and operatorName is ÷, display the error message "Cannot divide by zero" on textbox
@@ -326,6 +321,7 @@ function display(){
             }
             //If isAccumulated is true, store the previous result value added by the secondNumber into the result
             else if(operatorName === '-' && isAccumulated === true){
+                //If the arithmetic array has a last item as firstNumber, set secondNumber as firstNumber 
                 result -= secondNumber;
             }  
             //If the operatorName is 'X',
