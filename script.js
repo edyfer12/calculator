@@ -455,6 +455,8 @@ function display(){
                             total += firstNumber - secondNumber;
                             //Display the total value on the textbox
                             output.value = total;
+                            //Store the result value in total variable
+                            result = total;
                         }
                         //If the operator between two operands is +,
                         else if(operatorName === 'X'){
@@ -462,6 +464,8 @@ function display(){
                             total += firstNumber * secondNumber
                             //Display the total value on the textbox
                             output.value = total;
+                            //Store the result value in total variable
+                            result = total;
                         }
                         //If the operator between two operands is -,
                         else if(operatorName === '÷'){
@@ -469,6 +473,8 @@ function display(){
                             total += firstNumber / secondNumber;
                             //Display the total value on the textbox
                             output.value = total;
+                            //Store the result value in total variable
+                            result = total;
                         }
                 
                 }
@@ -481,6 +487,8 @@ function display(){
                             total += secondNumber;
                             //Display the total value to the textbox
                             output.value = total;
+                            //Store the result value in total variable
+                            result = total;
                         }
                         //If the operator between two operands is -,
                         else if(operatorName === '-'){
@@ -488,6 +496,8 @@ function display(){
                             total -= secondNumber;
                             //Display the total value to the textbox
                             output.value = total;
+                            //Store the result value in total variable
+                            result = total;
                         }
                         //If the operator between two operands is +,
                         else if(operatorName === 'X'){
@@ -495,6 +505,8 @@ function display(){
                             total *= secondNumber;
                             //Display the total value on the textbox
                             output.value = total;
+                            //Store the result value in total variable
+                            result = total;
                         }
                         //If the operator between two operands is -,
                         else if(operatorName === '÷'){
@@ -502,6 +514,8 @@ function display(){
                             total /= secondNumber;
                             //Display the total value on the textbox
                             output.value = total;
+                            //Store the result value in total variable
+                            result = total;
                         }
                 }
                 //Store the operator button value into the operatorName variable
@@ -545,6 +559,8 @@ function display(){
                             total += firstNumber;
                             //Display the total value to the textbox
                             output.value = total;
+                            //Store the result value in total variable
+                            result = total;
                         }
                         //If operator between two operand is -
                         else if(operatorName === '-'){
@@ -552,6 +568,8 @@ function display(){
                             total -= firstNumber;
                             //Display the total value to the textbox
                             output.value = total;
+                            //Store the result value in total variable
+                            result = total;
                         }
                         //If the operator between two operands is +,
                         else if(operatorName === 'X'){
@@ -559,6 +577,8 @@ function display(){
                             total *= firstNumber;
                             //Display the total value on the textbox
                             output.value = total;
+                            //Store the result value in total variable
+                            result = total;
                         }
                         //If the operator between two operands is -,
                         else if(operatorName === '÷'){
@@ -566,6 +586,8 @@ function display(){
                             total /= firstNumber;
                             //Display the total value on the textbox
                             output.value = total;
+                            //Store the result value in total variable
+                            result = total;
                         }
                 } 
                 operatorName = operator.textContent;
