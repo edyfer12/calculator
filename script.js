@@ -446,6 +446,7 @@ function display(){
                             total += firstNumber + secondNumber
                             //Display the total value on the textbox
                             output.value = total;
+                            //Store the result value in total variable
                         }
                         //If the operator between two operands is -,
                         else if(operatorName === '-'){
