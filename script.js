@@ -292,7 +292,10 @@ function display(){
             }, 0);
         }
         //If the last item of arithmetic array is the first number and isAccumulated is set to true,
+        if(arithmetic[arithmetic.length - 1] === firstNumber && isAccumulated === true){
             //Set firstNumber to previous firstNumber value
+            secondNumber = originalFirstNumber;
+        }
         //If the last item of arithmetic array is the second number and isAccumulated is set to true,
             //Set secondNumber to previous secondNumber value
         /*If the secondNumber is 0 and operatorName is ÷, display the error message "Cannot divide by zero" on textbox
