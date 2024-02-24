@@ -367,7 +367,8 @@ function display(){
             arithmetic.pop();
         }
         //If the last index is an equal sign and the previous index has a second number that is undefined of the arithmetic array,
-        else if(arithmetic[arithmetic.length - 1] === '=' && arithmetic[arithmetic.length - 2] === undefined){
+        else if(arithmetic[arithmetic.length - 1] === '=' && arithmetic[arithmetic.length - 2] === secondNumber &&
+        secondNumber === undefined){
             //Replace the last item with operatorName
             arithmetic[arithmetic.length - 1] = operatorName;
             //Replace the last item with firstNumber
