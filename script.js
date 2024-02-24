@@ -352,7 +352,7 @@ function display(){
             //Set the output value as the firstNumber
             firstNumber = result;
             //result = 0;
-            total = result;
+            total = 0;
             arithmetic.push(firstNumber);
 
         }
@@ -447,6 +447,7 @@ function display(){
                             //Display the total value on the textbox
                             output.value = total;
                             //Store the result value in total variable
+                            result = total;
                         }
                         //If the operator between two operands is -,
                         else if(operatorName === '-'){
