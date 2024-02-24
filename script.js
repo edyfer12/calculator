@@ -146,9 +146,15 @@ function display(){
         //If a user clicks on a number button, 
         digit.addEventListener('click', () => {
             //Set the isAccumulated to false
-            isAccumulated = false;
+            //isAccumulated = false;
             //If the isAccumulated is true, set to true
-            //Otherwise, set to false
+            if(isAccumulated === true){
+                isAccumulated = true;
+            }
+            else{
+                //Otherwise, set to false
+                isAccumulated = false;
+            }
             //Push each digit into the digits array
             digits.push(digit.textContent);
             //If arithmetic array not include firstNumber,
@@ -335,6 +341,16 @@ function display(){
             }   
             //Print the final result to the textbox
             output.value = result;
+            //Empty the arithmetic array
+            arithmetic.splice(0,arithmetic.length);
+            //Empty the digits array
+            digits.splice(0,digits.length);
+            //Set the output value as the firstNumber
+            firstNumber = result;
+            //result = 0;
+            total = result;
+            arithmetic.push(firstNumber);
+
         }
         //If the item in the first index has an undefined second number and an equal sign on the second index,
         else if(arithmetic[0] === secondNumber && secondNumber === undefined && arithmetic[1] === '='){ 
@@ -406,6 +422,8 @@ function display(){
                 operatorName = operator.textContent;
                 //Push the operatorName into the arithmetic array
                 arithmetic.push(operatorName);
+                //Set the secondNumber to undefined
+                secondNumber = undefined;
             }
             //If arithmetic[lastIndex - 1] EQUAL to firstNumber AND arithmetic[lastIndex] equal to operatorName,
             else if(arithmetic[arithmetic.length - 2] === firstNumber && 
