@@ -219,14 +219,14 @@ function display(){
                 //Push the firstNumber to the arithmetic array
             arithmetic.push(firstNumber);
         }
+        //Save the original value of the firstNumber in case the user makes a mistake when hitting the firstNumber Op secondNumber Op Equal
+        let originalFirstNumber = firstNumber;
+        //Save the original value of the secondNumber in case the user makes a mistake when hitting the firstNumber Op secondNumber Op firstNumber Op Equal
+        let originalSecondNumber = secondNumber;
         //If isAccumulated is false
         if(isAccumulated === false){
             //Push the equal sign into the arithmetic array 
             arithmetic.push(equal.textContent);
-            //Save the original value of the firstNumber in case the user makes a mistake when hitting the firstNumber Op secondNumber Op Equal
-            let originalFirstNumber = firstNumber;
-            //Save the original value of the secondNumber in case the user makes a mistake when hitting the firstNumber Op secondNumber Op firstNumber Op Equal
-            let originalSecondNumber = secondNumber;
             //Extract the last item in the index from arithmetic array and store into the secondNumber variable
             secondNumber = arithmetic[arithmetic.length - 2];
             //Extract the arithmetic array from the first index to the index where operator is final and store into firstNumber 
