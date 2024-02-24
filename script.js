@@ -322,6 +322,9 @@ function display(){
             //If isAccumulated is true, store the previous result value added by the secondNumber into the result
             else if(operatorName === '-' && isAccumulated === true){
                 //If the arithmetic array has a last item as firstNumber, set secondNumber as firstNumber 
+                if(arithmetic[arithmetic.length - 1] === firstNumber){
+                    secondNumber = firstNumber;
+                }
                 result -= secondNumber;
             }  
             //If the operatorName is 'X',
