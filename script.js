@@ -369,13 +369,6 @@ function display(){
             //Replace the last item with firstNumber
             arithmetic[arithmetic.length - 2] = firstNumber;
         }
-        //Otherwise, empty the arithmetic array, first number and second number and return the output value as Invalid Input: Cannot click Operator Before equal 
-        else{
-            arithmetic.splice(0,arithmetic.length);
-            firstNumber = undefined;
-            secondNumber = undefined;
-            output.value = 'Invalid Input: Cannot Click Operator Before Equal';
-        }
     });
     //Loop through the nodelist of operator buttons +-/*,
     operators.forEach((operator) => {
