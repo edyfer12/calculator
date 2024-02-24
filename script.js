@@ -147,6 +147,8 @@ function display(){
         digit.addEventListener('click', () => {
             //Set the isAccumulated to false
             isAccumulated = false;
+            //If the isAccumulated is true, set to true
+            //Otherwise, set to false
             //Push each digit into the digits array
             digits.push(digit.textContent);
             //If arithmetic array not include firstNumber,
