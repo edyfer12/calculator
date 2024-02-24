@@ -400,6 +400,8 @@ function display(){
             //Replace the secondNumber with the original second number value
             secondNumber = originalSecondNumber;
         }
+        //If the last index of the arithmetic array is undefined first number,
+            //Pop the last item that is an undefined first number
     });
     //Loop through the nodelist of operator buttons +-/*,
     operators.forEach((operator) => {
