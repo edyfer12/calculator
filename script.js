@@ -220,7 +220,7 @@ function display(){
         //Push the final operand into the arithmetic array
             /* If the items of the last index and one before in the arithmetic array is operatorName and firstNumber
              respectively and isAccumulated is false, */
-        if(isAccumulated === false && arithmetic[arithmetic.length - 1] === operatorName 
+        else if(isAccumulated === false && arithmetic[arithmetic.length - 1] === operatorName 
             && arithmetic[arithmetic.length - 2] === firstNumber ){
                 //Push the secondNumber to the arithmetic array
             arithmetic.push(secondNumber);
