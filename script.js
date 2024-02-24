@@ -369,10 +369,14 @@ function display(){
         //If the last index is an equal sign and the previous index has a second number that is undefined of the arithmetic array,
         else if(arithmetic[arithmetic.length - 1] === '=' && arithmetic[arithmetic.length - 2] === secondNumber &&
         secondNumber === undefined){
-            //Replace the last item with operatorName
-            arithmetic[arithmetic.length - 1] = operatorName;
-            //Replace the last item with firstNumber
-            arithmetic[arithmetic.length - 2] = firstNumber;
+            //Pop the last item that is an equal sign
+            arithmetic.pop();
+            //Pop the second last item that is a secondNumber
+            arithmetic.pop();
+            //Replace the firstNumber with the original first number value
+            firstNumber = originalFirstNumber;
+            //Replace the secondNumber with the original second number value
+            secondNumber = originalSecondNumber;
         }
     });
     //Loop through the nodelist of operator buttons +-/*,
