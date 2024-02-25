@@ -162,11 +162,11 @@ function display(){
                 //Store the value of digits array into the first number variable 
                 firstNumber = digits;
                 //Join together all the digits with '' and save into firstNumber 
-                firstNumber = digits.join(''); 
+                firstNumber = digits.join('');
+                //Display firstNumber to textbox
+                output.value = firstNumber; 
                 //Convert to Number and save into firstNumber
                 firstNumber = +firstNumber;
-                //Display firstNumber to textbox
-                output.value = firstNumber;
             }
             //If arithmetic[lastIndex - 1] EQUAL to firstNumber and arithmetic[lastIndex] to operatorName,
             else if(arithmetic[arithmetic.length - 2] === firstNumber &&
@@ -175,10 +175,10 @@ function display(){
                 secondNumber = digits;
                 //Join together all the digits with '' and save into the secondNumber
                 secondNumber = digits.join('');
-                //Convert to Number and save into secondNumber
-                secondNumber = +secondNumber;
                 //Display secondNumber to textbox = textbox.value = secondNumber
                 output.value = secondNumber;
+                //Convert to Number and save into secondNumber
+                secondNumber = +secondNumber;     
             }
             //If arithmetic[lastIndex - 1] EQUAL to secondNumber and arithmetic[lastIndex] equal to operatorName,
             else if(arithmetic[arithmetic.length - 2] === secondNumber &&
