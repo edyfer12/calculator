@@ -158,7 +158,10 @@ function display(){
             //Push each digit into the digits array
             digits.push(digit.textContent);
             //If a decimal point pressed on the button, 
+            if(digits[0] === '.'){
                 //Use the shift method of the digits array to add 0 as an item of first index
+                digits.unshift("0");
+            }
             //If arithmetic array not include firstNumber,
             if(arithmetic.length === 0){
                 //Store the value of digits array into the first number variable 
