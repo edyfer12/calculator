@@ -213,8 +213,14 @@ function display(){
     });
     //If a user clicks an equal button, 
     equal.addEventListener('click', () => {
-        //If isAccumulated is true, push the secondNumber in the array
-        if(isAccumulated === true){
+        //If isAccumulated is true, push the secondNumber in the array if the two items before last index has firstNumber and last index has operator
+        if(isAccumulated === true && arithmetic[arithmetic.length - 1] === operatorName && arithmetic[arithmetic.length - 2] === firstNumber){
+            arithmetic.push(secondNumber);
+        }
+        //If isAccumulated is true and last index is operator and second last index is secondNumber,
+        else if(isAccumulated === true && arithmetic[arithmetic.length -1] === operatorName 
+            && arithmetic[arithmetic.length - 2] === secondNumber){
+            //Push the first number
             arithmetic.push(firstNumber);
         }
         //Push the final operand into the arithmetic array
@@ -321,11 +327,14 @@ function display(){
             }
             //If isAccumulated is true, store the previous result value added by the secondNumber into the result
             else if(operatorName === '-' && isAccumulated === true){
-                //If the arithmetic array has a last item as firstNumber, set secondNumber as firstNumber 
-                if(arithmetic[arithmetic.length - 1] === firstNumber){
-                    secondNumber = firstNumber;
+                 //If the arithmetic array has a last item as firstNumber, subtract result by firstNumber
+                if(arithmetic[arithmetic.length - 1] === firstNumber && arithmetic.length > 1){
+                    result -= firstNumber;
+                } 
+                else if(arithmetic[arithmetic.length - 1] === secondNumber && arithmetic.length > 1){
+                    //If the last item in the arithmetic array is the secondNumber, subtract result by secondNumber
+                    result -= secondNumber;
                 }
-                result -= secondNumber;
             }  
             //If the operatorName is 'X',
             else if(operatorName === 'X' && isAccumulated === false){
