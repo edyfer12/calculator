@@ -140,6 +140,8 @@ function display(){
     let result = 0;
     //Create variable isAccumulated and set value to false
     let isAccumulated = false;
+    //Create variable called prev to store the last operand of the array before the equal sign
+    let prev;
 
     //Loop through the nodelist for the number buttons from 0 to 9,
     numbers.forEach((digit) => {
@@ -238,7 +240,7 @@ function display(){
             arithmetic.push(firstNumber);
         }
         //Create variable called prev to store the last operand of the array before the equal sign
-        let prev;
+        /*let prev;
         //If the last index is first number and length of arithmetic array is 3, store firstNumber to prev
         if(arithmetic[arithmetic.length - 1] === firstNumber && arithmetic.length >= 3){
             prev = firstNumber;
@@ -246,7 +248,7 @@ function display(){
         //If the last index is second number and length of arithmetic array is 3, store secondNumber to prev
         else if(arithmetic[arithmetic.length - 1] === secondNumber && arithmetic.length >= 3){
             prev = secondNumber;
-        }
+        }*/
         //Save the original value of the firstNumber in case the user makes a mistake when hitting the firstNumber Op secondNumber Op Equal
         let originalFirstNumber = firstNumber;
         //Save the original value of the secondNumber in case the user makes a mistake when hitting the firstNumber Op secondNumber Op firstNumber Op Equal
@@ -378,6 +380,15 @@ function display(){
 
             //Print the final result to the textbox
             output.value = result;
+
+            //If the last index is first number and length of arithmetic array is 3, store firstNumber to prev
+            if(arithmetic[arithmetic.length - 1] === firstNumber && arithmetic.length >= 3){
+                prev = firstNumber;
+            }
+            //If the last index is second number and length of arithmetic array is 3, store secondNumber to prev
+            else if(arithmetic[arithmetic.length - 1] === secondNumber && arithmetic.length >= 3){
+                prev = secondNumber;
+            }
             //Empty the arithmetic array
             arithmetic.splice(0,arithmetic.length);
             //Empty the digits array
