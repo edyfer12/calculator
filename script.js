@@ -237,6 +237,9 @@ function display(){
                 //Push the firstNumber to the arithmetic array
             arithmetic.push(firstNumber);
         }
+        //Create variable called prev to store the last operand of the array before the equal sign
+            //If the last index is first number, store firstNumber to prev
+            //If the last index is second number, store secondNumber to prev
         //Save the original value of the firstNumber in case the user makes a mistake when hitting the firstNumber Op secondNumber Op Equal
         let originalFirstNumber = firstNumber;
         //Save the original value of the secondNumber in case the user makes a mistake when hitting the firstNumber Op secondNumber Op firstNumber Op Equal
@@ -363,8 +366,9 @@ function display(){
             else if(operatorName === '÷' && isAccumulated === true){
                 result /= secondNumber;
             }   
-            //Create variable to store the last operand of the array before the equal sign
-            let prev = arithmetic[arithmetic.length - 2];
+            //If the item of the last index of arithmetic array is secondNumber and isAccumulated is true,
+
+
             //Print the final result to the textbox
             output.value = result;
             //Empty the arithmetic array
