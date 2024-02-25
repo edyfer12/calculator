@@ -403,6 +403,9 @@ function display(){
                  //If the arithmetic array has a last item as firstNumber, divide result by firstNumber
                  if(arithmetic[arithmetic.length - 1] === firstNumber && arithmetic.length > 1){
                     result /= firstNumber;
+                    //If the user enters 0,
+                        //Display the error on the textbox, 'Cannot divide by zero'
+                        //Pop the first number off the array
                 } 
                 else if(arithmetic[arithmetic.length - 1] === secondNumber && arithmetic.length > 1){
                     //If the last item in the arithmetic array is the secondNumber, divide result by secondNumber
