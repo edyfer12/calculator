@@ -365,9 +365,7 @@ function display(){
             else if(operatorName === '÷' && isAccumulated === true){
                 result /= secondNumber;
             }   
-            //If the item of the last index of arithmetic array is secondNumber and isAccumulated is true,
-
-
+            
             //Print the final result to the textbox
             output.value = result;
 
