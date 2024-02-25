@@ -335,6 +335,8 @@ function display(){
                     //If the last item in the arithmetic array is the secondNumber, subtract result by secondNumber
                     result -= secondNumber;
                 }
+                //If length of the arithmetic array is 1, 
+                    //Subtract firstNumber by secondNumber 
             }  
             //If the operatorName is 'X',
             else if(operatorName === 'X' && isAccumulated === false){
