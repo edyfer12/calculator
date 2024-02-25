@@ -400,6 +400,7 @@ function display(){
                     //Pop the last item which is the second number
                     arithmetic.pop();
                     //Pop the last item which is the divide sign
+                    arithmetic.pop();
                     output.value = 'Number cannot be divided by 0';
                 }
                 //Otherwise, 
