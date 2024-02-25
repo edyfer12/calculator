@@ -363,6 +363,7 @@ function display(){
             else if(operatorName === '÷' && isAccumulated === true){
                 result /= secondNumber;
             }   
+            //Create variable to store the last operand of the array before the equal sign
             //Print the final result to the textbox
             output.value = result;
             //Empty the arithmetic array
