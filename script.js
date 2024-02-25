@@ -239,6 +239,14 @@ function display(){
                 //Push the firstNumber to the arithmetic array
             arithmetic.push(firstNumber);
         }
+        //If the last index is first number and length of arithmetic array is 3, store firstNumber to prev
+            if(arithmetic[arithmetic.length - 1] === firstNumber && arithmetic.length >= 3){
+                prev = firstNumber;
+            }
+            //If the last index is second number and length of arithmetic array is 3, store secondNumber to prev
+            else if(arithmetic[arithmetic.length - 1] === secondNumber && arithmetic.length >= 3){
+                prev = secondNumber;
+            }
         //Save the original value of the firstNumber in case the user makes a mistake when hitting the firstNumber Op secondNumber Op Equal
         let originalFirstNumber = firstNumber;
         //Save the original value of the secondNumber in case the user makes a mistake when hitting the firstNumber Op secondNumber Op firstNumber Op Equal
@@ -401,18 +409,8 @@ function display(){
                     result /= prev;
                 }
             }   
-
             //Print the final result to the textbox
             output.value = result;
-
-            //If the last index is first number and length of arithmetic array is 3, store firstNumber to prev
-            if(arithmetic[arithmetic.length - 1] === firstNumber && arithmetic.length >= 3){
-                prev = firstNumber;
-            }
-            //If the last index is second number and length of arithmetic array is 3, store secondNumber to prev
-            else if(arithmetic[arithmetic.length - 1] === secondNumber && arithmetic.length >= 3){
-                prev = secondNumber;
-            }
             //Empty the arithmetic array
             arithmetic.splice(0,arithmetic.length);
             //Empty the digits array
