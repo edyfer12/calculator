@@ -336,7 +336,10 @@ function display(){
                     result -= secondNumber;
                 }
                 //If length of the arithmetic array is 1, 
+                else if(arithmetic.length === 1){
                     //Subtract firstNumber by secondNumber 
+                    result -= secondNumber;
+                }
             }  
             //If the operatorName is 'X',
             else if(operatorName === 'X' && isAccumulated === false){
