@@ -401,7 +401,6 @@ function display(){
                     arithmetic.pop();
                     //Pop the last item which is the divide sign
                     arithmetic.pop();
-                    output.value = 'Number cannot be divided by 0';
                 }
                 //Otherwise, 
                 else{   
