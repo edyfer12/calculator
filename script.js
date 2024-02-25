@@ -393,22 +393,10 @@ function display(){
             }  
             //If the operatorName is '÷',
             else if(operatorName === '÷' && isAccumulated === false){
-                //If the secondNumber is set to 0, 
-                if(secondNumber === 0){
-                    //Pop the last item which is the equal sign
-                    arithmetic.pop();
-                    //Pop the last item which is the second number
-                    arithmetic.pop();
-                    //Pop the last item which is the divide sign
-                    arithmetic.pop();
-                }
-                //Otherwise, 
-                else{   
-                    //Initially, store operate() function into the result variable
-                    result = operate(firstNumber, secondNumber, operatorName);
-                    //Set isAccumulated to true
-                    isAccumulated = true;
-                }
+                //Initially, store operate() function into the result variable
+                result = operate(firstNumber, secondNumber, operatorName);
+                //Set isAccumulated to true
+                isAccumulated = true;
             }
             //If isAccumulated is true, store the previous result value added by the secondNumber into the result
             else if(operatorName === '÷' && isAccumulated === true){
