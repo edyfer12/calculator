@@ -393,6 +393,10 @@ function display(){
             }  
             //If the operatorName is '÷',
             else if(operatorName === '÷' && isAccumulated === false){
+                //If the secondNumber is set to 0, 
+                    //Pop the last item which is the equal sign
+                    //Pop the last item which is the second number
+                //Otherwise,    
                 //Initially, store operate() function into the result variable
                 result = operate(firstNumber, secondNumber, operatorName);
                 //Set isAccumulated to true
