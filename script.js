@@ -156,7 +156,9 @@ function display(){
                 isAccumulated = false;
             }
             //Push each digit into the digits array up to 15 digits
-            digits.push(digit.textContent);
+            if(digits.length <= 15){
+                digits.push(digit.textContent);
+            }
             //If a decimal point pressed on the button, 
             if(digits[0] === '.'){
                 //Use the unshift method of the digits array to add 0 as an item of first index
