@@ -147,8 +147,6 @@ function display(){
     numbers.forEach((digit) => {
         //If a user clicks on a number button, 
         digit.addEventListener('click', () => {
-            //Set the isAccumulated to false
-            //isAccumulated = false;
             //If the isAccumulated is true, set to true
             if(isAccumulated === true){
                 isAccumulated = true;
