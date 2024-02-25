@@ -364,7 +364,19 @@ function display(){
             }
             //If isAccumulated is true, store the previous result value added by the secondNumber into the result
             else if(operatorName === 'X' && isAccumulated === true){
-                result *= secondNumber;
+                 //If the arithmetic array has a last item as firstNumber, multiply result by firstNumber
+                 if(arithmetic[arithmetic.length - 1] === firstNumber && arithmetic.length > 1){
+                    result *= firstNumber;
+                } 
+                else if(arithmetic[arithmetic.length - 1] === secondNumber && arithmetic.length > 1){
+                    //If the last item in the arithmetic array is the secondNumber, multiply result by secondNumber
+                    result *= secondNumber;
+                }
+                //If length of the arithmetic array is 1, 
+                else if(arithmetic.length === 1){
+                    //Multiply result by prev 
+                    result *= prev;
+                }
             }  
             //If the operatorName is '÷',
             else if(operatorName === '÷' && isAccumulated === false){
@@ -375,7 +387,19 @@ function display(){
             }
             //If isAccumulated is true, store the previous result value added by the secondNumber into the result
             else if(operatorName === '÷' && isAccumulated === true){
-                result /= secondNumber;
+                 //If the arithmetic array has a last item as firstNumber, divide result by firstNumber
+                 if(arithmetic[arithmetic.length - 1] === firstNumber && arithmetic.length > 1){
+                    result /= firstNumber;
+                } 
+                else if(arithmetic[arithmetic.length - 1] === secondNumber && arithmetic.length > 1){
+                    //If the last item in the arithmetic array is the secondNumber, divide result by secondNumber
+                    result /= secondNumber;
+                }
+                //If length of the arithmetic array is 1, 
+                else if(arithmetic.length === 1){
+                    //Divide result by prev 
+                    result /= prev;
+                }
             }   
 
             //Print the final result to the textbox
