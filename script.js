@@ -364,6 +364,7 @@ function display(){
                 result /= secondNumber;
             }   
             //Create variable to store the last operand of the array before the equal sign
+            let prev = arithmetic[arithmetic.length - 2];
             //Print the final result to the textbox
             output.value = result;
             //Empty the arithmetic array
