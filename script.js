@@ -466,7 +466,7 @@ function display(){
             //Replace the secondNumber with the original second number value
             secondNumber = originalSecondNumber;
         }
-        //If the last index of the arithmetic array is first number,
+        //If the last index of the arithmetic array is first number or second number,
         else if(arithmetic[arithmetic.length - 1] === firstNumber || arithmetic[arithmetic.length - 1] === secondNumber){
             //Pop the last item that is a defined first number
             arithmetic.pop();
