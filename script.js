@@ -403,10 +403,10 @@ function display(){
                 }
                 //Otherwise, 
                 else{   
-                //Initially, store operate() function into the result variable
-                result = operate(firstNumber, secondNumber, operatorName);
-                //Set isAccumulated to true
-                isAccumulated = true;
+                    //Initially, store operate() function into the result variable
+                    result = operate(firstNumber, secondNumber, operatorName);
+                    //Set isAccumulated to true
+                    isAccumulated = true;
                 }
             }
             //If isAccumulated is true, store the previous result value added by the secondNumber into the result
