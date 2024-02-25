@@ -337,7 +337,7 @@ function display(){
                 }
                 //If length of the arithmetic array is 1, 
                 else if(arithmetic.length === 1){
-                    //Subtract firstNumber by secondNumber 
+                    //Subtract result by prev 
                     result -= secondNumber;
                 }
             }  
