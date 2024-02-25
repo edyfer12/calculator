@@ -240,7 +240,13 @@ function display(){
         //Create variable called prev to store the last operand of the array before the equal sign
         let prev;
         //If the last index is first number and length of arithmetic array is 3, store firstNumber to prev
+        if(arithmetic[arithmetic.length - 1] === firstNumber && arithmetic.length >= 3){
+            prev = firstNumber;
+        }
         //If the last index is second number and length of arithmetic array is 3, store secondNumber to prev
+        else if(arithmetic[arithmetic.length - 1] === secondNumber && arithmetic.length >= 3){
+            prev = secondNumber;
+        }
         //Save the original value of the firstNumber in case the user makes a mistake when hitting the firstNumber Op secondNumber Op Equal
         let originalFirstNumber = firstNumber;
         //Save the original value of the secondNumber in case the user makes a mistake when hitting the firstNumber Op secondNumber Op firstNumber Op Equal
