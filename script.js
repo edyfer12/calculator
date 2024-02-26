@@ -567,10 +567,10 @@ function display(){
                                 //Pop the next last item of the arithmetic array which is the divide sign
                                 //Display the error message on the textbox
                             //Otherwise,
-                            //Display the total value on the textbox
-                            output.value = total;
-                            //Store the result value in total variable
-                            result = total;
+                                //Display the total value on the textbox
+                                output.value = total;
+                                //Store the result value in total variable
+                                result = total;
                         }
                 
                 }
