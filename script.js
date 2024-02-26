@@ -436,8 +436,8 @@ function display(){
             }
             //If result is not Infinity, 
             else{
-            //Print the final result to the textbox
-            output.value = result;
+                //Print the final result to the textbox
+                output.value = result;
             }
             //Empty the arithmetic array
             arithmetic.splice(0,arithmetic.length);
