@@ -426,7 +426,13 @@ function display(){
                     //Divide result by prev 
                     result = Number.parseFloat((result / prev).toFixed(10));;
                 }
-            }   
+            }  
+            //If the result is Infinity where first number is divided by 0,
+                //Pop the equal sign from the arithmetic array
+                //Pop the second number from the arithmetic array
+                //Pop the divide sign from the arithmetic array
+                //Output the error message 'Cannot divide by 0'
+            //If result is not Infinity, 
             //Print the final result to the textbox
             output.value = result;
             //Empty the arithmetic array
