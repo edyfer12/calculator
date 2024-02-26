@@ -147,6 +147,13 @@ function display(){
     numbers.forEach((digit) => {
         //If a user clicks on a number button, 
         digit.addEventListener('click', () => {
+            //If arithmetic array's length is 1, pop the last item of the array and set isAccumulated to false
+            if(arithmetic.length === 1){
+                arithmetic.pop();
+                isAccumulated = false;
+                //Set result to 0 to reset the overall accumulated value
+                result = 0;
+            }
             //If the isAccumulated is true, set to true
             if(isAccumulated === true){
                 isAccumulated = true;
