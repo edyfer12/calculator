@@ -430,8 +430,11 @@ function display(){
             //If the result is Infinity where first number is divided by 0,
             if(result === Infinity){
                 //Pop the equal sign from the arithmetic array
+                arithmetic.pop();
                 //Pop the second number from the arithmetic array
+                arithmetic.pop();
                 //Pop the divide sign from the arithmetic array
+                arithmetic.pop();
                 //Output the error message 'Cannot divide by 0'
             }
             //If result is not Infinity, 
