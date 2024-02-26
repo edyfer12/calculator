@@ -143,6 +143,7 @@ function display(){
     //Create variable called prev to store the last operand of the array before the equal sign
     let prev;
     //Capture reference to the decimal point button
+    const decimal = document.querySelector('.decimal');
 
     //Loop through the nodelist for the number buttons from 0 to 9,
     numbers.forEach((digit) => {
