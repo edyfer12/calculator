@@ -231,9 +231,11 @@ function display(){
         total = 0;
         //Set isAccumulated to false
         isAccumulated = false;
+        //Enable the decimal button
     });
     //If a user clicks an equal button, 
     equal.addEventListener('click', () => {
+        //Enable the decimal button
         //If isAccumulated is true, push the secondNumber in the array if the two items before last index has firstNumber and last index has operator
         if(isAccumulated === true && arithmetic[arithmetic.length - 1] === operatorName && arithmetic[arithmetic.length - 2] === firstNumber){
             arithmetic.push(secondNumber);
