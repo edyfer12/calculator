@@ -436,6 +436,7 @@ function display(){
                 //Pop the divide sign from the arithmetic array
                 arithmetic.pop();
                 //Output the error message 'Cannot divide by 0'
+                output.value = 'Cannot divide by 0';
             }
             //If result is not Infinity, 
             else{
