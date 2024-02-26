@@ -569,6 +569,7 @@ function display(){
                                 //Pop the next last item of the arithmetic array which is the divide sign
                                 arithmetic.pop();
                                 //Display the error message on the textbox
+                                output.value = 'Cannot divide by 0';
                             }
                             //Otherwise,
                             else{
