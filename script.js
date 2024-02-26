@@ -499,6 +499,7 @@ function display(){
         //When the operator is clicked,
         operator.addEventListener('click', () => {
             //Enable the decimal number button after user clicks the operator button
+            decimal.disabled = false;
             //Remove all digits in the digits array
             digits.splice(0,digits.length);
             if(arithmetic.length == 0){
