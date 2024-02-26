@@ -167,6 +167,9 @@ function display(){
                 digits.push(digit.textContent);
                 /*If the decimal point is included in the digits array, disable the decimal number 
                 button*/
+                if(digits.includes('.')){
+                    decimal.disabled = true;
+                }
             }
             //If a decimal point pressed on the button, 
             if(digits[0] === '.'){
