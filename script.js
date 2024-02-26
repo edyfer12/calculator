@@ -330,14 +330,6 @@ function display(){
             }
             }, 0);
         }
-        //If the last item of arithmetic array is the second number and isAccumulated is set to true,
-            //Set secondNumber to previous secondNumber value
-        /*If the secondNumber is 0 and operatorName is ÷, display the error message "Cannot divide by zero" on textbox
-        return the value -1 to terminate the display function*/
-        /*if(operatorName === '÷' && secondNumber === 0){
-            output.value = 'Cannot divide by 0';
-            return -1;
-        }*/
         //If secondNumber, operatorName, firstNumber does not have an undefined value,
         if(secondNumber !== undefined && firstNumber !== undefined && operatorName !== undefined){ 
             //If the operatorName is '+',
