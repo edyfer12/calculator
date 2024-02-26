@@ -562,22 +562,10 @@ function display(){
                         else if(operatorName === '÷'){
                             //Add current total value and dvide first number and second number rounded to 10 digits and converted to floating point number
                             total = Number.parseFloat((total + firstNumber / secondNumber).toFixed(10));
-                            //If the total is Infinity, 
-                            if(total === Infinity){
-                                //Pop the last item of the arithmetic array which is the secondNumber
-                                arithmetic.pop();
-                                //Pop the next last item of the arithmetic array which is the divide sign
-                                arithmetic.pop();
-                                //Display the error message on the textbox
-                                output.value = 'Cannot divide by 0';
-                            }
-                            //Otherwise,
-                            else{
-                                //Display the total value on the textbox
-                                output.value = total;
-                                //Store the result value in total variable
-                                result = total;
-                            }
+                            //Display the total value on the textbox
+                            output.value = total;
+                            //Store the result value in total variable
+                            result = total;
                         }
                 
                 }
