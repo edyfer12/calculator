@@ -351,11 +351,11 @@ function display(){
             else if(operatorName === '+' && isAccumulated === true){
                  //If the arithmetic array has a last item as firstNumber, add result by firstNumber
                 if(arithmetic[arithmetic.length - 1] === firstNumber && arithmetic.length > 1){
-                    result += firstNumber;
+                    result = Number.parseFloat((result + firstNumber).toFixed(10));
                 } 
                 else if(arithmetic[arithmetic.length - 1] === secondNumber && arithmetic.length > 1){
                     //If the last item in the arithmetic array is the secondNumber, add result by secondNumber
-                    result += secondNumber;
+                    result = Number.parseFloat((result + secondNumber).toFixed(10));
                 }
                 //If length of the arithmetic array is 1, 
                 else if(arithmetic.length === 1){
@@ -366,7 +366,7 @@ function display(){
             //If the operatorName is '-',
             else if(operatorName === '-' && isAccumulated === false){
                 //Initially, store operate() function into the result variable
-                result = operate(firstNumber, secondNumber, operatorName);
+                result = Number.parseFloat(operate(firstNumber, secondNumber, operatorName).toFixed(10));
                 //Set isAccumulated to true
                 isAccumulated = true;
             }
@@ -374,22 +374,22 @@ function display(){
             else if(operatorName === '-' && isAccumulated === true){
                  //If the arithmetic array has a last item as firstNumber, subtract result by firstNumber
                 if(arithmetic[arithmetic.length - 1] === firstNumber && arithmetic.length > 1){
-                    result -= firstNumber;
+                    result = Number.parseFloat((result - firstNumber).toFixed(10));
                 } 
                 else if(arithmetic[arithmetic.length - 1] === secondNumber && arithmetic.length > 1){
                     //If the last item in the arithmetic array is the secondNumber, subtract result by secondNumber
-                    result -= secondNumber;
+                    result = Number.parseFloat((result - secondNumber).toFixed(10));
                 }
                 //If length of the arithmetic array is 1, 
                 else if(arithmetic.length === 1){
                     //Subtract result by prev 
-                    result -= prev;
+                    result = Number.parseFloat((result - prev).toFixed(10));
                 }
             }  
             //If the operatorName is 'X',
             else if(operatorName === 'X' && isAccumulated === false){
                 //Initially, store operate() function into the result variable
-                result = operate(firstNumber, secondNumber, operatorName);
+                result = Number.parseFloat(operate(firstNumber, secondNumber, operatorName).toFixed(10))
                 //Set isAccumulated to true
                 isAccumulated = true;
             }
@@ -397,22 +397,22 @@ function display(){
             else if(operatorName === 'X' && isAccumulated === true){
                  //If the arithmetic array has a last item as firstNumber, multiply result by firstNumber
                  if(arithmetic[arithmetic.length - 1] === firstNumber && arithmetic.length > 1){
-                    result *= firstNumber;
+                    result = Number.parseFloat((result * firstNumber).toFixed(10));
                 } 
                 else if(arithmetic[arithmetic.length - 1] === secondNumber && arithmetic.length > 1){
                     //If the last item in the arithmetic array is the secondNumber, multiply result by secondNumber
-                    result *= secondNumber;
+                    result = Number.parseFloat((result * secondNumber).toFixed(10));
                 }
                 //If length of the arithmetic array is 1, 
                 else if(arithmetic.length === 1){
                     //Multiply result by prev 
-                    result *= prev;
+                    result = Number.parseFloat((result * prev).toFixed(10));;
                 }
             }  
             //If the operatorName is '÷',
             else if(operatorName === '÷' && isAccumulated === false){
                 //Initially, store operate() function into the result variable
-                result = operate(firstNumber, secondNumber, operatorName);
+                result = Number.parseFloat(operate(firstNumber, secondNumber, operatorName).toFixed(10));
                 //Set isAccumulated to true
                 isAccumulated = true;
             }
@@ -420,19 +420,19 @@ function display(){
             else if(operatorName === '÷' && isAccumulated === true){
                  //If the arithmetic array has a last item as firstNumber, divide result by firstNumber
                  if(arithmetic[arithmetic.length - 1] === firstNumber && arithmetic.length > 1){
-                    result /= firstNumber;
+                    result = Number.parseFloat((result / firstNumber).toFixed(10));
                     //If the user enters 0,
                         //Display the error on the textbox, 'Cannot divide by zero'
                         //Pop the first number off the array
                 } 
                 else if(arithmetic[arithmetic.length - 1] === secondNumber && arithmetic.length > 1){
                     //If the last item in the arithmetic array is the secondNumber, divide result by secondNumber
-                    result /= secondNumber;
+                    result = Number.parseFloat((result / secondNumber).toFixed(10));
                 }
                 //If length of the arithmetic array is 1, 
                 else if(arithmetic.length === 1){
                     //Divide result by prev 
-                    result /= prev;
+                    result = Number.parseFloat((result / prev).toFixed(10));;
                 }
             }   
             //Print the final result to the textbox
