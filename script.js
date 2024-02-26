@@ -565,7 +565,9 @@ function display(){
                             //If the total is Infinity, 
                             if(total === Infinity){
                                 //Pop the last item of the arithmetic array which is the secondNumber
+                                arithmetic.pop();
                                 //Pop the next last item of the arithmetic array which is the divide sign
+                                arithmetic.pop();
                                 //Display the error message on the textbox
                             }
                             //Otherwise,
