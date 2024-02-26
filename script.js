@@ -542,7 +542,7 @@ function display(){
                         //If the operator between two operands is +,
                         if(operatorName === '+'){
                             //Add current total value by first number and second number
-                            total += firstNumber + secondNumber
+                            total = Number.parseFloat((total + firstNumber + secondNumber).toFixed(10));
                             //Display the total value on the textbox
                             output.value = total;
                             //Store the result value in total variable
@@ -551,7 +551,7 @@ function display(){
                         //If the operator between two operands is -,
                         else if(operatorName === '-'){
                             //Add current total value and subtract first number and second number
-                            total += firstNumber - secondNumber;
+                            total = Number.parseFloat((total + firstNumber - secondNumber).toFixed(10));
                             //Display the total value on the textbox
                             output.value = total;
                             //Store the result value in total variable
@@ -560,7 +560,7 @@ function display(){
                         //If the operator between two operands is +,
                         else if(operatorName === 'X'){
                             //Add current total value and multiply first number by second number
-                            total += firstNumber * secondNumber
+                            total = Number.parseFloat((total + firstNumber * secondNumber).toFixed(10));
                             //Display the total value on the textbox
                             output.value = total;
                             //Store the result value in total variable
@@ -569,7 +569,7 @@ function display(){
                         //If the operator between two operands is -,
                         else if(operatorName === '÷'){
                             //Add current total value and dvide first number and second number
-                            total += firstNumber / secondNumber;
+                            total = Number.parseFloat((total + firstNumber / secondNumber).toFixed(10));
                             //Display the total value on the textbox
                             output.value = total;
                             //Store the result value in total variable
@@ -583,7 +583,7 @@ function display(){
                      && arithmetic.length > 3){
                         if(operatorName === '+'){
                             //Add current total value by secondNumber
-                            total += secondNumber;
+                            total = Number.parseFloat((total + secondNumber).toFixed(10));
                             //Display the total value to the textbox
                             output.value = total;
                             //Store the result value in total variable
@@ -592,7 +592,7 @@ function display(){
                         //If the operator between two operands is -,
                         else if(operatorName === '-'){
                             //Subtract current total value by second number
-                            total -= secondNumber;
+                            total = Number.parseFloat((total - secondNumber).toFixed(10));
                             //Display the total value to the textbox
                             output.value = total;
                             //Store the result value in total variable
@@ -601,7 +601,7 @@ function display(){
                         //If the operator between two operands is +,
                         else if(operatorName === 'X'){
                             //Multiply current total value by second number
-                            total *= secondNumber;
+                            total = Number.parseFloat((total * secondNumber).toFixed(10));
                             //Display the total value on the textbox
                             output.value = total;
                             //Store the result value in total variable
@@ -610,7 +610,7 @@ function display(){
                         //If the operator between two operands is -,
                         else if(operatorName === '÷'){
                             //Divide current total value by second number
-                            total /= secondNumber;
+                            total = Number.parseFloat((total / secondNumber).toFixed(10));
                             //Display the total value on the textbox
                             output.value = total;
                             //Store the result value in total variable
@@ -655,7 +655,7 @@ function display(){
                         //If operator between two operands is +
                         if(operatorName === '+'){
                             //Add current total value by firstNumber
-                            total += firstNumber;
+                            total = Number.parseFloat((total + firstNumber).toFixed(10));
                             //Display the total value to the textbox
                             output.value = total;
                             //Store the result value in total variable
@@ -664,7 +664,7 @@ function display(){
                         //If operator between two operand is -
                         else if(operatorName === '-'){
                             //Subtract current total value by firstNumber
-                            total -= firstNumber;
+                            total = Number.parseFloat((total - firstNumber).toFixed(10));
                             //Display the total value to the textbox
                             output.value = total;
                             //Store the result value in total variable
@@ -673,7 +673,7 @@ function display(){
                         //If the operator between two operands is +,
                         else if(operatorName === 'X'){
                             //Multiply current total value by first number
-                            total *= firstNumber;
+                            total = Number.parseFloat((total * firstNumber).toFixed(10));
                             //Display the total value on the textbox
                             output.value = total;
                             //Store the result value in total variable
@@ -682,7 +682,7 @@ function display(){
                         //If the operator between two operands is -,
                         else if(operatorName === '÷'){
                             //Divide current total value by first number
-                            total /= firstNumber;
+                            total = Number.parseFloat((total / firstNumber).toFixed(10));
                             //Display the total value on the textbox
                             output.value = total;
                             //Store the result value in total variable
