@@ -343,7 +343,7 @@ function display(){
             //If the operatorName is '+',
             if(operatorName === '+' && isAccumulated === false){
                 //Initially, store operate() function into the result variable
-                result = operate(firstNumber, secondNumber, operatorName);
+                result = Number.parseFloat(operate(firstNumber, secondNumber, operatorName).toFixed(10))
                 //Set isAccumulated to true
                 isAccumulated = true;
             }
@@ -360,7 +360,7 @@ function display(){
                 //If length of the arithmetic array is 1, 
                 else if(arithmetic.length === 1){
                     //Add result by prev 
-                    result += prev;
+                    result = Number.parseFloat((result + prev).toFixed(10));
                 }
             } 
             //If the operatorName is '-',
