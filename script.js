@@ -428,13 +428,17 @@ function display(){
                 }
             }  
             //If the result is Infinity where first number is divided by 0,
+            if(result === Infinity){
                 //Pop the equal sign from the arithmetic array
                 //Pop the second number from the arithmetic array
                 //Pop the divide sign from the arithmetic array
                 //Output the error message 'Cannot divide by 0'
+            }
             //If result is not Infinity, 
+            else{
             //Print the final result to the textbox
             output.value = result;
+            }
             //Empty the arithmetic array
             arithmetic.splice(0,arithmetic.length);
             //Empty the digits array
