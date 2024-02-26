@@ -165,6 +165,8 @@ function display(){
             //Push each digit into the digits array up to 15 digits
             if(digits.length <= 15){
                 digits.push(digit.textContent);
+                /*If the decimal point is included in the digits array, disable the decimal number 
+                button*/
             }
             //If a decimal point pressed on the button, 
             if(digits[0] === '.'){
@@ -491,6 +493,7 @@ function display(){
     operators.forEach((operator) => {
         //When the operator is clicked,
         operator.addEventListener('click', () => {
+            //Enable the decimal number button after user clicks the operator button
             //Remove all digits in the digits array
             digits.splice(0,digits.length);
             if(arithmetic.length == 0){
