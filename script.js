@@ -441,7 +441,8 @@ function display(){
             if(result === Infinity){
                 //Output to the text box, 'Cannot divide by zero'
                 output.value = "Cannot divide by 0";
-                //Remove the last three items
+                //Remove the last four items
+                arithmetic.pop();
                 arithmetic.pop();
                 arithmetic.pop();
                 arithmetic.pop();
@@ -450,12 +451,12 @@ function display(){
             //If the result is Infinity and arithmetic array has six or more indexes with last operand as first,
                 //Set first number as item of last index minus five indexes
                 //Set second number as item of last index minus three indexes
-                //Pop off the last three items
+                //Pop off the last four items
             //Example: 1 + 5 + 6 / 0 = => first OP second OP first OP second EQUAL
             //If the result is Infinity and arithmetic array has six or more indexes with last operand as second,
                 //Set first number as item of last index minus three indexes
                 //Set second number as item of last index minus five indexes
-                //Pop off the last three items
+                //Pop off the last four items
             else{
                 output.value = result;
                 //Empty the arithmetic array
