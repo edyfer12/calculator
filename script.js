@@ -588,10 +588,10 @@ function display(){
                             //If total is infinity, 
                                 //Display the error message to textbox
                             //Otherwise,
-                            //Display the total value on the textbox
-                            output.value = total;
-                            //Store the result value in total variable
-                            result = total;
+                                //Display the total value on the textbox
+                                output.value = total;
+                                //Store the result value in total variable
+                                result = total;
                         }
                 
                 }
@@ -632,10 +632,10 @@ function display(){
                             //If total is infinity, 
                                 //Display the error message to textbox
                             //Otherwise,
-                            //Display the total value on the textbox
-                            output.value = total;
-                            //Store the result value in total variable
-                            result = total;
+                                //Display the total value on the textbox
+                                output.value = total;
+                                //Store the result value in total variable
+                                result = total;
                         }
                 }
                 //Store the operator button value into the operatorName variable
@@ -716,10 +716,10 @@ function display(){
                             //If total is infinity, 
                                 //Display the error message to textbox
                             //Otherwise,
-                            //Display the total value on the textbox
-                            output.value = total;
-                            //Store the result value in total variable
-                            result = total;
+                                //Display the total value on the textbox
+                                output.value = total;
+                                //Store the result value in total variable
+                                result = total;
                         }
                 } 
                 operatorName = operator.textContent;
