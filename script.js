@@ -157,6 +157,8 @@ function display(){
                 isAccumulated = false;
                 //Set result to 0 to reset the overall accumulated value
                 result = 0;
+                //Set total to 0 to reset the accumulated value in the middle of the equation
+                total = 0;
             }
             //If the isAccumulated is true, set to true
             if(isAccumulated === true){
@@ -423,9 +425,6 @@ function display(){
                  //If the arithmetic array has a last item as firstNumber, divide result by firstNumber
                  if(arithmetic[arithmetic.length - 1] === firstNumber && arithmetic.length > 1){
                     result = Number.parseFloat((result / firstNumber).toFixed(10));
-                    //If the user enters 0,
-                        //Display the error on the textbox, 'Cannot divide by zero'
-                        //Pop the first number off the array
                 } 
                 else if(arithmetic[arithmetic.length - 1] === secondNumber && arithmetic.length > 1){
                     //If the last item in the arithmetic array is the secondNumber, divide result by secondNumber
@@ -437,11 +436,11 @@ function display(){
                     result = Number.parseFloat((result / prev).toFixed(10));;
                 }
             }  
-            //If the result is Infinity,
+            //If the result is Infinity and arithmetic array has only first four indexes
             if(result === Infinity){
                 //Output to the text box, 'Cannot divide by zero'
                 output.value = "Cannot divide by 0";
-                //Remove the last four items from the equal sign to the first number in the arithmetic array
+                //Remove the last three items
                 arithmetic.pop();
                 arithmetic.pop();
                 arithmetic.pop();
@@ -758,8 +757,12 @@ function display(){
                     arithmetic.pop();
                     //Pop the last item of the arithmetic array which is the divide sign
                     arithmetic.pop();
+                    //Pop the last item of the arithmetic array which is the firstNumber
+                    arithmetic.pop();
+                    //Set firstNumber to the 2nd last item
+                    firstNumber = arithmetic[arithmetic.length - 2];
                     //Set total to last item fo arithmetic array
-                    total = arithmetic[arithmetic.length - 1];
+                    total = arithmetic[arithmetic.length - 2];
                 }
             }  
         });
