@@ -640,10 +640,16 @@ function display(){
                     arithmetic.push(operatorName);
                 }
                 //If total is Infinity,
+                if(total === Infinity){
                     //Pop the last item of the arithmetic array which is the operator
+                    arithmetic.pop();
                     //Pop the last item of the arithmetic array which is the secondNumber
+                    arithmetic.pop();
                     //Pop the last item of the arithmetic array which is the divide sign
+                    arithmetic.pop();
                     //Set total to last item fo arithmetic array
+                    total = arithmetic[arithmetic.length - 1];
+                }
 
                 operatorName = operator.textContent;
                 //If item of last index of the arithmetic array is an operator,
@@ -709,6 +715,18 @@ function display(){
                             result = total;
                         }
                 } 
+                //If total is Infinity,
+                if(total === Infinity){
+                    //Pop the last item of the arithmetic array which is the operator
+                    arithmetic.pop();
+                    //Pop the last item of the arithmetic array which is the secondNumber
+                    arithmetic.pop();
+                    //Pop the last item of the arithmetic array which is the divide sign
+                    arithmetic.pop();
+                    //Set total to last item fo arithmetic array
+                    total = arithmetic[arithmetic.length - 1];
+                }
+
                 operatorName = operator.textContent;
                 //If item of last index of the arithmetic array is an operator,
                 //Replace the item wih new value
