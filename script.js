@@ -445,7 +445,6 @@ function display(){
                 arithmetic.pop();
                 arithmetic.pop();
                 arithmetic.pop();
-                arithmetic.pop();
             }
             //Example: 1 + 3 / 0 = => first OP second OP first EQUAL
             //If the result is Infinity and arithmetic array has six or more indexes with last operand as first,
