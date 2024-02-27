@@ -180,6 +180,10 @@ function display(){
                 //Use the unshift method of the digits array to add 0 as an item of first index
                 digits.unshift("0");
             }
+            //If the result is infinity and arithmetic array's length is more than 1, set the result value as the value of the first number so Infinity is not added by previous value 
+            if(result === Infinity && arithmetic.length > 1){
+                result = arithmetic[arithmetic.length - 2];
+            }
             //If arithmetic array not include firstNumber,
             if(arithmetic.length === 0){
                 //Store the value of digits array into the first number variable 
@@ -190,10 +194,6 @@ function display(){
                 output.value = firstNumber; 
                 //Convert to Number and save into firstNumber
                 firstNumber = +firstNumber;
-                //If the result is infinity, set the result value as the value of the first number so Infinity is not added by previous value 
-                if(result === Infinity){
-                    result = firstNumber;
-                }
             }
             //If arithmetic[lastIndex - 1] EQUAL to firstNumber and arithmetic[lastIndex] to operatorName,
             else if(arithmetic[arithmetic.length - 2] === firstNumber &&
