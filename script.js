@@ -436,17 +436,27 @@ function display(){
                     result = Number.parseFloat((result / prev).toFixed(10));;
                 }
             }  
-            //If the result is Infinity and arithmetic array has only first four indexes
+            //Example: 1 / 0 = => first OP second EQUAL
+            //If the result is Infinity and arithmetic array has only first four indexes 
             if(result === Infinity){
                 //Output to the text box, 'Cannot divide by zero'
                 output.value = "Cannot divide by 0";
-                //Remove the last four items
+                //Remove the last three items
                 arithmetic.pop();
                 arithmetic.pop();
                 arithmetic.pop();
                 arithmetic.pop();
             }
-            //Otherwise, print the final result to the textbox
+            //Example: 1 + 3 / 0 = => first OP second OP first EQUAL
+            //If the result is Infinity and arithmetic array has six or more indexes with last operand as first,
+                //Set first number as item of last index minus five indexes
+                //Set second number as item of last index minus three indexes
+                //Pop off the last three items
+            //Example: 1 + 5 + 6 / 0 = => first OP second OP first OP second EQUAL
+            //If the result is Infinity and arithmetic array has six or more indexes with last operand as second,
+                //Set first number as item of last index minus three indexes
+                //Set second number as item of last index minus five indexes
+                //Pop off the last three items
             else{
                 output.value = result;
                 //Empty the arithmetic array
