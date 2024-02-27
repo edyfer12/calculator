@@ -586,12 +586,17 @@ function display(){
                             //Add current total value and dvide first number and second number rounded to 10 digits and converted to floating point number
                             total = Number.parseFloat((total + firstNumber / secondNumber).toFixed(10));
                             //If total is infinity, 
+                            if(total === Infinity){
                                 //Display the error message to textbox
+                                output.value = 'Cannot divide by 0';
+                            }
                             //Otherwise,
+                            else{
                                 //Display the total value on the textbox
                                 output.value = total;
                                 //Store the result value in total variable
                                 result = total;
+                            }
                         }
                 
                 }
@@ -629,13 +634,18 @@ function display(){
                         else if(operatorName === '÷'){
                             //Divide current total value by second number rounded to 10 digits and converted to floating point number
                             total = Number.parseFloat((total / secondNumber).toFixed(10));
-                            //If total is infinity, 
+                            //If total is infinity,
+                            if(total === Infinity) { 
                                 //Display the error message to textbox
+                                output.value = 'Cannot divide by 0';
+                            }
                             //Otherwise,
+                            else {
                                 //Display the total value on the textbox
                                 output.value = total;
                                 //Store the result value in total variable
                                 result = total;
+                            }
                         }
                 }
                 //Store the operator button value into the operatorName variable
@@ -714,12 +724,17 @@ function display(){
                             //Divide current total value by first number rounded to 10 digits and converted to floating point number
                             total = Number.parseFloat((total / firstNumber).toFixed(10));
                             //If total is infinity, 
+                            if(total === Infinity){
                                 //Display the error message to textbox
+                                output.value = 'Cannot divide by 0';
+                            }
                             //Otherwise,
+                            else{
                                 //Display the total value on the textbox
                                 output.value = total;
                                 //Store the result value in total variable
                                 result = total;
+                            }
                         }
                 } 
                 operatorName = operator.textContent;
