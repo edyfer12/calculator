@@ -194,7 +194,10 @@ function display(){
                 output.value = firstNumber; 
                 //Convert to Number and save into firstNumber
                 firstNumber = +firstNumber;
-                //If arithmetic array's length is 0
+                //If arithmetic array's length is 0 and result is Infinity, set result to firstNumber instead of Infinity
+                if(result === Infinity){
+                    result = firstNumber;
+                }
             }
             //If arithmetic[lastIndex - 1] EQUAL to firstNumber and arithmetic[lastIndex] to operatorName,
             else if(arithmetic[arithmetic.length - 2] === firstNumber &&
