@@ -434,13 +434,14 @@ function display(){
                 output.value = result;
                 //Empty the arithmetic array
                 arithmetic.splice(0,arithmetic.length);
+                //Set the output value as the firstNumber
+                firstNumber = result;
+                //result = 0;
+                total = 0;
+                arithmetic.push(firstNumber);
             //Empty the digits array
             digits.splice(0,digits.length);
-            //Set the output value as the firstNumber
-            firstNumber = result;
-            //result = 0;
-            total = 0;
-            arithmetic.push(firstNumber);
+            
 
         }
         //If the item in the first index has an undefined second number and an equal sign on the second index,
