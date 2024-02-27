@@ -436,6 +436,8 @@ function display(){
                 arithmetic.pop();
                 arithmetic.pop();
                 arithmetic.pop();
+                //Reset the result
+                result = 0;
             }
             //Otherwise, print the final result to the textbox
             else{
