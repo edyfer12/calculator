@@ -639,6 +639,11 @@ function display(){
                     //Push the operatorName variale into the arithmetic array 
                     arithmetic.push(operatorName);
                 }
+                //If total is Infinity,
+                    //Pop the last item of the arithmetic array which is the operator
+                    //Pop the last item of the arithmetic array which is the secondNumber
+                    //Pop the last item of the arithmetic array which is the divide sign
+                    //Set total to last item fo arithmetic array
 
                 operatorName = operator.textContent;
                 //If item of last index of the arithmetic array is an operator,
