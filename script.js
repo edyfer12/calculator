@@ -428,9 +428,12 @@ function display(){
                 }
             }  
             //If the result is Infinity,
+            if(result === Infinity){
                 //Output to the text box, 'Cannot divide by zero'
                 //Remove the last four items from the equal sign to the first number in the arithmetic array
+            }
             //Otherwise, print the final result to the textbox
+            else{
                 output.value = result;
                 //Empty the arithmetic array
                 arithmetic.splice(0,arithmetic.length);
@@ -439,6 +442,7 @@ function display(){
                 //result = 0;
                 total = 0;
                 arithmetic.push(firstNumber);
+            }
             //Empty the digits array
             digits.splice(0,digits.length);
             
