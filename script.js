@@ -585,6 +585,9 @@ function display(){
                         else if(operatorName === '÷'){
                             //Add current total value and dvide first number and second number rounded to 10 digits and converted to floating point number
                             total = Number.parseFloat((total + firstNumber / secondNumber).toFixed(10));
+                            //If total is infinity, 
+                                //Display the error message to textbox
+                            //Otherwise,
                             //Display the total value on the textbox
                             output.value = total;
                             //Store the result value in total variable
@@ -626,6 +629,9 @@ function display(){
                         else if(operatorName === '÷'){
                             //Divide current total value by second number rounded to 10 digits and converted to floating point number
                             total = Number.parseFloat((total / secondNumber).toFixed(10));
+                            //If total is infinity, 
+                                //Display the error message to textbox
+                            //Otherwise,
                             //Display the total value on the textbox
                             output.value = total;
                             //Store the result value in total variable
@@ -707,6 +713,9 @@ function display(){
                         else if(operatorName === '÷'){
                             //Divide current total value by first number rounded to 10 digits and converted to floating point number
                             total = Number.parseFloat((total / firstNumber).toFixed(10));
+                            //If total is infinity, 
+                                //Display the error message to textbox
+                            //Otherwise,
                             //Display the total value on the textbox
                             output.value = total;
                             //Store the result value in total variable
