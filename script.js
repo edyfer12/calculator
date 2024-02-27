@@ -149,6 +149,8 @@ function display(){
     numbers.forEach((digit) => {
         //If a user clicks on a number button, 
         digit.addEventListener('click', () => {
+            //If result is Infinity, set result to previous number so Infinity does not get added to the previous number
+       
             //If arithmetic array's length is 1, pop the last item of the array and set isAccumulated to false
             if(arithmetic.length === 1){
                 arithmetic.pop();
@@ -188,6 +190,10 @@ function display(){
                 output.value = firstNumber; 
                 //Convert to Number and save into firstNumber
                 firstNumber = +firstNumber;
+                //If the result is infinity, set the result value as the value of the first number so Infinity is not added by previous value 
+                if(result === Infinity){
+                    result = firstNumber;
+                }
             }
             //If arithmetic[lastIndex - 1] EQUAL to firstNumber and arithmetic[lastIndex] to operatorName,
             else if(arithmetic[arithmetic.length - 2] === firstNumber &&
