@@ -440,7 +440,7 @@ function display(){
             if(result === Infinity){
                 //Output to the text box, 'Cannot divide by zero'
                 output.value = "Cannot divide by 0";
-                //Remove the last three items
+                //Remove the last four items
                 arithmetic.pop();
                 arithmetic.pop();
                 arithmetic.pop();
