@@ -430,7 +430,12 @@ function display(){
             //If the result is Infinity,
             if(result === Infinity){
                 //Output to the text box, 'Cannot divide by zero'
+                output.value = "Cannot divide by 0";
                 //Remove the last four items from the equal sign to the first number in the arithmetic array
+                arithmetic.pop();
+                arithmetic.pop();
+                arithmetic.pop();
+                arithmetic.pop();
             }
             //Otherwise, print the final result to the textbox
             else{
