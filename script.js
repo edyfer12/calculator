@@ -197,7 +197,7 @@ function display(){
                 //If the operator is multiply,
                 else if(operatorName === "X"){
                     //Set result to total
-                    result = total;
+                    result = total / operandPopped;
                 }
             }
             //If arithmetic array not include firstNumber,
