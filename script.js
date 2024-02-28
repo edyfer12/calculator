@@ -506,11 +506,19 @@ function display(){
                 //Halve the arithmetic array's length and store into numOfOperands variable
                 numOfOperands = arithmetic.length / 2;
                 //If numOfOperands is even,
+                if(numOfOperands % 2 === 0){
                     //Set firstNumber to arithmetic[arithmetic.length - 2]
+                    firstNumber = arithmetic[arithmetic.length - 2];
                     //Set secondNumber to arithmetic[arithmetic.length - 4]
+                    secondNumber = arithmetic[arithmetic.length - 4];
+                }
                 //If numOfOperands is odd,
+                else {
                     //Set firstNumber to arithmetic[arithmetic.length - 4]
+                    firstNumber = arithmetic[arithmetic.length - 4];
                     //Set secondNumber to arithmetic[arithmetic.length - 2]
+                    secondNumber = arithmetic[arithmetic.length - 2];
+                }
             }
             //If result is Infinity where equation is [first OP second OP (first OP second EQUAL)], 
                 //eg. 1 + 6 + 1 / 0 =
