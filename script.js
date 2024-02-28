@@ -484,11 +484,17 @@ function display(){
                 //eg. 1 / 0 =
                 //Length is 4
                 //Pop off the equal sign
+                arithmetic.pop();
                 //Pop off the second number
+                arithmetic.pop();
                 //Pop off the divide sign
+                arithmetic.pop();
                 //Pop off the first number
+                arithmetic.pop();
                 //Length is 0
                 //Now arithmetic array is []
+                //Print the error message to the textbox
+                output.value = 'Cannot divide by 0. Please enter a new number';
             }
             //If result is Infinity where equation is [first OP (second OP first EQUAL)],
             else if(result === Infinity && arithmetic.length > 4){
@@ -519,6 +525,8 @@ function display(){
                     //Set secondNumber to arithmetic[arithmetic.length - 2]
                     secondNumber = arithmetic[arithmetic.length - 2];
                 }
+                //Print the error message to textbox
+                output.value = 'Cannot divide by 0. Please enter a new number';
             }
             //If result is Infinity where equation is [first OP second OP (first OP second EQUAL)], 
                 //eg. 1 + 6 + 1 / 0 =
