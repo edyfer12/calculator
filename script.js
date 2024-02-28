@@ -477,6 +477,8 @@ function display(){
                     result = Number.parseFloat((result / prev).toFixed(10));;
                 }
             } 
+            //Create variable to store half the arithmetic array's length
+            let numOfOperands;
             //If result is Infinity where equation is [(first OP second EQUAL)],
             if(result === Infinity && arithmetic.length === 4){
                 //eg. 1 / 0 =
