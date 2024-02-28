@@ -478,6 +478,7 @@ function display(){
                 }
             } 
             //If result is Infinity where equation is [(first OP second EQUAL)],
+            if(result === Infinity && arithmetic.length === 4){
                 //eg. 1 / 0 =
                 //Length is 4
                 //Pop off the equal sign
@@ -486,17 +487,22 @@ function display(){
                 //Pop off the first number
                 //Length is 0
                 //Now arithmetic array is []
-            
+            }
             //If result is Infinity where equation is [first OP (second OP first EQUAL)],
+            else if(result === Infinity && arithmetic.length > 4){
                 //eg. 1 + 3 / 0 =
                 //Pop off the equal sign
+                arithmetic.pop();
                 //Pop off the firstNumber 
+                arithmetic.pop();
                 //Pop off the divide sign
+                arithmetic.pop();
                 //Pop off the secondNumber
+                arithmetic.pop();
                 //Length is 2
                 //Now arithmetic array is [first OP] => 1 +
-                //Set the firstNumber to arithmetic item of first index 
-            
+                //Set the firstNumber to arithmetic item of arithmetic.length - 2
+            }
             //If result is Infinity where equation is [first OP second OP (first OP second EQUAL)], 
                 //eg. 1 + 6 + 1 / 0 =
                 //Length is 8
