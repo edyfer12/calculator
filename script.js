@@ -517,6 +517,8 @@ function display(){
                     firstNumber = arithmetic[arithmetic.length - 2];
                     //Set secondNumber to arithmetic[arithmetic.length - 4]
                     secondNumber = arithmetic[arithmetic.length - 4];
+                    //Set operatorName to arithmetic[arithmetic.length - 1]
+                    operatorName = arithmetic[arithmetic.length - 1];
                 }
                 //If numOfOperands is odd,
                 else {
@@ -524,43 +526,15 @@ function display(){
                     firstNumber = arithmetic[arithmetic.length - 4];
                     //Set secondNumber to arithmetic[arithmetic.length - 2]
                     secondNumber = arithmetic[arithmetic.length - 2];
+                    //Set operatorName to arithmetic[arithmetic.length - 1]
+                    operatorName = arithmetic[arithmetic.length - 1];
                 }
                 //Print the error message to textbox
                 output.value = 'Cannot divide by 0. Please enter a new number';
             }
-            //If result is Infinity where equation is [first OP second OP (first OP second EQUAL)], 
-                //eg. 1 + 6 + 1 / 0 =
-                //Length is 8
-                //Pop off the equal sign
-                //Pop off the second number
-                //Pop off the divide sign
-                //Pop off the first number
-                //Now length is 4
-                //arithmetic is now => [first OP second OP] => 1 + 6 +
-                //Set operatorName to arithmetic[arithmetic.length - 1]
-                /*Since number of operators is equal to number of operands, 
-                we can check to see if there are even number of operands. */
-                //Create variable numOfOperands and assign value by halving length of arithmetic array
-                //If numOfOperands is even,
-                    //Set secondNumber to arithmetic[arithmetic.length - 2]
-                    //Set firstNumber to arithmetic[arithmetic.length - 4]
-                //Print error message to textbox
-            //If result is Infinity where equation is [first OP second OP first OP (second OP first EQUAL)],
-                //eg. 1 + 5 - 4 + 10 / 0 =
-                //Length is 10 
-                //Pop off the equal sign
-                //Pop off the secondNumber
-                //Pop off the divide sign
-                //Pop off the firstNumber
-                //Now length is 6
-                //arithmetic is now => [first OP second OP first OP] => 1 + 5 - 4 +
-                //If number of operands is odd,
-                    //Set secondNumber to arithmetic[arithmetic.length - 4]
-                    //Set firstNumber to arithmetic[arithmetic.length - 2]
-
 
             //If the result is not infinity, 
-            else{
+            else if (result !== Infinity){
                 //Print result to output
                 output.value = result;
                 //Empty the arithmetic array
@@ -570,6 +544,11 @@ function display(){
                 //result = 0;
                 total = 0;
                 arithmetic.push(firstNumber);
+            }
+            //Otherwise,
+            else{
+                //Print error message to output
+                output.value === 'Cannot divide by 0. Please enter a new number'
             }
             //Empty the digits array
             digits.splice(0,digits.length);
