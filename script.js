@@ -435,29 +435,66 @@ function display(){
                     //Divide result by prev 
                     result = Number.parseFloat((result / prev).toFixed(10));;
                 }
-            }  
-            //Example: 1 / 0 = => first OP second EQUAL
-            //If the result is Infinity and arithmetic array has only first four indexes 
-            if(result === Infinity){
-                //Output to the text box, 'Cannot divide by zero'
-                output.value = "Cannot divide by 0";
-                //Remove the last four items
+            } 
+            //If result is Infinity where equation is first OP second OP EQUAL, eg. 1 / 0 =
+            if(result === Infinity && arithmetic.length === 4){
+                //Display the error message
+                output.value = 'Cannot divide by 0. Enter a new number';
+                //Allow the user to enter a new number before the / sign
+                //Pop off the equal sign
                 arithmetic.pop();
+                //Pop off the second number
                 arithmetic.pop();
+                //Pop off the divide sign
                 arithmetic.pop();
+                //Pop off the first number
                 arithmetic.pop();
             }
-            //Example: 1 + 3 / 0 = => first OP second OP first EQUAL
-            //If the result is Infinity and arithmetic array has six or more indexes with last operand as first,
-                //Set first number as item of last index minus five indexes
-                //Set second number as item of last index minus three indexes
-                //Pop off the last four items
-            //Example: 1 + 5 + 6 / 0 = => first OP second OP first OP second EQUAL
-            //If the result is Infinity and arithmetic array has six or more indexes with last operand as second,
-                //Set first number as item of last index minus three indexes
-                //Set second number as item of last index minus five indexes
-                //Pop off the last four items
+            //If result is Infinity where equation is first OP second OP first EQUAL, eg. 1 + 3 / 0 =
+            else if(result === Infinity && arithmetic.length === 6){
+                //Display the error message
+                output.value = "Cannot divide by 0. Enter a new number";
+                //Allow the user to enter a new number before the / sign
+                //Pop off the equal sign
+                arithmetic.pop();
+                //Pop off the second number
+                arithmetic.pop();
+                //Pop off the divide sign
+                arithmetic.pop();
+                //Pop off the first number
+                arithmetic.pop();
+                //Set first number as 2 indexes before last index
+                firstNumber = arithmetic[arithmetic.length - 2];
+                //Set operatorName to 1 index before last index
+                operatorName = arithmetic[arithmetic.length - 1];
+                //Set total to 0
+                total = 0;
+            }
+            //If result is Infinity where equation is first OP second OP first OP second EQUAL, eg. 1 + 6 + 1 / 0 = 
+            else if(result === Infinity && arithmetic.length > 6){
+                //Display the error message
+                output.value = "Cannot divide by 0. Enter a new number";
+                //Allow the user to enter a new number before the / sign
+                //Pop off the equal sign
+                arithmetic.pop();
+                //Pop off the secondNumber
+                arithmetic.pop();
+                //Pop off the divide sign
+                arithmetic.pop();
+                //Pop off the firstNumber
+                arithmetic.pop();
+                //Set firstNumber to the item of the last index subtracted by four indexes
+                firstNumber = arithmetic[arithmetic.length - 4];
+                //Set secondNumber to the item of the last index subtracted by two indexes
+                secondNumber = arithmetic[arithmetic.length - 2];
+                //Set operatorName to the item of the last index
+                operatorName = arithmetic[arithmetic.length - 1];
+                //Set total to 0
+                total = 0;
+            }
+            //If the result is not infinity,
             else{
+                //Print result to output
                 output.value = result;
                 //Empty the arithmetic array
                 arithmetic.splice(0,arithmetic.length);
