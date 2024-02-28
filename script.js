@@ -188,23 +188,42 @@ function display(){
             if(result === Infinity && arithmetic.length >= 1){
                 result = arithmetic.reduce((total, currentItem, currentIndex) => {
                     //If index is 0,
+                    if(currentIndex === 0) {
                         //Add initial value by currentItem
                         //Store initial value added by currentItem to total variable
+                        return total += currentItem;
+                    }
                     //If index is 1, just return the total values
+                    else if(currentIndex === 1 || currentIndex === arithmetic.length -1){
+                        return total;
+                    }
                     //If index is even and is at least 2,
+                    else if(currentIndex % 2 === 0 && currentIndex >= 2){
                         //If item of the previous index before current item is +,
+                        if(arithmetic[currentIndex - 1] === '+'){
                             //Add item of 2 indexes before current index by current item
                             //Store into total
+                            return total = currentItem + arithmetic[arithmetic.length - 2];
+                        }
                         //If item of the previous index before current item is -,
+                        else if(arithmetic[currentIndex - 1] === '-'){
                             //Add item of 2 indexes before current index by current item
                             //Store into total
+                            return total = currentItem + arithmetic[arithmetic.length - 2];
+                        }
                         //If item of the previous index before current item is X,
+                        else if(arithmetic[currentIndex - 1] === 'X'){
                             //Add item of 2 indexes before current index by current item
                             //Store into total
+                            return total = currentItem + arithmetic[arithmetic.length - 2];
+                        }
                         //If item of the previous index before current item is /,
+                        else{
                             //Add item of 2 indexes before current index by current item
                             //Store into total
-
+                            return total = currentItem + arithmetic[arithmetic.length - 2];
+                        }
+                    }
                     //If index is last, just return total variable
                 }, 0);
             }
