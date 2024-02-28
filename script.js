@@ -503,6 +503,8 @@ function display(){
                 arithmetic.pop();
                 //Length is 2
                 //Now arithmetic array is [first OP] => 1 +
+                //Halve the arithmetic array's length and store into numOfOperands variable
+                numOfOperands = arithmetic.length / 2;
                 //Set the firstNumber to arithmetic item of arithmetic.length - 2
             }
             //If result is Infinity where equation is [first OP second OP (first OP second EQUAL)], 
