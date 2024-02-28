@@ -196,8 +196,13 @@ function display(){
                 }
                 //If the operator is multiply,
                 else if(operatorName === "X"){
-                    //Set result to total
+                    //Set result to total divided by operandPopped
                     result = total / operandPopped;
+                }
+                //If the operator is divide,
+                else if(operatorName === '÷'){
+                    //Set result to total multiplied by operandPopped
+                    result = total * operandPopped;
                 }
             }
             //If arithmetic array not include firstNumber,
