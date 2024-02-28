@@ -144,6 +144,8 @@ function display(){
     let prev;
     //Capture reference to the decimal point button
     const decimal = document.querySelector('.decimal');
+    //Create variable that will store the last operand that was popped
+    let operandPopped; 
 
     //Loop through the nodelist for the number buttons from 0 to 9,
     numbers.forEach((digit) => {
@@ -185,47 +187,18 @@ function display(){
             //If the result is infinity and arithmetic array's length is at least 1,
                 //Loop through each arithmetic array item via reduce method of array
                 //and return a single value
-            if(result === Infinity && arithmetic.length >= 1){
-                result = arithmetic.reduce((total, currentItem, currentIndex) => {
-                    //If index is 0,
-                    if(currentIndex === 0) {
-                        //Add initial value by currentItem
-                        //Store initial value added by currentItem to total variable
-                        return total += currentItem;
+            if((result === Infinity || result === -Infinity)&& arithmetic.length >= 1){
+                if(operatorName === '+' || operatorName === '-'){
+                    if(result === -Infinity){
+                        operandPopped = -operandPopped;
                     }
-                    //If index is 1, just return the total values
-                    else if(currentIndex === 1 || currentIndex === arithmetic.length -1){
-                        return total;
-                    }
-                    //If index is even and is at least 2,
-                    else if(currentIndex % 2 === 0 && currentIndex >= 2){
-                        //If item of the previous index before current item is +,
-                        if(arithmetic[currentIndex - 1] === '+'){
-                            //Add item of 2 indexes before current index by current item
-                            //Store into total
-                            return total = currentItem + arithmetic[arithmetic.length - 2];
-                        }
-                        //If item of the previous index before current item is -,
-                        else if(arithmetic[currentIndex - 1] === '-'){
-                            //Add item of 2 indexes before current index by current item
-                            //Store into total
-                            return total = currentItem + arithmetic[arithmetic.length - 2];
-                        }
-                        //If item of the previous index before current item is X,
-                        else if(arithmetic[currentIndex - 1] === 'X'){
-                            //Add item of 2 indexes before current index by current item
-                            //Store into total
-                            return total = currentItem + arithmetic[arithmetic.length - 2];
-                        }
-                        //If item of the previous index before current item is /,
-                        else{
-                            //Add item of 2 indexes before current index by current item
-                            //Store into total
-                            return total = currentItem + arithmetic[arithmetic.length - 2];
-                        }
-                    }
-                    //If index is last, just return total variable
-                }, 0);
+                    result = total - operandPopped;
+                }
+                //If the operator is multiply,
+                else if(operatorName === "X"){
+                    //Set result to total
+                    result = total;
+                }
             }
             //If arithmetic array not include firstNumber,
             if(arithmetic.length === 0){
@@ -240,6 +213,10 @@ function display(){
                 //If arithmetic array's length is 0 and result is Infinity, set result to firstNumber instead of Infinity
                 if(result === Infinity){
                     result = firstNumber;
+                }
+                //If arithmetic array's length is 0 and result is -Infinity, set result to -firstNumber instead of Infinity
+                if(result === -Infinity){
+                    result = -firstNumber;
                 }
             }
             //If arithmetic[lastIndex - 1] EQUAL to firstNumber and arithmetic[lastIndex] to operatorName,
@@ -480,7 +457,7 @@ function display(){
             //Create variable to store half the arithmetic array's length
             let numOfOperands;
             //If result is Infinity where equation is [(first OP second EQUAL)],
-            if(result === Infinity && arithmetic.length === 4){
+            if((result === Infinity || result === -Infinity) && arithmetic.length === 4){
                 //eg. 1 / 0 =
                 //Length is 4
                 //Pop off the equal sign
@@ -489,6 +466,8 @@ function display(){
                 arithmetic.pop();
                 //Pop off the divide sign
                 arithmetic.pop();
+                //Store operand that was popped
+                operandPopped = arithmetic[arithmetic.length - 1];
                 //Pop off the first number
                 arithmetic.pop();
                 //Length is 0
@@ -497,7 +476,8 @@ function display(){
                 output.value = 'Cannot divide by 0. Please enter a new number';
             }
             //If result is Infinity where equation is [first OP (second OP first EQUAL)],
-            else if(result === Infinity && arithmetic.length > 4){
+            else if((result === Infinity || result === -Infinity)&& arithmetic.length > 4){
+                //result = 0;
                 //eg. 1 + 3 / 0 =
                 //Pop off the equal sign
                 arithmetic.pop();
@@ -505,6 +485,8 @@ function display(){
                 arithmetic.pop();
                 //Pop off the divide sign
                 arithmetic.pop();
+                //Store operand that was popped
+                operandPopped = arithmetic[arithmetic.length - 1];
                 //Pop off the secondNumber
                 arithmetic.pop();
                 //Length is 2
@@ -514,25 +496,24 @@ function display(){
                 //If numOfOperands is even,
                 if(numOfOperands % 2 === 0){
                     //Set firstNumber to arithmetic[arithmetic.length - 2]
-                    firstNumber = arithmetic[arithmetic.length - 2];
+                    firstNumber = arithmetic[arithmetic.length - 4];
                     //Set secondNumber to arithmetic[arithmetic.length - 4]
-                    secondNumber = arithmetic[arithmetic.length - 4];
+                    secondNumber = arithmetic[arithmetic.length - 2];
                     //Set operatorName to arithmetic[arithmetic.length - 1]
                     operatorName = arithmetic[arithmetic.length - 1];
                 }
                 //If numOfOperands is odd,
                 else {
                     //Set firstNumber to arithmetic[arithmetic.length - 4]
-                    firstNumber = arithmetic[arithmetic.length - 4];
+                    firstNumber = arithmetic[arithmetic.length - 2];
                     //Set secondNumber to arithmetic[arithmetic.length - 2]
-                    secondNumber = arithmetic[arithmetic.length - 2];
+                    secondNumber = arithmetic[arithmetic.length - 4];
                     //Set operatorName to arithmetic[arithmetic.length - 1]
                     operatorName = arithmetic[arithmetic.length - 1];
                 }
                 //Print the error message to textbox
                 output.value = 'Cannot divide by 0. Please enter a new number';
             }
-
             //If the result is not infinity, 
             else if (result !== Infinity){
                 //Print result to output
