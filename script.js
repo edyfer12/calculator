@@ -182,9 +182,31 @@ function display(){
                 //Use the unshift method of the digits array to add 0 as an item of first index
                 digits.unshift("0");
             }
-            //If the result is infinity and arithmetic array's length is at least 1, set the result value as the value of the first number so Infinity is not added by previous value 
+            //If the result is infinity and arithmetic array's length is at least 1,
+                //Loop through each arithmetic array item via reduce method of array
+                //and return a single value
             if(result === Infinity && arithmetic.length >= 1){
-                result = arithmetic[arithmetic.length - 2];
+                result = arithmetic.reduce((total, currentItem, currentIndex) => {
+                    //If index is 0,
+                        //Add initial value by currentItem
+                        //Store initial value added by currentItem to total variable
+                    //If index is 1, just return the total values
+                    //If index is even and is at least 2,
+                        //If item of the previous index before current item is +,
+                            //Add item of 2 indexes before current index by current item
+                            //Store into total
+                        //If item of the previous index before current item is -,
+                            //Add item of 2 indexes before current index by current item
+                            //Store into total
+                        //If item of the previous index before current item is X,
+                            //Add item of 2 indexes before current index by current item
+                            //Store into total
+                        //If item of the previous index before current item is /,
+                            //Add item of 2 indexes before current index by current item
+                            //Store into total
+
+                    //If index is last, just return total variable
+                }, 0);
             }
             //If arithmetic array not include firstNumber,
             if(arithmetic.length === 0){
