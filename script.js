@@ -666,7 +666,7 @@ function display(){
                             //If total is infinity, 
                             if(total === Infinity){
                                 //Display the error message to textbox
-                                output.value = 'Cannot divide by 0';
+                                output.value = 'Cannot divide by 0. Enter a new number';
                             }
                             //Otherwise,
                             else{
@@ -715,7 +715,7 @@ function display(){
                             //If total is infinity,
                             if(total === Infinity) { 
                                 //Display the error message to textbox
-                                output.value = 'Cannot divide by 0';
+                                output.value = 'Cannot divide by 0. Enter a new number';
                             }
                             //Otherwise,
                             else {
