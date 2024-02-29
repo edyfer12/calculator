@@ -132,7 +132,7 @@ function display(){
     //Declare an array that stores the operator and operands
     const arithmetic = [];
     //Create an array called digits that stores digits in one container
-    const digits = [];
+    let digits = [];
     //Create a total variable that will store the calculated values for display
     //Set to 0
     let total = 0;
@@ -963,18 +963,29 @@ function display(){
         /*
             If arithmetic.length is equal to 0 or arithmetic[arithmetic.length - 2] is second number,
         */
-            //Revert the first number number variable into an array 
-            //Store digits that were popped into the firstNumber variable
-            //Convert first number array back to a Number variable
-            //Display first number to the textbox
+        if(arithmetic.length === 0 || arithmetic[arithmetic.length - 2] === secondNumber){
+            //Store the value of digits array into the first number variable 
+            firstNumber = digits;
+            //Join together all the digits with '' and save into firstNumber 
+            firstNumber = digits.join('');
+            //Convert to Number and save into firstNumber
+            firstNumber = +firstNumber;
+            //Display firstNumber to textbox
+            output.value = firstNumber; 
+        }
         /*
             If arithmetic[arithmetic.length - 2] is first number,
         */
-            //Revert the second number variable into an array 
-            //Store digits that were popped into the secondNumber variable
-            //Convert second number array back to a Number variable
-            //Display second number to the textbox
-        //
+        else if(arithmetic[arithmetic.length - 2] === firstNumber){
+            //Store the firstNumber into the arithmetic array
+            secondNumber = digits;
+            //Join together all the digits with '' and save into the secondNumber
+            secondNumber = digits.join(''); 
+            //Convert to Number and save into secondNumber
+            secondNumber = +secondNumber;
+            //Display secondNumber to textbox = textbox.value = secondNumber
+            output.value = secondNumber;
+        }   
     });
 }
 //Add a function call to execute an task responsible for displaying value on the calculator
