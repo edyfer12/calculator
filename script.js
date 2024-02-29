@@ -132,7 +132,7 @@ function display(){
     //Declare an array that stores the operator and operands
     const arithmetic = [];
     //Create an array called digits that stores digits in one container
-    let digits = [];
+    const digits = [];
     //Create a total variable that will store the calculated values for display
     //Set to 0
     let total = 0;
