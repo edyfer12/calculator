@@ -950,7 +950,8 @@ function display(){
             }  
         });
     });
-    
+    //When a user clicks a backspace button on the keyboard,
+        //Pop off the last digit from the digits array
     
 }
 //Add a function call to execute an task responsible for displaying value on the calculator
