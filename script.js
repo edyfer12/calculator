@@ -146,6 +146,8 @@ function display(){
     const decimal = document.querySelector('.decimal');
     //Create variable that will store the last operand that was popped
     let operandPopped; 
+    //Create variable that will store boolean value if digits array is popped
+    let isPopped = false;
 
     //Loop through the nodelist for the number buttons from 0 to 9,
     numbers.forEach((digit) => {
@@ -951,8 +953,29 @@ function display(){
         });
     });
     //When a user clicks a backspace button on the keyboard,
-        //Pop off the last digit from the digits array
-    
+    window.addEventListener('keydown', (e) => {
+        //Declar variable key and assign to key property of event
+        let key = e.key;
+        //Pop off the last digit from the digits array if backspace is entered
+        if(key === "Backspace"){
+            digits.pop();
+        }
+        /*
+            If arithmetic.length is equal to 0 or arithmetic[arithmetic.length - 2] is second number,
+        */
+            //Revert the first number number variable into an array 
+            //Store digits that were popped into the firstNumber variable
+            //Convert first number array back to a Number variable
+            //Display first number to the textbox
+        /*
+            If arithmetic[arithmetic.length - 2] is first number,
+        */
+            //Revert the second number variable into an array 
+            //Store digits that were popped into the secondNumber variable
+            //Convert second number array back to a Number variable
+            //Display second number to the textbox
+        //
+    });
 }
 //Add a function call to execute an task responsible for displaying value on the calculator
 display();
