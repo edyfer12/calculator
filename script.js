@@ -370,7 +370,7 @@ function display(){
             //If the operatorName is '+',
             if(operatorName === '+' && isAccumulated === false){
                 //Initially, store operate() function into the result variable
-                result = Number.parseFloat(operate(firstNumber, secondNumber, operatorName).toFixed(10))
+                result = Number.parseFloat((operate(firstNumber, secondNumber, operatorName)).toFixed(10));
                 //Set isAccumulated to true
                 isAccumulated = true;
             }
@@ -744,7 +744,7 @@ function display(){
                 }
                 //If total is Infinity and length is 4 where last operand is secondNumber,
                 //Example: 1 / 0 +
-                if(total === Infinity){
+                if(total === Infinity && arithmetic.length === 4){
                     //Pop the last item of the arithmetic array which is the operator
                     arithmetic.pop();
                     //Pop the last item of the arithmetic array which is the secondNumber
@@ -760,16 +760,58 @@ function display(){
                 }
                 //If total is Infinity and length is greater than 4 where last operand is secondNumber,
                 //Example: 1 + 2 + 3 / 0 +
+                else if(total === Infinity && arithmetic.length > 4){
                     //Pop the last item of the arithmetic array which is the operator
                     //Arithmetic array is now 1 + 2 + 3 / 0
+                    arithmetic.pop();
                     //Pop the last item of the arithmetic array which is the operand
                     //Arithmetic array is now 1 + 2 + 3 / 
+                    arithmetic.pop();
                     //Pop the last item of the arithmetic array which is the divide sign
                     //Arithmetic array is now 1 + 2 + 3
-                    //Store the last item in the operandPopped
+                    arithmetic.pop();
                     //Pop the last item of the arithmetic array which is the operand
+                    arithmetic.pop();
                     //Arithmetic array is now 1 + 2 +
                     //Set total to the total of first and second number using reduce method
+                    total = arithmetic.reduce((accum, current_item,current_index) => {
+                        //If current index is 0, add current item by initial value and store into accum variable
+                        if(current_index === 0){
+                            accum += current_item;
+                            return accum;
+                        }
+                        //If current index is odd, just return accum value
+                        else if(current_index % 2 !== 0){
+                            return accum;
+                        }
+                        //If current index is 2 or more and is even, 
+                        else if(current_index >= 2 && current_index % 2 === 0){
+                            //If arithmetic[current index - 1] is '+',
+                            if(arithmetic[current_index - 1] === '+'){
+                                //Add current item by arithmetic[current_index - 2], current accum and store into accum
+                                accum += current_item;
+                            }
+                            //If arithmetic[current index - 1] is '-',
+                            else if(arithmetic[current_index - 1] === '-'){
+                                //Subtract accum by arithmetic[current_index - 2] and store into accum
+                                accum -= current_item;
+                            }
+                            //If arithmetic[current index - 1] is 'X',
+                            else if(arithmetic[current_index - 1] === 'X'){
+                                //Multiply accum by arithmetic[current_index - 2] and store into accum
+                                accum *= current_item;
+                            }
+                            //If arithmetic[current index - 1] is '/',
+                            else {
+                                //Divide accum by arithmetic[current_index - 2] and store into accum
+                                accum /= current_item;
+                            }
+                            return accum;
+                        }
+                        //Set initial value to 0
+                    }, 0);
+                    secondNumber = arithmetic[arithmetic.length - 2];
+                }
             }
             //If arithmetic[lastIndex - 1] EQUAL to secondNumber and EQUAL to arithmetic[lastIndex] equal to operatorName?
                 //Push the firstNumber into the arithmetic array
