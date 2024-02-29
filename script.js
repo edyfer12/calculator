@@ -742,7 +742,8 @@ function display(){
                 if(secondNumber !== undefined){
                     firstNumber = undefined;
                 }
-                //If total is Infinity,
+                //If total is Infinity and length is 4 where last operand is secondNumber,
+                //Example: 1 / 0 +
                 if(total === Infinity){
                     //Pop the last item of the arithmetic array which is the operator
                     arithmetic.pop();
@@ -750,9 +751,25 @@ function display(){
                     arithmetic.pop();
                     //Pop the last item of the arithmetic array which is the divide sign
                     arithmetic.pop();
-                    //Set total to last item fo arithmetic array
+                    //Set operandPopped to firstNumber
+                    //Pop the next last item of the arithmetic array which is the first number
+                    //Length is 0
+                    //Arithmetic array is now []
+                    //Set total to operandPopped
                     total = arithmetic[arithmetic.length - 1];
                 }
+                //If total is Infinity and length is greater than 4 where last operand is secondNumber,
+                //Example: 1 + 2 + 3 / 0 +
+                    //Pop the last item of the arithmetic array which is the operator
+                    //Arithmetic array is now 1 + 2 + 3 / 0
+                    //Pop the last item of the arithmetic array which is the operand
+                    //Arithmetic array is now 1 + 2 + 3 / 
+                    //Pop the last item of the arithmetic array which is the divide sign
+                    //Arithmetic array is now 1 + 2 + 3
+                    //Store the last item in the operandPopped
+                    //Pop the last item of the arithmetic array which is the operand
+                    //Arithmetic array is now 1 + 2 +
+                    //Set total to the total of first and second number using reduce method
             }
             //If arithmetic[lastIndex - 1] EQUAL to secondNumber and EQUAL to arithmetic[lastIndex] equal to operatorName?
                 //Push the firstNumber into the arithmetic array
