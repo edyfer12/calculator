@@ -810,7 +810,10 @@ function display(){
                         }
                         //Set initial value to 0
                     }, 0);
+                    //Set secondNumber to the second last item in the arithmetic array
                     secondNumber = arithmetic[arithmetic.length - 2];
+                    //Set operatorName to the last item in the arithmetic array
+                    operatorName = arithmetic[arithmetic.length - 1];
                 }
             }
             //If arithmetic[lastIndex - 1] EQUAL to secondNumber and EQUAL to arithmetic[lastIndex] equal to operatorName?
@@ -887,20 +890,62 @@ function display(){
                 else if(secondNumber !== undefined){
                     secondNumber = undefined;
                 }
-                //If total is Infinity,
-                if(total === Infinity){
+                //If total is Infinity and length is greater than 4 where last operand is firstNumber,
+                //Example: 1 + 2 + 8 * 3 / 0 +
+                if(total === Infinity && arithmetic.length > 4){
                     //Pop the last item of the arithmetic array which is the operator
+                    //Arithmetic array is now 1 + 2 + 8 * 3 / 0 +
                     arithmetic.pop();
-                    //Pop the last item of the arithmetic array which is the secondNumber
+                    //Pop the last item of the arithmetic array which is the operand
+                    //Arithmetic array is now 1 + 2 + 8 * 3 / 0 
                     arithmetic.pop();
                     //Pop the last item of the arithmetic array which is the divide sign
+                    //Arithmetic array is now 1 + 2 + 8 * 3
                     arithmetic.pop();
-                    //Pop the last item of the arithmetic array which is the firstNumber
+                    //Pop the last item of the arithmetic array which is the operand
                     arithmetic.pop();
-                    //Set firstNumber to the 2nd last item
+                    //Arithmetic array is now 1 + 2 + 8 *
+                    //Set total to the total of first and second number using reduce method
+                    total = arithmetic.reduce((accum, current_item,current_index) => {
+                        //If current index is 0, add current item by initial value and store into accum variable
+                        if(current_index === 0){
+                            accum += current_item;
+                            return accum;
+                        }
+                        //If current index is odd, just return accum value
+                        else if(current_index % 2 !== 0){
+                            return accum;
+                        }
+                        //If current index is 2 or more and is even, 
+                        else if(current_index >= 2 && current_index % 2 === 0){
+                            //If arithmetic[current index - 1] is '+',
+                            if(arithmetic[current_index - 1] === '+'){
+                                //Add current item by arithmetic[current_index - 2], current accum and store into accum
+                                accum += current_item;
+                            }
+                            //If arithmetic[current index - 1] is '-',
+                            else if(arithmetic[current_index - 1] === '-'){
+                                //Subtract accum by arithmetic[current_index - 2] and store into accum
+                                accum -= current_item;
+                            }
+                            //If arithmetic[current index - 1] is 'X',
+                            else if(arithmetic[current_index - 1] === 'X'){
+                                //Multiply accum by arithmetic[current_index - 2] and store into accum
+                                accum *= current_item;
+                            }
+                            //If arithmetic[current index - 1] is '/',
+                            else {
+                                //Divide accum by arithmetic[current_index - 2] and store into accum
+                                accum /= current_item;
+                            }
+                            return accum;
+                        }
+                        //Set initial value to 0
+                    }, 0);
+                    //Set first number to the second last item in the arithmetic array
                     firstNumber = arithmetic[arithmetic.length - 2];
-                    //Set total to last item fo arithmetic array
-                    total = arithmetic[arithmetic.length - 2];
+                    //Set operatorName to the last item in the arithmetic array
+                    operatorName = arithmetic[arithmetic.length - 1];
                 }
             }  
         });
