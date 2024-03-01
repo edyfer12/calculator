@@ -956,9 +956,14 @@ function display(){
     window.addEventListener('keydown', (e) => {
         //Declar variable key and assign to key property of event
         let key = e.key;
-        //Pop off the last digit from the digits array if backspace is entered
+        
+        //Convert result to a string and then to an array
+        result = Array.from(result.toString());
+        
+        //Pop off the last digit and result item from the digits array if backspace is entered
         if(key === "Backspace"){
             digits.pop();
+            result.pop();
         }
         /*
             If arithmetic.length is equal to 0 or arithmetic[arithmetic.length - 2] is second number,
@@ -970,8 +975,19 @@ function display(){
             firstNumber = digits.join('');
             //Convert to Number and save into firstNumber
             firstNumber = +firstNumber;
-            //Display firstNumber to textbox
-            output.value = firstNumber; 
+            //Display firstNumber to textbox if digit's length is greater than 0
+            if(digits.length > 0){
+                output.value = firstNumber;
+            }
+            //Otherwise display as empty
+            else{
+                output.value = "";
+            }
+        }
+        else if(arithmetic.length === 1){
+            result = result.join('');
+            result = +result;
+            output.value = result;
         }
         /*
             If arithmetic[arithmetic.length - 2] is first number,
@@ -983,8 +999,14 @@ function display(){
             secondNumber = digits.join(''); 
             //Convert to Number and save into secondNumber
             secondNumber = +secondNumber;
-            //Display secondNumber to textbox = textbox.value = secondNumber
-            output.value = secondNumber;
+            //Display secondNumber to textbox if digit's length is greater than 0
+            if(digits.length > 0){
+                output.value = secondNumber;
+            }
+            //Otherwise display as empty
+            else{
+                output.value = "";
+            }
         }   
     });
 }
